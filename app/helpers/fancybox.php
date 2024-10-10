@@ -1,0 +1,12 @@
+<?php
+function fancybox( $asset, $images ) {
+    foreach($images as $index => $image) {
+        $images[$index] = [
+            'caption' => "- $image -",
+            'src' => asset("$asset/$image.webp"),
+            'thumbnail' => asset("$asset/thumbnails/$image.webp"),
+        ];
+    }
+
+    return $images;
+}

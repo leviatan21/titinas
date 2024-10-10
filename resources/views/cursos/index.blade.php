@@ -1,0 +1,85 @@
+@extends('layouts.app')
+
+@section('css')
+<link rel="stylesheet" href="{{asset("/css/vertical-cards.css{$REFRESH}")}}" type="text/css" media="all" />
+<link rel="stylesheet" href="{{asset("/css/horizontal-cards.css{$REFRESH}")}}" type="text/css" media="all" />
+@endsection
+
+@section('content')
+<div class="page-content contact">
+    <div class="container">
+        <article class=" page type-page status-publish has-post-thumbnail hentry">
+            <header class="post-header">
+                <h1 class="post-title">Cursos y seminarios</h1>
+            </header>
+            <div class="post-content">
+                <ul class="blog-grid">
+                    <li class="blog-list-style">
+                        <strong class="title">Videos: </strong> <br/>
+                        <p>
+                            Los comprás y los tenés disponibles para siempre
+                        </p>
+                        <p>
+                            La modalidad de nuestros cursos y capacitaciones a distancia es como si estuvieras en forma presencial,
+                            en tiempo real, solo con pequeñas ediciones para agregar el mayor contenido posible y una mejor vista<br/>
+                            La diferencia entre seminario y capacitacion es que esta ultima esta basada en la TECNICA y no en el OBJETO a realizar<br/>
+                            En cambio los seminarios convocan al aprendizaje de una o varias tecnicas a traves de la realizacion de un trabajo en concreto.
+                        </p>
+                    </li>
+                    <li class="blog-list-style">
+                        <strong class="title">Forma de envio: </strong> <br/>
+                        Se les envía un link por mail para que puedan verlo.
+                    </li>
+                    <li class="blog-list-style">
+                        <strong class="title">Tiempos de entrega: </strong> <br/>
+                        Si compra por Mercado pago debe enviar un mail a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a> para coordinar el envío. <br/>
+                        De no recibir mail de su parte se enviará el link del curso a mail con el cual compró en Mercado Pago
+                    </li>
+                    <li class="blog-list-style">
+                        <strong class="title">Certificaciones: </strong> <br/>
+                        En las capacitaciones Ud. puede solicitar su certificación enviando fotos de los trabajos realizados y una foto suya al lado de los mismos a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a> <br/>
+                        ES IMPORTANTE QUE EN SUBJET/TEMA DEL MAIL INDIQUE EL NOMBRE DEL SEMINARIO<br/>
+                        y su nombre y apellido completo + mail con el cual se registró para adquirir los seminarios.
+                    </li>
+                    <li class="blog-list-style">
+                        <strong class="title">TRANSFERENCIA BANCARIA: </strong> <br/>
+                        Si depositás o tranferís<br/>
+                        Envías la boleta de deósito a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a><br/>
+                        Se envía el link a la dirección de mail que indiques
+                    </li>
+                    <li class="blog-list-style">
+                        <strong class="title">MERCADERÍA DE FABRICACIÓN EXCLUSIVA / PUNTO DE VENTA: </strong> <br/>
+                        Para el caso de la Pasta ceramica sin horno y el Efecto Gaudi, <br/>
+                        si Ud. no consigue el producto en su localidad, nosotros podemos enviarle por correo ANDREANI <br/>
+                        en forma minorista para que pueda realizar el trabajo. <br/>
+                        Y si posee taller, podemos luego venderle a precios preferenciales para que dicte los seminarios.
+                    </li>
+                    <li class="blog-list-style">
+                        Para consultas y pedidos de cursos a distancia escribirnos a <a href="mailto:{{$CONFIG->EMAIL_ADISTANCIA}}">{{$CONFIG->EMAIL_ADISTANCIA}}</a>
+                    </li>
+                    <li class="blog-list-style">
+                        Buscá el comercio que quede mas cerca de tu casa.
+                        Si no encontras, podes escribirnos a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a>
+                        y darnos los datos de tu comercio mas cercano.
+                        Nosotros los contactaremos.
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <div class="container">
+        <header class="post-header">
+            <h2 class="page-title">Cursos y seminarios</h2>
+        </header>
+
+        @if (!empty($horizontal))
+        @include('components.card-horizontal', ['courses' => $horizontal ])
+        @endempty
+
+        @if (!empty($vertical))
+        @include('components.card-vertical', ['courses' => $vertical ])
+        @endempty
+    </div>
+</div>
+@endsection

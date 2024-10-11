@@ -56,8 +56,7 @@
                 </div>
 
                 @isset($item['youtube'])
-                <br />
-                <div class="row">
+                <div class="row mt-4">
                     @foreach ($item['youtube'] as $youtube)
                     <div class="col-sm mb-2">
                         <div class="embed-responsive embed-responsive-16by9">

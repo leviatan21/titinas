@@ -77,11 +77,12 @@ function transferencias() {
             'image' => asset('/images/productos/transferencias/a3-negras.webp'),
             'asset' => '/images/productos/transferencias/a3-negras',
             'images' => [
-                'LT A3_000','LT A3_001','LT A3_002','LT A3_003','LT A3_004','LT A3_005','LT A3_006','LT A3_007','LT A3_008',
-                'LT A3_009','LT A3_010','LT A3_011','LT A3_012','LT A3_013','LT A3_014','LT A3_015','LT A3_016','LT A3_017',
-                'LT A3_018','LT A3_019','LT A3_020','LT A3_021','LT A3_022','LT A3_023','LT A3_024','LT A3_025','LT A3_026',
-                'LT A3_027','LT A3_028','LT A3_029','LT A3_030','LT A3_031','LT A3_032','LT A3_033','LT A3_034','LT A3_035',
-                'LT A3_036','LT A3_037','LT A3_038','LT A3_039','LT A3_040','LT A3_041','LT A3_042','LT A3_043','LT A3_044','LT A3_045'
+                'LT A3_001','LT A3_002','LT A3_003','LT A3_004','LT A3_005','LT A3_006','LT A3_007','LT A3_008','LT A3_009',
+                'LT A3_017','LT A3_018','LT A3_010','LT A3_011','LT A3_012','LT A3_013','LT A3_014','LT A3_015','LT A3_016',
+                'LT A3_019','LT A3_020','LT A3_021','LT A3_022','LT A3_023','LT A3_024','LT A3_025','LT A3_026','LT A3_027',
+                'LT A3_028','LT A3_029','LT A3_030','LT A3_031','LT A3_032','LT A3_033','LT A3_034','LT A3_035','LT A3_036',
+                'LT A3_037','LT A3_038','LT A3_039','LT A3_040','LT A3_041','LT A3_042','LT A3_043','LT A3_044','LT A3_045'
+            //  'LT A3_000',
             ]
         ],
         [

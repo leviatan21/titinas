@@ -51,7 +51,8 @@ function exclusivos() {
             'price' => '7040',
             'image' => asset('/images/productos/exclusivos/efecto-gaudi.webp'),
             'youtube' => [
-                'https://www.youtube.com/embed/iuHUOMvmnNU?rel=0'
+                'https://www.youtube.com/embed/iuHUOMvmnNU?rel=0',
+                'https://www.youtube.com/embed/9xEnBE1Kzhg?rel=0'
             ]
         ],
         [

@@ -47,13 +47,13 @@
 
                 <div id="gallery-wrap-{{$key}}" class="f-carousel">
                     @if(empty($item['images']))
-                    <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="800" height="800" loading="lazy" fetchpriority="high" />
+                    <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" width="800" height="200" loading="lazy" fetchpriority="high" />
                     @else
                     <a href="javascript:void(0);" data-fancybox-trigger="gallery-{{$key}}">
                         @if(!empty($item['text']))
                         {!!$item['text']!!}
                         @else
-                        <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="800" height="800" loading="lazy" fetchpriority="high" />
+                        <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" width="800" height="200" loading="lazy" fetchpriority="high" />
                         @endif
                     </a>
                     @endif

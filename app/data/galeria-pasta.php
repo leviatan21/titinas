@@ -157,6 +157,7 @@ function galeriaPasta() {
                 'Veronica Yanun_02','Veronica Yanun_03'
             ]
         ],
+        /*
         [
             'title' => "Algunos trabajos últimos años del taller 2010/2011/2012",
             'description' => "PASTA CERÁMICA SIN HORNO + TECNICAS DECORATIVAS",
@@ -209,7 +210,6 @@ function galeriaPasta() {
                 'Teresa_02','Teteras Alumnas','Veronica Yanun_01','Veronica Yanun_02','Veronica Yanun_03'
             ]
         ],
-        /*
         [
             'title' => "EXPO DECO ARTES 2010",
             'description' => "PASTA CERÁMICA SIN HORNO + TECNICAS DECORATIVAS",

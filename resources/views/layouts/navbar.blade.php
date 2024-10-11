@@ -1,7 +1,7 @@
 
     <div id="main-nav" class="clear-fix">
         <div class="boxed-wrapper">
-            <span class="mobile-menu-btn">
+            <div class="mobile-menu-btn">
                 <div class="main-nav-sidebar">
                     <div>
                         <span></span>
@@ -12,7 +12,7 @@
                 <div class="mobile-menu-header">
                     Bienvenidos a Titina's materiales para el arte y la creatividad
                 </div>
-            </span>
+            </div>
 
             <nav class="main-menu-container">
                 <ul id="main-menu" itemscope itemtype="https://schema.org/SiteNavigationElement" role="menu">

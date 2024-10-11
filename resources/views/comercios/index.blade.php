@@ -22,7 +22,7 @@
     </div>
 
     <div class="container pt-4">
-@foreach ($shops as $key => $items)
+@foreach ($comercios as $key => $items)
         <article class="article">
             <h2 class="page-title" id="shops-{{$key}}">
                 <span class="bd-content-title">

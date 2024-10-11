@@ -59,9 +59,16 @@ function comercios() {
             ],
             [
                 'name' => 'ARTESHOP',
-                'address' => [],
+                'address' => [
+                    'Tel: +54 911 6597 9206',
+                    'Retiros Yerbal 5950, Caba'
+                ],
                 'href' => [
-                    'Web' => 'http://www.arteshop.com.ar'
+                    'Web' => 'http://www.arteshop.com.ar',
+                    'Instagram' => 'https://instagram.com/artisticaarteshop',
+                    'Facebook' => 'https://www.facebook.com/artistica.arteshop/',
+                    'Twitter' => 'https://www.twitter.com/Aarteshop',
+                    'Pinterest' => 'https://ar.pinterest.com/aarteshop/'
                 ]
             ],
             [
@@ -88,10 +95,12 @@ function comercios() {
             [
                 'name' => 'BELLAS ARTES BA',
                 'address' => [
-                    'VENTA ONLINE'
+                    'Tel: +54 911 323 45284',
+                    'Campichuelo al 200 ( Solo Entregas )'
                 ],
                 'href' => [
                     'Web' => 'https://www.bellasartesba.com.ar',
+                    'Instagram' => 'https://instagram.com/libreriabellasartesba',
                     'Facebook' => 'https://www.facebook.com/BellasArtesBA'
                 ],
                 'email' => [
@@ -214,6 +223,7 @@ function comercios() {
                     'Instagram' => 'https://www.instagram.com/crearte_manualidades'
                 ]
             ],
+            /*
             [
                 'name' => 'CREAR ARTISTICA ',
                 'address' => [
@@ -224,6 +234,7 @@ function comercios() {
                     'Instagram' => 'https://www.instagram.com/artisticacrear'
                 ]
             ],
+            */
         ],
         'provincia de bs as' => [
             [
@@ -249,7 +260,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'EN DRAW',
+                'name' => 'Pen Draw',
                 'address' => [
                     'Plaza Irigoyen 165 - La Plata'
                 ],
@@ -341,7 +352,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'Luz-El 13',
+                'name' => 'Luz El 13',
                 'address' => [
                     'Calle 3 n° 5496, esq. 55 - Mar del Tuyú',
                     'Tel: 2246461974'

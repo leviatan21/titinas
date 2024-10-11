@@ -9,7 +9,8 @@ function sellos() {
             'image' => asset('/images/productos/sellos/sellos.webp'),
             'asset' => '/images/productos/sellos/linea-azul',
             'images' => [
-                'B001','B002','B004','B005','B006','B007','B008','B009','B010','B011'
+                'B001','B004','B005','B006','B007','B008','B009','B010','B011'
+            //  'B002',
             ]
         ],
         [
@@ -62,6 +63,7 @@ function sellos() {
                 'B502','B506'
             ]
         ],
+        /*
         [
             'title' => '<strong style="font-size:2rem;color:red;">Línea navidad</strong>',
             'description' => 'Tamaño: de 6x6cm',
@@ -69,10 +71,10 @@ function sellos() {
             'image' => asset('/images/productos/sellos/sellos.webp'),
             'asset' => '/images/productos/sellos/linea-navidad',
             'images' => [
-                'NAV B004'
-            //  'NAV B101','NAV B102','NAV B201','NAV B202'
+                'NAV B004','NAV B101','NAV B102','NAV B201','NAV B202'
             ]
         ],
+        */
         [
             'title' => '<strong style="font-size:2rem;color:red;">Línea navidad</strong>',
             'description' => 'Tamaño: de 10x10cm',

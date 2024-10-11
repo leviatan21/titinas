@@ -55,7 +55,7 @@ class Controller {
                 'href' => url('/redirect?to=shop'),
                 'target' => '_blank', 
                 'rel' => 'opener noreferrer nofollow',
-                'label' => 'Tienda',
+                'label' => 'Comprar en la Tienda',
                 'text' => 'Tienda',
                 'image' =>  asset('images/logo-tienda.jpg'),
             ],

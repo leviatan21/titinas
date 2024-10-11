@@ -36,9 +36,10 @@ function exclusivos() {
                 'text' => 'Ver galeria',
                 'href' => url('/productos/exclusivos/pasta-ceramica-sin-horno/')
             ],
-            'image' => asset('/images/productos/exclusivos/pasta-ceramica-sin-horno.webp'),
+            'image' => asset('/images/productos/exclusivos//nueva-pasta-ceramica-sin-horno.webp'),
             'youtube' => [
-                'https://www.youtube.com/embed/jsglAGqyydg?rel=0'
+                'https://www.youtube.com/embed/jsglAGqyydg?rel=0',
+                'https://www.youtube.com/embed/UPHB6KmPA60?rel=0'
             ]
         ],
         [

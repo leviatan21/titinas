@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
+use App\Http\Traits\SchemaMarkupTraits;
+
 include_once(app_path() . '/data/cursos.php');
-include_once(app_path() . '/helpers/schemamarkup-course.php');
 
 class CursosController extends Controller {
     public function index() {
@@ -19,13 +20,13 @@ class CursosController extends Controller {
         $horizontal = cursosHorizontal();
         foreach($horizontal as $index => $item) {
             foreach($item['steps'] as $key => $step) {
-                $horizontal[$index]['steps'][$key]['schemamarkup'] = SchemaMarkupCourse(static::$seo, static::$config, $step);
+                $horizontal[$index]['steps'][$key]['schemamarkup'] = SchemaMarkupTraits::Course(static::$seo, static::$config, $step);
             }
         }
 
         $vertical = cursosVertical();
         foreach($vertical as $index => $item) {
-            $vertical[$index]['schemamarkup'] = SchemaMarkupCourse(static::$seo, static::$config, $item);
+            $vertical[$index]['schemamarkup'] = SchemaMarkupTraits::Course(static::$seo, static::$config, $item);
         }
 
         return view('cursos.index')

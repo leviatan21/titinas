@@ -40,6 +40,13 @@ class HomeController extends Controller {
             ->with('products', $products);
     }
 
+    public function historia() {
+        static::seo([
+            'title' => "La historia de Titina's"
+        ]);
+        return view('historia.index');
+    }
+
     public function proximamente() {
         return view('proximamente');
     }

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CatalogosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ContactoController;
@@ -18,12 +19,11 @@ Route::get( '{any}.{extension}', function($route, $extension) {
 
 Route::get( '/',                    [HomeController::class, 'index']                )->name('web.home');
 Route::get( '/catalogos',           [CatalogosController::class, 'index']           )->name('web.catalogos');
-Route::get( '/blog',                [HomeController::class, 'proximamente']         )->name('web.blog');
 Route::get( '/cursos',              [CursosController::class, 'index']              )->name('web.cursos');
 Route::get( '/contacto',            [ContactoController::class, 'index']            )->name('web.contacto');
 Route::get( '/comercios',           [ComerciosController::class, 'index']           )->name('web.comercios');
 Route::get( '/manuales',            [HomeController::class, 'proximamente']         )->name('web.manuales');
-Route::get( '/historia',            [HomeController::class, 'proximamente']         )->name('web.historia');
+Route::get( '/historia',            [HomeController::class, 'historia']             )->name('web.historia');
 Route::get( '/videos',              [HomeController::class, 'proximamente']         )->name('web.videos');
 Route::get( '/sitio-renovado',      [RenewalController::class, 'index']             )->name('renovado');
 Route::get( '/redirect',            [RedirectController::class, 'index']            )->name('redireccion');
@@ -45,4 +45,11 @@ Route::prefix('/productos')->group(function () {
     Route::get( '/stenciles',       [ProductosController::class, 'stenciles']       )->name('web.stenciles');
     Route::get( '/herramientas',    [HomeController::class, 'proximamente']         )->name('web.herramientas');
     Route::get( '/pinturas',        [HomeController::class, 'proximamente']         )->name('web.pinturas');
+});
+Route::prefix('/blog')->group(function () {
+    Route::get( '/',                 [BlogController::class, 'index']                )->name('web.blog');
+    Route::get( '/{post}',           [BlogController::class, 'post']                 )->name('web.post');
+    Route::get( '/categoria/{cat}',  [BlogController::class, 'categoria']            )->name('web.categoria');
+    Route::get( '/tag/{tag}',        [BlogController::class, 'tag']                  )->name('web.tag');
+    Route::get( '/author/{author}',  [BlogController::class, 'author']               )->name('web.author');
 });

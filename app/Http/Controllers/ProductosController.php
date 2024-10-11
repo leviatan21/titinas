@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-include_once(app_path() . '/helpers/fancybox.php');
-include_once(app_path() . '/helpers/schemamarkup-product.php');
+use App\Http\Traits\SchemaMarkupTraits;
+use App\Http\Traits\FancyboxTraits;
 
 class ProductosController extends Controller {
     public function index() {
@@ -35,9 +35,9 @@ class ProductosController extends Controller {
 
         foreach($productos as $index => $item) {
             if (!empty($item['images'])) {
-                $productos[$index]['images'] =  fancybox($item['asset'], $item['images']);
+                $productos[$index]['images'] =  FancyboxTraits::Gallery($item['asset'], $item['images']);
             }
-            $productos[$index]['schemamarkup'] = SchemaMarkupProduct(static::$seo, $item);
+            $productos[$index]['schemamarkup'] = SchemaMarkupTraits::Product(static::$seo, $item);
         }
 
         return view('productos.exclusivos')
@@ -55,7 +55,7 @@ class ProductosController extends Controller {
         $productos = transferencias();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -73,7 +73,7 @@ class ProductosController extends Controller {
         $productos = decoupage();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -91,7 +91,7 @@ class ProductosController extends Controller {
         $productos = cartulinas();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -109,7 +109,7 @@ class ProductosController extends Controller {
         $productos = autoadhesivos();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -127,7 +127,7 @@ class ProductosController extends Controller {
         $productos = vinilos();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -150,7 +150,7 @@ class ProductosController extends Controller {
         $productos = sublimacion();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -169,7 +169,7 @@ class ProductosController extends Controller {
         $productos = artefrances();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -190,7 +190,7 @@ class ProductosController extends Controller {
         $productos = sellos();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -213,7 +213,7 @@ class ProductosController extends Controller {
         $productos = stenciles();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -239,7 +239,7 @@ class ProductosController extends Controller {
         $productos = galeriaPasta();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')
@@ -262,7 +262,7 @@ class ProductosController extends Controller {
         $productos = galeriaTintas();
 
         foreach($productos as $index => $item) {
-            $productos[$index]['images'] = fancybox($item['asset'], $item['images']);
+            $productos[$index]['images'] = FancyboxTraits::Gallery($item['asset'], $item['images']);
         }
 
         return view('productos.fancybox')

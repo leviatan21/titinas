@@ -12,7 +12,7 @@
 <div id="page-wrap">
     <div class="page-content">
 
-        <div class="post-header full-width py-5">
+        <div class="post-header full-width pb-4">
             <h1 class="post-title">{{$SEO->TITLE}}</h1>
         </div>
 
@@ -24,10 +24,10 @@
         </div>
         @endisset
 
+        @foreach ($productos as $key => $item)
         <div class="container">
- 
-            @foreach ($productos as $key => $item)
-            <article id="gallery-wrap-{{$key}}"  class="gallery-wrap">
+
+            <article id="gallery-wrap-{{$key}}" class="gallery-wrap">
 
                 <header class="post-header">
                     @if(!empty($item['title']))
@@ -39,7 +39,7 @@
                     @endif
 
                     @if(!empty($item['instagram']))
-                    <a href="{{$item['instagram']['link']}}" title="Facbook" target="_blank" rel="opener noreferrer nofollow">
+                    <a href="{{$item['instagram']['link']}}" title="instagram" target="_blank" rel="opener noreferrer nofollow">
                         {{$item['instagram']['text']}}
                     </a>
                     @endif
@@ -49,7 +49,7 @@
                     @if(empty($item['images']))
                     <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="200" loading="lazy" fetchpriority="high" />
                     @else
-                    <a href="javascript:void(0);" data-fancybox-trigger="gallery-{{$key}}">
+                    <a href="javascript:void(0);" data-fancybox-trigger="gallery-{{$key}}" data-fancybox-index="0">
                         @if(!empty($item['text']))
                         {!!$item['text']!!}
                         @else
@@ -58,19 +58,18 @@
                     </a>
                     @endif
 
-                    <div style="display:none">
+                    <div class="d-none">
                         @foreach ($item['images'] as $image)
                         <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-caption="{{$image['caption']}}">
-                            <img src="{{$image['thumbnail']}}" alt="{{strip_tags($item['title'] ?? '*')}}" loading="lazy" fetchpriority="low" />
+                            <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" loading="lazy" fetchpriority="low" />
                         </a>
                         @endforeach
                     </div>
                 </div>
 
             </article>
-            @endforeach
-
         </div>
+        @endforeach
 
         @include('components.footer-shop')
         @include('components.footer-pedidos')
@@ -78,20 +77,14 @@
     </div>
 </div>
 
-{{-- 
-https://fancyapps.com/fancybox/plugins/images/ 
-https://jsfiddle.net/bezu63qg/
-https://stackblitz.com/edit/js-x7cx7w?file=index.html,index.js,style.css
---}}
-
 <script type="text/javascript">
 $(document).ready(function() {
 @foreach ($productos as $key => $item)
     Fancybox.bind(document.getElementById("gallery-wrap-{{$key}}"),'[data-fancybox]', {
-        'compact':false,'idle':false,'animated':false,'showClass':false,'hideClass':false,
-        'dragToClose':false,'Images':{'initialSize':'fit','zoom':false},
-        'Thumbs':{'type':'classic','Carousel':{center:function(){return this.contentDim > this.viewportDim}}},
-        'Toolbar': {'display': {'left': ['infobar'],'right': ['iterateZoom','rotateCCW','rotateCW','flipX','flipY','slideshow','fullscreen','thumbs','close']}}
+        'compact':false,'idle':false,'animated':false,'showClass':false,'hideClass':false,'dragToClose':false,
+        'Images':{'initialSize':'fit','zoom':false},
+        'Thumbs':{'type':'classic','Carousel':{center:function(){return this.contentDim>this.viewportDim}}},
+        'Toolbar':{'display':{'left':['infobar'],'right':['iterateZoom','rotateCCW','rotateCW','flipX','flipY','slideshow','fullscreen','thumbs','close']}}
     });
 @endforeach
 });

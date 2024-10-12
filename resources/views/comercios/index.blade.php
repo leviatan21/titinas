@@ -3,7 +3,7 @@
 @section('content')
 <div class="page-content">
 
-    <div class="container pt-4">
+    <div class="container">
         <article class="article">
             <header class="post-header">
                 <h1 class="post-title">Puntos de venta</h1>

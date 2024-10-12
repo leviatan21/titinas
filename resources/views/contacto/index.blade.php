@@ -3,7 +3,7 @@
 @section('content')
 <div class="page-content contact">
 
-    <div class="container pt-4">
+    <div class="container">
         <article class=" page type-page status-publish has-post-thumbnail hentry">
             <header class="post-header">
                 <h1 class="post-title">Contacto</h1>

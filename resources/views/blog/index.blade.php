@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="page-content contact">
-    <div class="container pt-4">
+    <div class="container">
         <header class="post-header">
             <h1 class="post-title">Posteos en Titina's</h1>
         </header>

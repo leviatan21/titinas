@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-    <div class="page-content pt-4">
+    <div class="page-content">
         <header class="post-header">
             <h1 class="post-title">{{$SEO->TITLE}}</h1>
         </header>

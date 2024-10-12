@@ -275,7 +275,7 @@ function decoupage() {
                 'Cat Seda XL32','Cat Seda XL31','Cat Seda XL30','Cat Seda XL29','Cat Seda XL28','Cat Seda XL27','Cat Seda XL26'
             ],
             'instagram' => [
-                'text' => '¿Viste nuetro video en Instagram?',
+                'text' => '¿Viste nuestro video en Instagram?',
                 'link' => 'https://www.instagram.com/reel/CgPvB3oDzMb/?utm_source=ig_web_copy_link'
             ]
         ],

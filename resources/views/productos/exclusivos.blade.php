@@ -4,7 +4,7 @@
 <div id="page-wrap">
     <div class="page-content">
 
-        <div class="post-header full-width py-5">
+        <div class="post-header full-width pb-4">
             <h1 class="post-title">{{$SEO->TITLE}}</h1>
         </div>
 

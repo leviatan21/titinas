@@ -5,7 +5,7 @@ namespace App\Http\Traits;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
-include_once(app_path() . '/data/blog-posts.php');
+include_once(app_path() . '/data/blog.php');
 
 trait BlogTraits {
 
@@ -15,6 +15,50 @@ trait BlogTraits {
             $posts[$index] = static::parsePost($item);
         }
         return collect($posts);
+    }
+
+    public static function GetCategories() {
+        $list       = [];
+        $posts      = static::GetPosts();
+
+        foreach($posts as $post) {
+            foreach($post['category'] as $item) {
+                $list[] = $item;
+            }
+        }
+
+        return $list;
+    }
+
+    public static function GetCategoriesDescription() {
+        $descriptions   = [];
+        $list           = static::GetCategories();
+        foreach($list as $item) {
+            $descriptions[] = $item['title'];
+        }
+        return implode(' - ', $descriptions);
+    }
+
+    public static function GetTag() {
+        $list       = [];
+        $posts      = static::GetPosts();
+
+        foreach($posts as $post) {
+            foreach($post['tag'] as $item) {
+                $list[] = $item;
+            }
+        }
+
+        return $list;
+    }
+
+    public static function GetTagDescription() {
+        $descriptions   = [];
+        $list           = static::GetTag();
+        foreach($list as $item) {
+            $descriptions[] = $item['title'];
+        }
+        return implode(' - ', $descriptions);
     }
 
     public static function GetBySlug($slug='') {

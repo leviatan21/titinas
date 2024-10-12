@@ -8,21 +8,24 @@ use App\Http\Traits\BlogTraits;
 use App\Http\Traits\PaginateTraits;
 use App\Http\Traits\SchemaMarkupTraits;
 
-include_once(app_path() . '/data/blog-posts.php');
 
 class BlogController extends Controller {
     use BlogTraits, PaginateTraits, SchemaMarkupTraits;
 
     public function index() {
-        static::seo([
-            'title' => "",
-            'description' => "",
-            'keywords' => ""
-        ]);
 
-        $posts = BlogTraits::GetPosts();
+        $posts  = BlogTraits::GetPosts();
 
         ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
+
+        $cats   = BlogTraits::GetCategoriesDescription();
+        $tags   = BlogTraits::GetTagDescription();
+
+        static::seo([
+            'title' => "Posteos en el blog de Titina's",
+            'description' => "$cats",
+            'keywords' => "$tags"
+        ]);
 
         return view('blog.index')
                 ->with([
@@ -46,8 +49,8 @@ class BlogController extends Controller {
         $post['schemamarkup'] = SchemaMarkupTraits::BlogPosting(static::$seo, $post);
 
         static::seo([
-            'title' => "",
-            'description' => "",
+            'title' => $post['title'],
+            'description' => $post['content'][0],
             'keywords' => ""
         ]);
 
@@ -71,11 +74,13 @@ class BlogController extends Controller {
             );
         }
 
+        $cats = BlogTraits::GetCategoriesDescription();
+
         ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
 
         static::seo([
             'title' => "Posteos para la categoría \"{$category['title']}\"",
-            'description' => "",
+            'description' => "Categorías - $cats",
             'keywords' => "",
         ]);
 
@@ -98,11 +103,13 @@ class BlogController extends Controller {
             );
         }
 
+        $tags = BlogTraits::GetTagDescription();
+
         ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
 
         static::seo([
             'title' => "Posteos para el tag \"{$tag['title']}\"",
-            'description' => "",
+            'description' => "Tags: $tags",
             'keywords' => ""
         ]);
 
@@ -128,16 +135,17 @@ class BlogController extends Controller {
         ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
 
         $content = BlogTraits::GetAuthor($slug);
+        $author = array_merge($author, $content);
 
         static::seo([
             'title' => "Posteos para el autor \"{$author['title']}\"",
-            'description' => "",
+            'description' => "{$author['title']} - {$author['content'][0]}",
             'keywords' => ""
         ]);
 
         return view('blog.posts')
                 ->with([
-                    'author' => array_merge($author, $content),
+                    'author' => $author,
                     'posts' => $items,
                     'paginator'=> $paginator
                 ]);

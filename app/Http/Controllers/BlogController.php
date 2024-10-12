@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-
 use App\Http\Traits\BlogTraits;
 use App\Http\Traits\PaginateTraits;
 use App\Http\Traits\SchemaMarkupTraits;
-
 
 class BlogController extends Controller {
     use BlogTraits, PaginateTraits, SchemaMarkupTraits;

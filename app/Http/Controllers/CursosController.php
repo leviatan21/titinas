@@ -20,6 +20,7 @@ class CursosController extends Controller {
         $horizontal = cursosHorizontal();
         foreach($horizontal as $index => $item) {
             foreach($item['steps'] as $key => $step) {
+                $step['title'] = "{$item['title']}: {$step['title']}";
                 $horizontal[$index]['steps'][$key]['schemamarkup'] = SchemaMarkupTraits::Course(static::$seo, static::$config, $step);
             }
         }

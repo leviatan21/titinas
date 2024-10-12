@@ -3,8 +3,8 @@
 function decoupage() {
     return [
         [
-            'title' => 'Decoupage húmedo',
-            'description' => "Tamaño A4<br/>Presentación: 3u x modelo",
+            'title' => 'Decoupage',
+            'description' => "Tamaño A4<br />Presentación: 3u x modelo",
             'image' => asset('/images/productos/decoupage/a4.webp'),
             'asset' => '/images/productos/decoupage/a4',
             'images' => [
@@ -34,8 +34,8 @@ function decoupage() {
             ]
         ],
         [
-            'title' => 'Decoupage húmedo',
-            'description' => "Tamaño A3 Plus (32x47cm)<br/>Presentación: 3u x modelo",
+            'title' => 'Decoupage',
+            'description' => "Tamaño A3 Plus (32x47cm)<br />Presentación: 3u x modelo",
             'image' => asset('/images/productos/decoupage/a3.webp'),
             'asset' => '/images/productos/decoupage/a3',
             'images' => [
@@ -49,7 +49,7 @@ function decoupage() {
             ]
         ],
         [
-            'title' => 'Decoupage húmedo',
+            'title' => 'Decoupage',
             'description' => "Tamaño: 30x30cm",
             'image' => asset('/images/productos/decoupage/30x30.webp'),
             'asset' => '/images/productos/decoupage/30x30',
@@ -174,7 +174,7 @@ function decoupage() {
         ],
         [
             'title' => 'Papel mate Autoadhesivo',
-            'description' => "Tamaño 14x20cm<br/>Presentación: 4u x modelo",
+            'description' => "Tamaño 14x20cm<br />Presentación: 4u x modelo",
             'image' => asset('/images/productos/decoupage/14x20.webp'),
             'asset' => '/images/productos/decoupage/14x20',
             'images' => [
@@ -205,12 +205,12 @@ function decoupage() {
         [
             'important' => true,
             'title' => '!!! nuevas láminas !!!',
-            'description' => 'Inspiración Kraft<br/> Tamaño: A4<br />Inspirados en la decoración moderna<br/>
-                            Inspirados en "volver a lo natural"<br/>
-                            Se pegan con Pegamento Multipropósito o cola de carpintero<br/>
-                            * Presentación: 3u x modelo<br/>
-                            * Muy fuertes - 80gr<br/>
-                            * Impronta rústica sin agregados<br/>
+            'description' => 'Inspiración Kraft<br /> Tamaño: A4<br />Inspirados en la decoración moderna<br />
+                            Inspirados en "volver a lo natural"<br />
+                            Se pegan con Pegamento Multipropósito o cola de carpintero<br />
+                            * Presentación: 3u x modelo<br />
+                            * Muy fuertes - 80gr<br />
+                            * Impronta rústica sin agregados<br />
                             * Ideal para muebles: mesas, placard, cómodas, cajones y baules, etc.',
             'image' => asset('/images/productos/decoupage/kraft-a4.webp'),
             'asset' => '/images/productos/decoupage/kraft-a4',
@@ -224,12 +224,12 @@ function decoupage() {
         [
             'important' => true,
             'title' => '!!! nuevas láminas !!!',
-            'description' => 'Inspiración Kraft<br/> Tamaño: A3<br />Inspirados en la decoración moderna<br/>
-                            Inspirados en "volver a lo natural"<br/>
-                            Se pegan con Pegamento Multipropósito o cola de carpintero<br/>
-                            * Presentación: 3u x modelo<br/>
-                            * Muy fuertes - 80gr<br/>
-                            * Impronta rústica sin agregados<br/>
+            'description' => 'Inspiración Kraft<br /> Tamaño: A3<br />Inspirados en la decoración moderna<br />
+                            Inspirados en "volver a lo natural"<br />
+                            Se pegan con Pegamento Multipropósito o cola de carpintero<br />
+                            * Presentación: 3u x modelo<br />
+                            * Muy fuertes - 80gr<br />
+                            * Impronta rústica sin agregados<br />
                             * Ideal para muebles: mesas, placard, cómodas, cajones y baules, etc.',
             'image' => asset('/images/productos/decoupage/kraft-a3.webp'),
             'asset' => '/images/productos/decoupage/kraft-a3',
@@ -239,34 +239,32 @@ function decoupage() {
             ]
         ],
         [
-            'title' => 'laminas de seda',
-            'description' => "Autoadhesivas - Tamaño 50x70cm - Presentación: 2u<br/>
-                            La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie<br/>
-                            HASTA AGOTAR STOCK DE ESTOS MODELOS 20% DE DESCUENTO POR MAYOR <br/>
-                            PARA REALIZAR DECOUPAGE EN TODO TIPO DE SUPERFICIES<br/>
-                            Pinta de un color claro previamente, ya que las láminas de seda son traslúcidas<br/>
-                            Aplicá barníz, cera, laca o el material que más te guste DIRECTAMENTE sobre la lámina<br/>
-                            * 6 modelos NAVIDEÑOS<br />
-                            * 40 modelos VARIADOS",
+            'title' => 'Láminas de seda',
+            'description' => "Tamaño 50x70cm - Presentación: 2u<br />
+                            La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie<br />
+                            HASTA AGOTAR STOCK DE ESTOS MODELOS 20% DE DESCUENTO POR MAYOR <br />
+                            PARA REALIZAR DECOUPAGE EN TODO TIPO DE SUPERFICIES<br />
+                            Pinta de un color claro previamente, ya que las láminas de seda son traslúcidas<br />
+                            Aplicá barníz, cera, laca o el material que más te guste DIRECTAMENTE sobre la lámina",
             'image' => asset('/images/productos/decoupage/seda.webp'),
             'asset' => '/images/productos/decoupage/seda',
             'images' => [
-                'H16 Cat Seda XL','H01 Cat Seda XL','H02 Cat Seda XL','H03 Cat Seda XL','H04 Cat Seda XL','H05 Cat Seda XL',
+                'H01 Cat Seda XL','H02 Cat Seda XL','H03 Cat Seda XL','H04 Cat Seda XL','H05 Cat Seda XL',
                 'H06 Cat Seda XL','H07 Cat Seda XL','H08 Cat Seda XL','H09 Cat Seda XL','H10 Cat Seda XL','H11 Cat Seda XL',
-                'H12 Cat Seda XL','H13 Cat Seda XL','H14 Cat Seda XL','H15 Cat Seda XL'
+                'H12 Cat Seda XL','H13 Cat Seda XL','H14 Cat Seda XL','H15 Cat Seda XL','H16 Cat Seda XL'
             ]
         ],
         [
-            'title' => 'laminas de seda lavables',
+            'title' => 'Láminas de seda lavables',
             'description' => "Láminas de seda de alta calidad de impresión<br />
-                            La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie, y depues la podes lavar<br/>
+                            La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie, y depues la podes lavar<br />
                             Se pueden barnizar, sin mojar el pincel con agua.<br />
-                            Se puede proteger con cualquier barniz, al agua, lacas, cera, etc<br />
-                            HERMOSOS Y VARIDADOS DISEÑOS<br />
+                            Se puede proteger con cualquier barniz al agua, lacas, cera, etc<br />
+                            HERMOSOS Y VARIADOS DISEÑOS<br />
                             Tamaño 50x70cm <br />
                             Presentación: 2u",
-            'image' => asset('/images/productos/decoupage/seda-lavable.webp'),
-            'asset' => '/images/productos/decoupage/seda-lavable',
+            'image' => asset('/images/productos/decoupage/seda-lavable-50x70.webp'),
+            'asset' => '/images/productos/decoupage/seda-lavable-50x70',
             'images' => [
                 'L Cat Seda XL43','L Cat Seda XL42','L Cat Seda XL41','L Cat Seda XL40','L Cat Seda XL39','L Cat Seda XL38','L Cat Seda XL37',
                 'L Cat Seda XL36','L Cat Seda XL35','L Cat Seda XL34','L Cat Seda XL33','L Cat Seda XL32','L Cat Seda XL31','L Cat Seda XL30',
@@ -277,8 +275,24 @@ function decoupage() {
                 'Cat Seda XL32','Cat Seda XL31','Cat Seda XL30','Cat Seda XL29','Cat Seda XL28','Cat Seda XL27','Cat Seda XL26'
             ],
             'instagram' => [
-                'text' => '¿Viste nuetros video en Instagram?',
+                'text' => '¿Viste nuetro video en Instagram?',
                 'link' => 'https://www.instagram.com/reel/CgPvB3oDzMb/?utm_source=ig_web_copy_link'
+            ]
+        ],
+        [
+            'title' => 'Láminas de seda lavables',
+            'description' => "Láminas de seda de alta calidad de impresión<br />
+                            La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie, y depues la podes lavar<br />
+                            Se pueden barnizar, sin mojar el pincel con agua.<br />
+                            Se puede proteger con cualquier barniz al agua, lacas, cera, etc<br />
+                            NUEVOS MODELOS<br />
+                            Tamaño 22x36cm <br />
+                            Presentación: 2u",
+            'image' => asset('/images/productos/decoupage/seda-lavable-22x36.webp'),
+            'asset' => '/images/productos/decoupage/seda-lavable-22x36',
+            'images' => [
+                'Sch001','Sch002','Sch003','Sch004','Sch005','Sch006','Sch007','Sch008',
+                'Sch009','Sch010','Sch011','Sch012','Sch013','Sch014','Sch015','Sch016'
             ]
         ],
     ];

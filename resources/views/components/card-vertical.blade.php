@@ -19,9 +19,7 @@
             </div>
             <div class="vertical-card__body">
                 <h2 class="vertical-card__title">
-                    <span class="a-text--small a-text--bold">
-                        {!!$item['title']!!}
-                    </span>
+                    {!!$item['title']!!}
                 </h2>
                 
                 <p class="a-text--micro card__teacher">

@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container mt-4 mb-6">
     <div id="featured-links" class="boxed-wrapper clear-fix">
         @foreach ($products as $item)
             <div class="featured-link">

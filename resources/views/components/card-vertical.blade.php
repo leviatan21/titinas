@@ -22,7 +22,7 @@
                     {!!$item['title']!!}
                 </h2>
                 
-                <p class="a-text--micro card__teacher">
+                <p class="card__teacher">
                     @foreach ($item['description'] as $description)
                     {!!$description!!}@if(!$loop->last)<br/>@endif
                     @endforeach

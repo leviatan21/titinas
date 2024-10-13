@@ -1,75 +1,97 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-content contact">
+<div class="page-content">
 
     <div class="container">
-        <article class=" page type-page status-publish has-post-thumbnail hentry">
-            <header class="post-header">
-                <h1 class="post-title">Contacto</h1>
-            </header>
-            <div class="post-content col-container">
-                <div class="content-column col">
-                    <div class="widget-title">
-                        <h2 class="title">Gestión de pedidos y entregas</h2>
+        <header class="post-header">
+            <h1 class="post-title">{{$SEO->TITLE}}</h1>
+        </header>
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+            <div class="col mb-3">
+                <div class="card shop h-100">
+                    <div class="card-header">
+                        <h2 class="card-title">Gestión de pedidos y entregas</h2>
                     </div>
-                    <ul style="padding-left: 0;">
-                        <li>
-                            <strong>{{$CONFIG->ANA_NAME}}</strong>  
-                        </li>
-                        <li>
+                    <div class="card-body d-flex flex-column">
+                        <span class="block">
+                            <strong>{{$CONFIG->ANA_NAME}}</strong> 
+                        </span>
+                        <span class="block">
                             <strong>Tel:</strong> <a href="tel:{{$CONFIG->ANA_TEL}}">{{$CONFIG->ANA_TEL}}</a>
-                        </li>
-                        <li>
+                        </span>
+                        <span class="block">
                             <strong>Email:</strong> <a href="mailto:{{$CONFIG->ANA_EMAIL}}">{{$CONFIG->ANA_EMAIL}}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content-column col">
-                    <div class="widget-title">
-                        <h2 class="title">Gestión artística</h2>
+                        </span>
                     </div>
-                    <ul style="padding-left: 0;">
-                        <li>
-                            <strong>{{$CONFIG->ROX_NAME}}</strong>  
-                        </li>
-                        <li>
-                            <strong>Tel:</strong>  <a href="tel:{{$CONFIG->ROX_TEL}}">{{$CONFIG->ROX_TEL}}</a>
-                        </li>
-                        <li>
-                            <strong>Email:</strong> <a href="mailto:{{$CONFIG->ROX_EMAIL}}">{{$CONFIG->ROX_EMAIL}}</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </article>
+            <div class="col mb-3">
+                <div class="card shop h-100">
+                    <div class="card-header">
+                        <h2 class="card-title">Gestión artística</h2>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="block">
+                            <strong>{{$CONFIG->ROX_NAME}}</strong>  
+                        </span>
+                        <span class="block">
+                            <strong>Tel:</strong>  <a href="tel:{{$CONFIG->ROX_TEL}}">{{$CONFIG->ROX_TEL}}</a>
+                        </span>
+                        <span class="block">
+                            <strong>Email:</strong> <a href="mailto:{{$CONFIG->ROX_EMAIL}}">{{$CONFIG->ROX_EMAIL}}</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container pt-4">
-        <article class="page type-page status-publish has-post-thumbnail hentry">
-            <header class="post-header">
-                <h2 class="page-title">Condiciones</h2>
-            </header>
-            <div class="post-content">
+        <header class="post-header">
+            <h2 class="page-title">Condiciones</h2>
+        </header>
 
-                    <ul class="blog-grid">
-                        <li class="blog-list-style">
+        <div class="row">
+            <div class="col mb-3">
+
+                <div class="card bg-light my-4">
+                    <div class="card-body d-flex flex-column">
+                        <div class="block">
                             <strong class="title">Compra mínima por mayor: </strong> $ 150.000.-
-                        </li>
-                        <li class="blog-list-style">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-light my-4">
+                    <div class="card-body d-flex flex-column">
+                        <div class="block">
                             <strong class="title">Envíos: </strong> <br/>
-                            El pedido se envía por ANDREANI con quienes tenemos descuentos que trasladamos a nuestros clientes<br/>
-                            O por un transporte a coordinar<br/>
-                            También, por supuesto, pueden retirar en nuestra sede de Villa Uquiza CABA, o enviar 
-                            un comisionista.
-                        </li>
-                        <li class="blog-list-style">
-                            <strong class="title">Tiempos de entrega: </strong> <br/>
+                        El pedido se envía por ANDREANI con quienes tenemos descuentos que trasladamos a nuestros clientes<br/>
+                        O por un transporte a coordinar<br/>
+                        También, por supuesto, pueden retirar en nuestra sede de Villa Uquiza CABA, o enviar 
+                        un comisionista.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-light my-4">
+                    <div class="card-body d-flex flex-column">
+                        <div class="block">
+                            <strong class="title">Tiempos de entrega: </strong>
+                            <br/>
                             El pedido se ARMA luego de la aceptación del presupuesto/remito que será enviado por email/whatsapp al cliente<br/>
                             Se despacha una vez acreditado el pago, en un máximo de 7 días hábiles, pero en general es de 72hs.
-                        </li>
-                        <li class="blog-list-style">
-                            <strong class="title">forma de pago: </strong> <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-light my-4">
+                    <div class="card-body d-flex flex-column">
+                        <div class="block">
+                            <strong class="title">forma de pago: </strong>
+                            <br/>
                             CABA: pago contra entrega de pedido.
                             <br/>
                             Resto del país: a través de transferencia bancaria a <strong>Anabella Audubert</strong>
@@ -81,8 +103,13 @@
                             Alias: SUELA.SABLE.BAR
                             <br />
                             Banco Santander - Cuenta única 049-144386/4
-                        </li>
-                        <li class="blog-list-style">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-light my-4">
+                    <div class="card-body d-flex flex-column">
+                        <div class="block">
                             <strong class="title">LOS NUEVOS CLIENTES</strong> <br />
                             Recibirán junto con el pedido "muestras vivas" de nuestros productos exclusivos una muestra para que exhiban.
                             <br />
@@ -93,12 +120,12 @@
                             Los precios son sumamente accesibles, se envía un link privado para verlo y dura PARA SIEMPRE.
                             <br />
                             Pueden ver mas información en <a href="{{$SEO->SITEURL}}">nuestra página</a>
-                        </li>
-
-                    </ul>
-
+                            </div>
+                    </div>
+                </div>
+            
             </div>
-        </article>
+        </div>
     </div>
 
     @include('components.footer-shop')

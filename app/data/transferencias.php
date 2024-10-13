@@ -117,7 +117,14 @@ function transferencias() {
         ],
         [
             'title' => "Multitransfer",
-            'description' => "",
+            'description' => "Última tecnología.<br />
+                            Listas para usar.<br />
+                            No necesitan pegamento<br />
+                            Sobre vidrio puede colocarse multipropósito para reforzar el engomado.<br />
+                            Se activa con plancha, secador de pelo o pistola de calor, lo mas conveniente según la superficie elegida.<br />
+                            Frotar. Ira pasando a la superficie y despegándose del soporte transparente.<br />
+                            El soporte es apto para el calor, y es grueso.<br />
+                            Tela, Madera, Cartón, Latas, Vidrio.",
             'image' => asset('/images/productos/transferencias/multitransfer.webp'),
             'asset' => '/images/productos/transferencias/multitransfer',
             'images' => [
@@ -132,7 +139,7 @@ function transferencias() {
             'description' => "Dorado - Cobre - Plata<br/>
                             * Presentación: 5u x modelo",
             'image' => asset('/images/productos/transferencias/foil/foil.webp'),
-            'asset' => '/images/productos/transferencias/foil/',
+            'asset' => '/images/productos/transferencias/foil',
             'images' => [
                 'Foil Metalizado AGOSTO_page-0001','Foil Metalizado AGOSTO_page-0002','Foil Metalizado AGOSTO_page-0003',
                 'Foil Metalizado AGOSTO_page-0004','Foil Metalizado AGOSTO_page-0005','Foil Metalizado AGOSTO_page-0006',

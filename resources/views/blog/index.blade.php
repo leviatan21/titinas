@@ -5,7 +5,7 @@
 <div class="page-content contact">
     <div class="container">
         <header class="post-header">
-            <h1 class="post-title">Posteos en Titina's</h1>
+            <h1 class="post-title">{{$SEO->TITLE}}</h1>
         </header>
     </div>
 

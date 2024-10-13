@@ -26,8 +26,7 @@
 
         @foreach ($productos as $key => $item)
         <div class="container">
-
-            <article id="gallery-wrap-{{$key}}" class="gallery-wrap">
+            <article class="gallery-wrap">
 
                 <header class="post-header">
                     @if(!empty($item['title']))
@@ -45,26 +44,27 @@
                     @endif
                 </header>
 
-                <div id="gallery-wrap-{{$key}}" class="f-carousel">
-                    @if(empty($item['images']))
+                <div class="f-carousel">
+                @if(empty($item['images']))
                     <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="200" loading="lazy" fetchpriority="high" />
-                    @else
-                    <a href="javascript:void(0);" data-fancybox-trigger="gallery-{{$key}}" data-fancybox-index="0">
-                        @if(!empty($item['text']))
+                @else
+
+                    <a href="javascript:void(0);" data-fancybox-trigger="gallery-{{$key}}">
+                    @if(!empty($item['text']))
                         {!!$item['text']!!}
-                        @else
+                    @else
                         <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="200" loading="lazy" fetchpriority="high" />
-                        @endif
-                    </a>
                     @endif
+                    </a>
 
                     <div class="d-none">
-                        @foreach ($item['images'] as $image)
-                        <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-caption="{{$image['caption']}}">
-                            <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" loading="lazy" fetchpriority="low" />
+                    @foreach ($item['images'] as $image)
+                        <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
+                            <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" height="200" loading="lazy" fetchpriority="low" />
                         </a>
-                        @endforeach
+                    @endforeach
                     </div>
+                @endif
                 </div>
 
             </article>
@@ -79,13 +79,9 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
+    FancyboxDefaults();
 @foreach ($productos as $key => $item)
-    Fancybox.bind(document.getElementById("gallery-wrap-{{$key}}"),'[data-fancybox]', {
-        'compact':false,'idle':false,'animated':false,'showClass':false,'hideClass':false,'dragToClose':false,
-        'Images':{'initialSize':'fit','zoom':false},
-        'Thumbs':{'type':'classic','Carousel':{center:function(){return this.contentDim>this.viewportDim}}},
-        'Toolbar':{'display':{'left':['infobar'],'right':['iterateZoom','rotateCCW','rotateCW','flipX','flipY','slideshow','fullscreen','thumbs','close']}}
-    });
+    Fancybox.bind('[data-fancybox="gallery-{{$key}}"]',Fancybox.defaults);
 @endforeach
 });
 </script>

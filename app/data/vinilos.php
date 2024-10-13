@@ -8,7 +8,7 @@ function vinilos() {
                             Tamaños 15x15cm<br/>
                             * Presentación: 6u x modelo",
             'image' => asset('/images/productos/vinilos/esmerilados-15x15.webp'),
-            'asset' => '/images/productos/vinilos/esmerilados-15x15/',
+            'asset' => '/images/productos/vinilos/esmerilados-15x15',
             'images' => [
                 'AZ_TR_ESMERILADO_033','AZ_TR_ESMERILADO_001','AZ_TR_ESMERILADO_002','AZ_TR_ESMERILADO_003','AZ_TR_ESMERILADO_004',
                 'AZ_TR_ESMERILADO_005','AZ_TR_ESMERILADO_006','AZ_TR_ESMERILADO_007','AZ_TR_ESMERILADO_008','AZ_TR_ESMERILADO_009',

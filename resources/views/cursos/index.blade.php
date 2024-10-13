@@ -1,12 +1,7 @@
 @extends('layouts.app')
 
-@section('css')
-<link rel="stylesheet" href="{{asset("/css/vertical-cards.css{$REFRESH}")}}" type="text/css" media="all" />
-<link rel="stylesheet" href="{{asset("/css/horizontal-cards.css{$REFRESH}")}}" type="text/css" media="all" />
-@endsection
-
 @section('content')
-<div class="page-content contact">
+<div class="page-content">
     <div class="container">
         <article class=" page type-page status-publish has-post-thumbnail hentry">
             <header class="post-header">

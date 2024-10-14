@@ -16,18 +16,24 @@ class BlogController extends Controller {
 
         ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
 
-        $cats   = BlogTraits::GetCategoriesDescription();
-        $tags   = BlogTraits::GetTagDescription();
+        $authors = BlogTraits::GetAuthors();
+        $cats   = BlogTraits::GetCategories();
+        $catsDescriptions   = BlogTraits::GetCategoriesDescription();
+        $tags   = BlogTraits::GetTag();
+        $tagsDescriptions   = BlogTraits::GetTagDescription();
 
         static::seo([
             'title' => "Posteos en el blog de Titina's",
-            'description' => "$cats",
-            'keywords' => "$tags"
+            'description' => "$catsDescriptions",
+            'keywords' => "$tagsDescriptions"
         ]);
 
         return view('blog.index')
                 ->with([
                     'posts' => $items,
+                    'authors' => collect($authors)->unique('slug')->take(6),
+                    'cats' => collect($cats)->unique('slug')->take(6),
+                    'tags' => collect($tags)->unique('slug')->take(6),
                     'paginator' => $paginator,
                 ]);
     }

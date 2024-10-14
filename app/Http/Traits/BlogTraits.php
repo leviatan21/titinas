@@ -30,6 +30,17 @@ trait BlogTraits {
         return $list;
     }
 
+    public static function GetAuthors() {
+        $list       = [];
+        $posts      = static::GetPosts();
+
+        foreach($posts as $post) {
+            $list[] = $post['author'];
+        }
+
+        return $list;
+    }
+
     public static function GetCategoriesDescription() {
         $descriptions   = [];
         $list           = static::GetCategories();

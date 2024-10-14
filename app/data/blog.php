@@ -22,6 +22,50 @@ function posts() {
                 'Entre las ciudades italianas más importantes de la historia del Art Nouveau podemos mencionar Turín, Milán y Palermo.'
             ]
         ],
+        /*
+        [
+            'datePublished' => '2024-10-10T10:00:00+00:00',
+            'dateModified' => '2024-10-10T10:00:00+00:00',
+            'title' => 'Art Nouveau y sus distintos nombres',
+            'image' => asset('/images/blog/art-nouveau.webp'),
+            'author' => 'Rox Caballero',
+            'category' => [
+                'Historia'
+            ],
+            'tag' => [
+                'Nouveau'
+            ],
+            'content' => [
+                'El Art Nouveau fue un movimiento artístico y filosófico que se desarrolló entre finales del siglo XIX y la primera década del siglo XX y que Influyó en las artes figurativas , la arquitectura y las artes aplicadas.',
+                'También conocido en Italia como estilo floral , estilo Liberty, tuvo su mayor difusión durante el último periodo de la llamada Belle Époque ( período histórico, sociocultural y artístico que afectó a Europa aproximadamente, entre 1871 y 1914 ).',
+                'El nombre Art Nouveau ("arte nuevo") fue acuñado en Francia , país en el que el movimiento también fue conocido como Estilo Guimard , Estilo 1900; también en Gran Bretaña se le conoció como Art Nouveau junto con las definiciones en el lenguaje de Modern Style o Studio Style , mientras que en Alemania tomó el nombre de Jugendstil (estilo joven) , en Austria Sezessionstil (Secesión) , en Países Bajos Nieuwe Kunst. (traducción del Art Nouveau al holandés) , en Rusia Moderno y, en España , Arte Joven (arte joven), o más frecuentemente, Modernismo .',
+                'Un representate del Modernismo Catalán fue Antonio Gaudí, el cual exprimió al extermo este estilo basado en la naturaleza, la botánica, las lineas curva en arquitectura y decoración.',
+                "La expresión «Art Nouveau» fue utilizada por primera vez por Edmond Picard en 1894 en la revista belga L'Art moderni para calificar la producción artística de Henry van de Velde, su trabajo fue elaborado, juzgado y estudiado a través de la única cualidad evidentemente común a todos: la novedad; De ahí surgió el nombre Art Nouveau.",
+                'Entre las ciudades italianas más importantes de la historia del Art Nouveau podemos mencionar Turín, Milán y Palermo.'
+            ]
+        ],
+        [
+            'datePublished' => '2024-10-10T10:00:00+00:00',
+            'dateModified' => '2024-10-10T10:00:00+00:00',
+            'title' => 'Art Nouveau y sus distintos nombres',
+            'image' => asset('/images/blog/art-nouveau.webp'),
+            'author' => 'Caballero',
+            'category' => [
+                'Arte'
+            ],
+            'tag' => [
+                'Nouveau'
+            ],
+            'content' => [
+                'El Art Nouveau fue un movimiento artístico y filosófico que se desarrolló entre finales del siglo XIX y la primera década del siglo XX y que Influyó en las artes figurativas , la arquitectura y las artes aplicadas.',
+                'También conocido en Italia como estilo floral , estilo Liberty, tuvo su mayor difusión durante el último periodo de la llamada Belle Époque ( período histórico, sociocultural y artístico que afectó a Europa aproximadamente, entre 1871 y 1914 ).',
+                'El nombre Art Nouveau ("arte nuevo") fue acuñado en Francia , país en el que el movimiento también fue conocido como Estilo Guimard , Estilo 1900; también en Gran Bretaña se le conoció como Art Nouveau junto con las definiciones en el lenguaje de Modern Style o Studio Style , mientras que en Alemania tomó el nombre de Jugendstil (estilo joven) , en Austria Sezessionstil (Secesión) , en Países Bajos Nieuwe Kunst. (traducción del Art Nouveau al holandés) , en Rusia Moderno y, en España , Arte Joven (arte joven), o más frecuentemente, Modernismo .',
+                'Un representate del Modernismo Catalán fue Antonio Gaudí, el cual exprimió al extermo este estilo basado en la naturaleza, la botánica, las lineas curva en arquitectura y decoración.',
+                "La expresión «Art Nouveau» fue utilizada por primera vez por Edmond Picard en 1894 en la revista belga L'Art moderni para calificar la producción artística de Henry van de Velde, su trabajo fue elaborado, juzgado y estudiado a través de la única cualidad evidentemente común a todos: la novedad; De ahí surgió el nombre Art Nouveau.",
+                'Entre las ciudades italianas más importantes de la historia del Art Nouveau podemos mencionar Turín, Milán y Palermo.'
+            ]
+        ],
+        */
     ];
 }
 

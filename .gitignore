@@ -1,6 +1,6 @@
 /.phpunit.cache
 /node_modules
-/public
+/public/images
 /storage/*.key
 /gulp
 /vendor

@@ -20,10 +20,18 @@
                         <h2 class="text-center h4">
                             {{$item['title']}}
                         </h2>
-                        <a href="{{$item['href']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
-                            Ver video en <br/>
-                            <svg class="svg-inline--fa fa-facebook-f fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>acebook
+                        @if(!empty($item['facebook']))
+                        <a href="{{$item['facebook']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
+                            <svg class="svg-inline--fa fa-video fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+                            &nbsp;Ver video en Facebook
                         </a>
+                        @endif
+                        @if(!empty($item['youtube']))
+                        <a href="{{$item['youtube']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
+                            <svg class="svg-inline--fa fa-video fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+                            &nbsp;Ver video en Youtube
+                        </a>
+                        @endif
                     </div>
                     @if(!empty($item['schemamarkup']))
                     @include('components.schemamarkup', ['schemamarkup' => $item['schemamarkup'] ])

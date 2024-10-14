@@ -24,13 +24,15 @@ trait SchemaMarkupTraits {
 
     public static function VideoObject( $seo, $item=[] ) {
 
+        $embedUrl = (isset($item['facebook'])) ? $item['facebook'] : $item['youtube'];
+
         $shema = [
             "@context" => "https://schema.org",
             "@type" => "VideoObject",
             "name" => $item['title'],
             "description" => $item['title'],
             "thumbnailUrl" => $item['image'],
-            "embedUrl" => $item['href'],
+            "embedUrl" => $embedUrl,
             "uploadDate" => $item['datePublished']
         ];
 

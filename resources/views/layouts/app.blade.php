@@ -53,19 +53,5 @@
         <script src="{{asset("/js/custom-scripts.js{$REFRESH}")}}" type="text/javascript"></script>
         @yield('js')
 
-        <button id="toggleMode">Cambiar Modo</button>
-        <script>
-            document.getElementById('toggleMode')
-            .addEventListener('click', () => {
-                console.log( document.body.getAttribute('data-theme') )
-                if (document.body.getAttribute('data-theme') === 'dark') {
-                    document.body.removeAttribute('data-theme');
-                    document.body.classList.remove('dark');
-                } else {
-                    document.body.setAttribute('data-theme', 'dark');
-                    document.body.classList.add('dark');
-                }
-            });
-          </script> 
     </body>
 </html>

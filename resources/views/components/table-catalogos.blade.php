@@ -5,7 +5,7 @@
 </header>
 <div class="post-content">
     <div class="woocommerce">
-        <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+        <table class="shop_table shop_table_responsive" cellspacing="0">
             <thead>
                 <tr>
                     <th class="product-name">Producto</th>

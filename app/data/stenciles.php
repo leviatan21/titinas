@@ -3,15 +3,14 @@
 function stenciles() {
     return [
         [
-            'title' => '',
-            'description' => "Set para puntillismo<br/>
-                        Se venden por set de 9 U distintas",
+            'title' => 'Set para puntillismo',
+            'description' => "Se venden por set de 9 U distintas",
             'image' => asset('/images/productos/stenciles/set-puntillismo-azul.webp'),
             'asset' => '/images/productos/stenciles/puntillismo',
             'images' => []
         ],
         [
-            'title' => '',
+            'title' => 'Stenciles',
             'description' => "Tamaño: de 40x55cm",
             'image' => asset('/images/productos/stenciles/40x55.webp'),
             'asset' => '/images/productos/stenciles/40x55',
@@ -21,7 +20,7 @@ function stenciles() {
             ]
         ],
         [
-            'title' => '',
+            'title' => 'Stenciles',
             'description' => "Tamaño: de 5x24cm",
             'image' => asset('/images/productos/stenciles/5x24.webp'),
             'asset' => '/images/productos/stenciles/5x24',
@@ -33,7 +32,7 @@ function stenciles() {
             ]
         ],
         [
-            'title' => '',
+            'title' => 'Stenciles',
             'description' => "Tamaño: de 17x17cm",
             'image' => asset('/images/productos/stenciles/17x17.webp'),
             'asset' => '/images/productos/stenciles/17x17',
@@ -48,7 +47,7 @@ function stenciles() {
             ]
         ],
         [
-            'title' => '',
+            'title' => 'Stenciles',
             'description' => "Tamaño: de 27x12cm",
             'image' => asset('/images/productos/stenciles/27x12.webp'),
             'asset' => '/images/productos/stenciles/27x12',
@@ -62,7 +61,7 @@ function stenciles() {
             ]
         ],
         [
-            'title' => '',
+            'title' => 'Stenciles',
             'description' => "Tamaño: de 20x30cm",
             'image' => asset('/images/productos/stenciles/20x30.webp'),
             'asset' => '/images/productos/stenciles/20x30',
@@ -76,7 +75,7 @@ function stenciles() {
             ]
         ],
         [
-            'title' => '',
+            'title' => 'Stenciles',
             'description' => "Tamaño: de 30x30cm",
             'image' => asset('/images/productos/stenciles/30x30.webp'),
             'asset' => '/images/productos/stenciles/30x30',

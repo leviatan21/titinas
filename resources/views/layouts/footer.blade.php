@@ -47,6 +47,12 @@
 
     <div class="footer-copyright">
         <div class="page-footer-inner container">
+            <div class="copyright-info">
+                © {{date('Y')}} - All Rights Reserved | 
+                <span class="credit">
+                    Theme by Titina's
+                </span>
+            </div>
         </div>
     </div>
 

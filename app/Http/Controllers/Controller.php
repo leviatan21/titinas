@@ -96,6 +96,7 @@ class Controller {
             'ROX_EMAIL'         => config('custom.RoxaEmail', 'ventas.titinas@gmail.com'),
             'EMAIL_VENTAS'      => config('custom.EmailVentas', 'ventas.titinas@gmail.com'),
             'EMAIL_ADISTANCIA'  => config('custom.EmailAdistancia', 'ventas.titinas+adistancia@gmail.com'),
+            'CATALOGS_LINK'     => url('/redirect?to=catalogos'),
             'DRIVE_PDF'         => config('custom.drivePdf', 'https://drive.google.com/drive/folders/1W-8xH6l98gaRglPqY1eXhXt-GSArmiHM?usp=sharing'),
             'PUNTO_VENTA'       => config('custom.puntoventa','https://docs.google.com/forms/d/1snk2faX6IcoLh3iqmX6hgQVNHLD4PZIXwre985aoHyw/edit')
         ];

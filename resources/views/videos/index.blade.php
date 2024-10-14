@@ -18,7 +18,7 @@
                     <img src="{{$item['image']}}" alt="{{$item['title']}}" height="200" class="img-thumbnail border border-light" />
                     <div class="card-body d-flex flex-column">
                         <h2 class="text-center h4">
-                            {{$item['title']}}
+                            {!!$item['title']!!}
                         </h2>
 
                         @if(!empty($item['dateHumans']))
@@ -46,9 +46,11 @@
                         </a>
                         @endif
                     </div>
+
                     @if(!empty($item['schemamarkup']))
                     @include('components.schemamarkup', ['schemamarkup' => $item['schemamarkup'] ])
                     @endif
+
                 </div>
             </div>
             @endforeach

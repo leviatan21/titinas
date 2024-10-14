@@ -10,7 +10,7 @@ function videos() {
         ],
         [
             'title' => 'Multitransfer en vidrio',
-            'description' => "Las láminas Multitransfer de Titina's se pueden aplicar también en vidrio. Acá muestro sólo con la aplicación de calor, pero puede usare pegamento multipropósito, dejar secar y luego pegar y frotar.",
+            'description' => "Las láminas Multitransfer de Titina's se pueden aplicar también en vidrio. Acá muestro sólo con la aplicación de calor, pero puede usarse pegamento multipropósito, dejar secar y luego pegar y frotar.",
             'datePublished' => '2023-05-30T16:00:00+00:00',
             'image' => asset('/images/videos/multitransfer-vidrio.webp'),
             'youtube' => 'https://www.youtube.com/shorts/w2ExcKMnYuw'
@@ -19,7 +19,7 @@ function videos() {
             'title' => 'Stencil',
             'description' => '',
             'datePublished' => '2021-08-07T16:00:00+00:00',
-            'image' => asset('/images/videos/stencil.webp'),
+            'image' => asset('/images/videos/stenciles.webp'),
             'facebook' => 'https://www.facebook.com/espaciotitinas/videos/336816370819342'
         ],
         [

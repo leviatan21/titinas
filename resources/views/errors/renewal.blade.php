@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- https://preview.uideck.com/items/appear/ --}}
 <div id="page-wrap">
     <div class="page-content">
         <div class="main-wrapper renewal">
@@ -45,10 +44,9 @@
     dataLayer.push({ 
         'event':"pageView", 
         'event_action':"pageView", 
-        'event_category':"pageError",
-        'event_label':"pageError",
+        'event_category':"pageRenewal",
+        'event_label':"pageRenewal",
         'event_value':"{{url()->current()}}"
     });
 </script>
-
 @endsection

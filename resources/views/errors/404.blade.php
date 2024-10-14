@@ -10,12 +10,12 @@
 </div>
 
 <script>
-dataLayer.push({ 
-    'event':"pageView", 
-    'event_action':"pageView", 
-    'event_category':"pageError",
-    'event_label':"pageError",
-    'event_value':"{{url()->current()}}"
-});
+    dataLayer.push({ 
+        'event':"pageView", 
+        'event_action':"pageView", 
+        'event_category':"pageError",
+        'event_label':"pageError",
+        'event_value':"{{url()->current()}}"
+    });
 </script>
 @endsection

@@ -30,7 +30,7 @@ function MobileMenu() {
 function FancyboxDefaults() {
 	Fancybox.defaults = {
         ...Fancybox.defaults,
-        'compact':false,'idle':false,'animated':false,'showClass':false,'hideClass':false,'dragToClose':false,'contentClick':'next',
+        'compact':false,'idle':false,'animated':false,'showClass':false,'hideClass':false,'dragToClose':false,'contentClick':false,'backdropClick':false,
         'Images':{'initialSize':'fit','protected':true,'zoom':false},
         'Thumbs':{'type':'classic','Carousel':{'infinite':false,center:function(){return this.contentDim>this.viewportDim}}},
         'Toolbar':{'display':{'left':['infobar'],'right':['iterateZoom','rotateCCW','rotateCW','flipX','flipY','slideshow','fullscreen','thumbs','close']}},

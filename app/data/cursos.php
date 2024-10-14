@@ -279,7 +279,7 @@ function cursosVertical() {
             'description' => [
                 'Cuadro realizado sobre una lamina',
                 'en blanco y negro.',
-                'Intervenido con Pasta ceramica sin horno Titina\'s a modo de estucado, modelado, espatulado, y pintado con Tintas al alcohol.'
+                'Intervenido con Pasta cerámica sin horno Titina\'s a modo de estucado, modelado, espatulado, y pintado con Tintas al alcohol.'
             ],
           //'mercadopago' => '65692463-4ff17865-d68e-4fdd-a9e3-f75ca8e9c95b',
             'price' => '20000',
@@ -292,9 +292,9 @@ function cursosVertical() {
             'image-cover' => asset('/images/cursos/mayolicas.webp'),
             'alt-cover' => 'Mayólicas sin horno',
             'image-body' => asset('/images/cursos/logo-pasta-ceramica-sin-horno-titinas.webp'),
-            'alt-body' => 'pasta ceramica sin horno titinas',
+            'alt-body' => 'pasta cerámica sin horno titinas',
             'description' => [
-                "Mayólicas con Pasta ceramica sin horno Titina's"
+                "Mayólicas con Pasta cerámica sin horno Titina's"
             ],
           //'mercadopago' => '65692463-1231412e-1862-4e67-aa1c-361ef3dc1d0a',
             'price' => '15000',
@@ -307,9 +307,9 @@ function cursosVertical() {
             'image-cover' => asset('/images/cursos/mosaicos-teselas-marmoles.webp'),
             'alt-cover' => 'Mosaicos Calcáreos, mayolicas y Mármoles',
             'image-body' => asset('/images/cursos/logo-pasta-ceramica-sin-horno-titinas.webp'),
-            'alt-body' => 'pasta ceramica sin horno titinas',
+            'alt-body' => 'pasta cerámica sin horno titinas',
             'description' => [
-                "Mosaicos Calcáreos, mayolicas y Mármoles con Pasta ceramica sin horno Titina's"
+                "Mosaicos Calcáreos, mayolicas y Mármoles con Pasta cerámica sin horno Titina's"
             ],
           //'mercadopago' => '65692463-9d6e2b73-4194-424f-a0e6-321f5670d09d',
             'price' => '20000',
@@ -322,9 +322,9 @@ function cursosVertical() {
             'image-cover' => asset('/images/cursos/macetas-colgantes.webp'),
             'alt-cover' => 'Macetas colgantes',
             'image-body' => asset('/images/cursos/logo-pasta-ceramica-sin-horno-titinas.webp'),
-            'alt-body' => 'pasta ceramica sin horno titinas',
+            'alt-body' => 'pasta cerámica sin horno titinas',
             'description' => [
-                "Macetas con Pasta ceramica sin horno Titina's"
+                "Macetas con Pasta cerámica sin horno Titina's"
             ],
           //'mercadopago' => '65692463-8b05eab9-2540-4255-91a0-71a430c6d431',
             'price' => '15000',
@@ -337,9 +337,9 @@ function cursosVertical() {
             'image-cover' => asset('/images/cursos/platos-ceramicos-con-textura.webp'),
             'alt-cover' => 'Platos cerámicos con textura',
             'image-body' => asset('/images/cursos/logo-pasta-ceramica-sin-horno-titinas.webp'),
-            'alt-body' => 'pasta ceramica sin horno titinas',
+            'alt-body' => 'pasta cerámica sin horno titinas',
             'description' => [
-                "Platos cerámicos y textura con Pasta ceramica sin horno Titina's"
+                "Platos cerámicos y textura con Pasta cerámica sin horno Titina's"
             ],
           //'mercadopago' => '65692463-dcd7217a-3fa6-4ccf-8eb8-4b9ea5577dd1',
             'price' => '150000',
@@ -352,9 +352,9 @@ function cursosVertical() {
             'image-cover' => asset('/images/cursos/acolchado-en-pasta-ceramica.webp'),
             'alt-cover' => 'Acolchado cerámico',
             'image-body' => asset('/images/cursos/logo-pasta-ceramica-sin-horno-titinas.webp'),
-            'alt-body' => 'pasta ceramica sin horno titinas',
+            'alt-body' => 'pasta cerámica sin horno titinas',
             'description' => [
-                "Acolchado cerámico con Pasta ceramica sin horno Titina's"
+                "Acolchado cerámico con Pasta cerámica sin horno Titina's"
             ],
           //'mercadopago' => '65692463-d5caee31-e346-4d13-aae6-58f45547be75',
             'price' => '15000',

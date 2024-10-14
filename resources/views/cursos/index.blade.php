@@ -44,7 +44,7 @@
                     </li>
                     <li class="blog-list-style">
                         <strong class="title">MERCADERÍA DE FABRICACIÓN EXCLUSIVA / PUNTO DE VENTA: </strong> <br/>
-                        Para el caso de la Pasta ceramica sin horno y el Efecto Gaudi, <br/>
+                        Para el caso de la Pasta cerámica sin horno y el Efecto Gaudi, <br/>
                         si Ud. no consigue el producto en su localidad, nosotros podemos enviarle por correo ANDREANI <br/>
                         en forma minorista para que pueda realizar el trabajo. <br/>
                         Y si posee taller, podemos luego venderle a precios preferenciales para que dicte los seminarios.

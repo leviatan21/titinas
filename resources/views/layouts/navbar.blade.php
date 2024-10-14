@@ -31,6 +31,7 @@
 @foreach ($MENU as $item)
                     <li class="menu-item menu-item-type-custom menu-item-object-custom">
                         <a href="{{$item['href']}}" @isset($item['target']) target="{{$item['target']}}" @endisset @isset($item['rel']) rel="{{$item['rel']}}" @endisset @isset($item['label']) aria-label="{{$item['label']}}" @endisset>
+                            @isset($item['image']) <img src="{{$item['image']}}" class="menu-item-image" alt="{{$item['label']}}" width="30" height="25" /> @endisset
                             {{$item['text']}}
                         </a>
                     </li>

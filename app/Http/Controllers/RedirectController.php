@@ -29,6 +29,6 @@ class RedirectController {
 
     static function renovado($route, $extension) {
         Log::channel('Renewal')->info('Page:', ['page' => "{$route}.{$extension}"]);
-        return redirect('/sitio-renovado', 307);
+        return redirect('/sitio-renovado', 301);
     }
 }

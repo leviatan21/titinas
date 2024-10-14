@@ -14,7 +14,7 @@
 
                 <header class="post-header">
                     @isset($item['title'])
-                    <h2 class="page-title">{!!$item['title']!!}</h2>
+                    <h2 class="page-title color-brand">{!!$item['title']!!}</h2>
                     @endisset
 
                     @isset($item['subtitle'])

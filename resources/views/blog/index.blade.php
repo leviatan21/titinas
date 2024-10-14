@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-
 @section('content')
-<div class="page-content contact">
+<div class="page-content py-4">
     <div class="container">
         <header class="post-header">
             <h1 class="post-title">{{$SEO->TITLE}}</h1>

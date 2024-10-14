@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-content contact">
+<div class="page-content py-4">
 
     <div class="container py-5">
         <header class="post-header">

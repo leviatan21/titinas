@@ -22,6 +22,21 @@ trait SchemaMarkupTraits {
         return $string;
     }
 
+    public static function VideoObject( $seo, $item=[] ) {
+
+        $shema = [
+            "@context" => "https://schema.org",
+            "@type" => "VideoObject",
+            "name" => $item['title'],
+            "description" => $item['title'],
+            "thumbnailUrl" => $item['image'],
+            "embedUrl" => $item['href'],
+            "uploadDate" => $item['datePublished']
+        ];
+
+        return static::View($shema);
+    }
+
     public static function BlogPosting( $seo, $item=[] ) {
 
         $shema = [

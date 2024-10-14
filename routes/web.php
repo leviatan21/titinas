@@ -8,6 +8,7 @@ use App\Http\Controllers\CatalogosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ComerciosController;
+use App\Http\Controllers\VideosController;
 use App\Http\Controllers\RenewalController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ProductosController;
@@ -24,7 +25,7 @@ Route::get( '/contacto',            [ContactoController::class, 'index']        
 Route::get( '/comercios',           [ComerciosController::class, 'index']           )->name('web.comercios');
 Route::get( '/manuales',            [HomeController::class, 'proximamente']         )->name('web.manuales');
 Route::get( '/historia',            [HomeController::class, 'historia']             )->name('web.historia');
-Route::get( '/videos',              [HomeController::class, 'proximamente']         )->name('web.videos');
+Route::get( '/videos',              [VideosController::class, 'index']              )->name('web.videos');
 Route::get( '/sitio-renovado',      [RenewalController::class, 'index']             )->name('renovado');
 Route::get( '/redirect',            [RedirectController::class, 'index']            )->name('redireccion');
 Route::prefix('/productos')->group(function () {

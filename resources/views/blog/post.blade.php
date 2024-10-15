@@ -16,7 +16,7 @@
                 <span class="border-divider"></span>
 
                 @if(!empty($post['dateHumans']))
-                <div class="post-meta clear-fix">
+                <div class="post-meta clearfix">
                     <span class="post-date">{{$post['dateHumans']}}</span>
                 </div>
                 @endif
@@ -64,20 +64,20 @@
             @if (!empty($prev))
             <div class="previous-post">
                 @if (!empty($prev['image']))
-                <a href="{{$prev['link']['href']}}" title="{{$prev['title']}}">
-                    <div class="post-media">
+                <div class="post-media">
+                    <a href="{{$prev['link']['href']}}" title="{{$prev['title']}}">
                         <img src="{{$prev['image']}}" alt="{{$prev['title']}}" class="attachment-bard-single-navigation size-bard-single-navigation wp-post-image" decoding="async" loading="lazy" />
-                    </div>
-                </a>
+                    </a>
+                </div>
                 @endif
 
-                <div>
-                    <span>
+                <div class="post-content">
+                    <div>
                         <svg class="svg-inline--fa fa-long-arrow-alt-left fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="long-arrow-alt-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"></path></svg>
                         &nbsp;Anterior
-                    </span>
+                    </div>
                     <a href="{{$prev['link']['href']}}" title="{{$prev['title']}}">
-                        <h5>{{$prev['title']}}</h5>
+                        <div class="post-title">{{$prev['title']}}</div>
                     </a>
                 </div>
             </div>
@@ -86,17 +86,19 @@
             @if (!empty($next))
             <div class="next-post">
                 @if (!empty($next['image']))
+                <div class="post-media">
                     <a href="https://bard-free.wp-royal-themes.com/demo/must-look-fashionable/" title="{{$next['title']}}">
-                    <img src="{{$next['image']}}" alt="{{$next['title']}}" class="attachment-bard-single-navigation size-bard-single-navigation wp-post-image" decoding="async" loading="lazy" />
-                </a>
+                        <img src="{{$next['image']}}" alt="{{$next['title']}}" class="attachment-bard-single-navigation size-bard-single-navigation wp-post-image" decoding="async" loading="lazy" />
+                    </a>
+                </div>
                 @endif
-                <div>
-                    <span>
+                <div class="post-content">
+                    <div>
                         <svg class="svg-inline--fa fa-long-arrow-alt-right fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="long-arrow-alt-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>
                         &nbsp;Siguiente
-                    </span>
+                    </div>
                     <a href="{{$next['link']['href']}}" title="{{$next['title']}}">
-                        <h5>{{$next['title']}}</h5>
+                        <div class="post-title">{{$next['title']}}</div>
                     </a>
                 </div>
             </div>
@@ -125,7 +127,7 @@
                 <span class="related-post-date">December 17, 2023</span>
             </section>
         
-            <div class="clear-fix"></div>
+            <div class="clearfix"></div>
         </div>
     --}}
     </div>

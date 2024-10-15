@@ -1,5 +1,5 @@
 
-    <div id="main-nav" class="clear-fix">
+    <div id="main-nav" class="clearfix">
         <div class="boxed-wrapper">
             <div class="mobile-menu-btn">
                 <div class="main-nav-sidebar">

@@ -28,7 +28,7 @@
 
         </div>
         <span class="border-divider"></span>
-        <div class="clear-fix"></div>
+        <div class="clearfix"></div>
     @endif
 
     @include('blog.grid', ['posts'=> $posts])

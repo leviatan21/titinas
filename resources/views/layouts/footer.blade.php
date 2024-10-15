@@ -1,5 +1,5 @@
 
-<footer id="page-footer" class="clear-fix">
+<footer id="page-footer" class="clearfix">
     <div class="footer-socials">
 @isset($SOCIAL->facebook)
         <a href="{{$SOCIAL->facebook}}" title="Facbook" target="_blank" rel="opener noreferrer nofollow">

@@ -12,11 +12,11 @@
 
             @foreach ($item['steps'] as $step)
             <article class="md:flex">
-                <div class="md:w-1/5 mr-4 mt-4 d-flex flex-col">
+                <div class="md:w-1/5 mr-4 mt-4 d-flex flex-column">
                     <div class="horizontal-cards-image">
                         <img src="{{$step['image-cover']}}" alt="{!!$step['alt-cover']!!}" loading="lazy" fetchpriority="auto" />
                         @if(isset($item['special']) && $item['special']==true)
-                        <span class="bg-green-500 rounded p-1 text-white inline-block absolute pin-t10 pin-r10">
+                        <span class="bg-green-500 rounded p-1 text-white inline-block position-absolute pin-t10 pin-r10">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.644 300" class="fill-current w-5 h-5">
                                 <path d="M215.283 99.885l-8.444-10.383a14.953 14.953 0 01-3.169-11.795l2.12-13.21a14.94 14.94 0 00-9.431-16.329l-12.503-4.765a14.939 14.939 0 01-8.64-8.64l-4.764-12.502a14.94 14.94 0 00-16.33-9.432l-13.208 2.12a14.94 14.94 0 01-11.796-3.156L118.735 3.35a14.94 14.94 0 00-18.851 0l-10.382 8.444a14.94 14.94 0 01-11.796 3.157l-13.21-2.12a14.94 14.94 0 00-16.329 9.431l-4.764 12.503a14.939 14.939 0 01-8.64 8.64L22.26 48.168a14.94 14.94 0 00-9.431 16.33l2.12 13.209a14.94 14.94 0 01-3.156 11.795L3.35 99.885a14.94 14.94 0 000 18.851l8.444 10.383a14.94 14.94 0 013.156 11.795l-2.146 13.222a14.94 14.94 0 009.432 16.33l12.503 4.764a14.939 14.939 0 018.64 8.64l4.765 12.55a14.94 14.94 0 0016.329 9.433l13.21-2.12a14.94 14.94 0 0111.795 3.155l10.382 8.445a14.94 14.94 0 0018.852 0l10.382-8.445a14.94 14.94 0 0111.796-3.156l13.21 2.12a14.94 14.94 0 0016.329-9.431l4.764-12.503a14.939 14.939 0 018.64-8.64l12.502-4.764a14.94 14.94 0 009.432-16.33l-2.12-13.209a14.953 14.953 0 013.168-11.796l8.445-10.382a14.94 14.94 0 00.024-18.912zm-106.016 84.642c-41.538 0-75.211-33.673-75.211-75.21s33.673-75.211 75.21-75.211 75.211 33.673 75.211 75.21c-.046 41.5-33.662 75.137-75.161 75.211h-.05z"></path>
                                 <circle cx="109.315" cy="109.317" r="62.148"></circle>
@@ -25,18 +25,18 @@
                         </span>
                         @endif
                     </div>
-                    <div class="flex flex-col md:flex-row mt-2">
+                    <div class="flex flex-column md:flex-row mt-2">
                         @if (!empty($step['mercadopago']))
                         @include('components.mercadopago-payment-button', ['preference_id' => $step['mercadopago'] ])
                         @endempty
                     </div>
                 </div>
-                <div class="md:w-4/5 ml-4 mt-4 d-flex flex-col">
+                <div class="md:w-4/5 ml-4 mt-4 d-flex flex-column">
                     <p class="text-2xl text-green-500 font-semibold">
                         {!!$step['title']!!}
                     </p>
                     {{--
-                    <div class="flex flex-col md:flex-row mb-2">
+                    <div class="flex flex-column md:flex-row mb-2">
                         <button type="button" class="btn btn-xs btn-green mr-2 mb-2 md:mb-0">HOW TO EARN YOUR CERTIFICATE</button> 
                         <button type="button" class="btn btn-xs btn-gray-light mr-2 mb-2 md:mb-0">PASS</button>
                         <button type="button" class="btn btn-xs btn-gray-light mr-2 mb-2 md:mb-0">MERIT</button> 

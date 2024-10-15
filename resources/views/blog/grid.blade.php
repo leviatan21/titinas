@@ -71,6 +71,6 @@
     </div>
 </div>
 
-@if (!empty($paginator) && $paginator['total'] > 1)
+@if (!empty($paginator) && $paginator->total() > 1)
 @include('components.paginator', ['paginator'=> $paginator])
 @endif

@@ -10,6 +10,55 @@
             </div>
         </section>
 
+        {{--
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+        <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/1560763354786699/" data-width="500" data-show-text="false">
+            <div class="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/facebook/videos/1560763354786699/">
+                <a href="https://www.facebook.com/facebook/videos/1560763354786699/">How to Share With Just Friends</a>
+                <p>How to share with just friends.</p>
+                Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
+              </blockquote>
+            </div>
+          </div>
+        --}}
+
+        {{--
+        <iframe 
+            name="fde21881a8fd375dd" 
+            width="500px" height="1000px" 
+            data-testid="fb:video Facebook Social Plugin" 
+            title="fb:video Facebook Social Plugin" 
+            frameborder="0" 
+            allowtransparency="true"
+            allowfullscreen="true" 
+            scrolling="no" 
+            allow="encrypted-media" 
+            src="https://web.facebook.com/v3.2/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F{{'1560763354786699'}}"
+            <!--
+            src="
+            https://web.facebook.com/v3.2/plugins/video.php?app_id=
+            &amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df944feddf96f38ecd%26domain%3D127.0.0.1%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252F127.0.0.1%253A8000%252Ffe36d93918885d93f%26relation%3Dparent.parent
+            &amp;container_width=1110
+            &amp;href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F1560763354786699%2F
+            &amp;locale=en_US
+            &amp;sdk=joey
+            &amp;show_text=false
+            &amp;width=500" 
+            -->
+            style="border: none; visibility: visible; width: 500px; height: 281px;" 
+            class=""
+        ></iframe>
+        --}}
+        
+        {{--
+        https://fb.watch/vehKXhnx-P/
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fsantuariodeelefantes%2Fvideos%2F1560763354786699%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?videos=1560763354786699&height=314&&width=560&show_text=false&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        --}}
+
         @foreach($chunks as $chunk)
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 my-4">
             @foreach($chunk as $item)

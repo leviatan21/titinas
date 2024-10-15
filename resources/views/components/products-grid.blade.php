@@ -1,5 +1,5 @@
 <div class="container mt-4 mb-6">
-    <div id="featured-links" class="boxed-wrapper clear-fix">
+    <div id="featured-links" class="boxed-wrapper clearfix">
         @foreach ($products as $item)
             <div class="featured-link">
                 <a href="{{$item['href']}}">

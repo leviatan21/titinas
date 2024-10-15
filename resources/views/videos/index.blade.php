@@ -11,11 +11,15 @@
         </section>
 
         @foreach($chunks as $chunk)
-        <div class="row row-cols-1 row-cols-sm-3 my-4">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 my-4">
             @foreach($chunk as $item)
             <div class="col mb-3">
                 <div class="card h-100 video-thumbnail">
+                    @if(!empty($item['youtube-embed']))
+                        @include('components.iframe-youtube-vertical', ['url'=>$item['youtube-embed'], 'title'=>$item['title']] )
+                    @else
                     <img src="{{$item['image']}}" alt="{{$item['title']}}" height="200" class="img-thumbnail border border-light" />
+                    @endif
                     <div class="card-body d-flex flex-column">
                         <h2 class="text-center h4">
                             {!!$item['title']!!}
@@ -33,14 +37,14 @@
                         </p>
                         @endif
 
-                        @if(!empty($item['facebook']))
-                        <a href="{{$item['facebook']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
+                        @if(!empty($item['facebook-share']))
+                        <a href="{{$item['facebook-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
                             <svg class="svg-inline--fa fa-video fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
                             &nbsp;Ver video en Facebook
                         </a>
                         @endif
-                        @if(!empty($item['youtube']))
-                        <a href="{{$item['youtube']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
+                        @if(empty($item['youtube-embed']) && !empty($item['youtube-share']))
+                        <a href="{{$item['youtube-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
                             <svg class="svg-inline--fa fa-video fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
                             &nbsp;Ver video en Youtube
                         </a>

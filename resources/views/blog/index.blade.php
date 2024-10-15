@@ -13,7 +13,7 @@
     @if(!empty($authors))
     <div class="container pt-5">
         <div class="row">
-            <div class="bard-widget widget_categories">
+            <div class="col bard-widget widget_categories">
                 <div class="widget-title"><h3>Autores:</h3></div>
                 <div class="authcloud">
                 @foreach ($authors as $item)
@@ -28,7 +28,7 @@
     @if(!empty($cats))
     <div class="container pt-5">
         <div class="row">
-            <div class="bard-widget widget_categories">
+            <div class="col bard-widget widget_categories">
                 <div class="widget-title"><h3>Categorias:</h3></div>
                 <div class="catcloud">
                 @foreach ($cats as $item)
@@ -43,7 +43,7 @@
     @if(!empty($tags))
     <div class="container pt-5">
         <div class="row">
-            <div class="bard-widget widget_tag_cloud">
+            <div class="col bard-widget widget_tag_cloud">
                 <div class="widget-title"><h3>Tags:</h3></div>
                 <div class="tagcloud">
                 @foreach ($tags as $item)

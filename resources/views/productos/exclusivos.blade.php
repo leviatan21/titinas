@@ -59,18 +59,7 @@
                 <div class="row mt-4">
                     @foreach ($item['youtube'] as $youtube)
                     <div class="col-sm mb-2">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe
-                                class="embed-responsive-item" 
-                                width="560" height="315" 
-                                src="{{$youtube}}" 
-                                title="{!!$item['title']!!}" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                referrerpolicy="strict-origin-when-cross-origin" 
-                                allowfullscreen="true"
-                            ></iframe>
-                        </div>
+                        @include('components.iframe-youtube-horizontal', ['url'=>$youtube, 'title'=>$item['title']] )
                     </div>
                     @endforeach
                 </div>

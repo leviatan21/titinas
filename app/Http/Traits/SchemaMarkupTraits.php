@@ -24,7 +24,7 @@ trait SchemaMarkupTraits {
 
     public static function VideoObject( $seo, $item=[] ) {
 
-        $embedUrl       = (!empty($item['facebook'])) ? $item['facebook'] : $item['youtube'];
+        $embedUrl       = (!empty($item['facebook-share'])) ? $item['facebook-share'] : $item['youtube-share'];
         $description    = (!empty($item['description'])) ? $item['description'] : $item['title'];
 
         $shema = [
@@ -124,8 +124,8 @@ trait SchemaMarkupTraits {
         $priceValidUntil->isLastOfMonth() ? $priceValidUntil->addDays(1)->lastOfMonth() : $priceValidUntil->lastOfMonth();
 
         $shema = [
-            "@context" =>  "http://schema.org/",
-            "@type" =>  "Product",
+            "@context" => "http://schema.org/",
+            "@type" => "Product",
             "name" => $item["title"],
             "description" => static::SanitizeString($item["description"]),
             "image" => $item["image"],
@@ -142,7 +142,7 @@ trait SchemaMarkupTraits {
                 "name" => $seo->SITE_TITLE,
                 "url" => $seo->SITEURL,
             ],
-            "mainEntityOfPage" =>[
+            "mainEntityOfPage" => [
                 "@type" => "WebPage",
                 "name" => $seo->SITE_TITLE,
                 "url" => $seo->SITEURL,
@@ -159,7 +159,15 @@ trait SchemaMarkupTraits {
                     "@type" => "Organization",
                     "name" => $seo->SITE_TITLE,
                     "url" => $seo->SITEURL
-                ]
+                ],
+                "hasMerchantReturnPolicy" => [
+                    "@type" => "MerchantReturnPolicy",
+                    "returnPolicyCategory" => "https://schema.org/MerchantReturnUnspecified",
+                ],
+                "shippingDetails" => [
+                    "@type" => "OfferShippingDetails",
+                    "doesNotShip" => "http://schema.org/True"
+                ],
             ],
             "aggregateRating" => [
                 "@type" => "AggregateRating",

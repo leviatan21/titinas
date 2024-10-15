@@ -10,8 +10,8 @@ function exclusivos() {
             'price' => '6600',
             'image' => asset('/images/productos/exclusivos/espatul-art.webp'),
             'youtube' => [
-                'https://www.youtube.com/embed/FBEgZeIhVPI?rel=0',
-                'https://www.youtube.com/embed/hKXbvd7TqbQ?rel=0'
+                'https://www.youtube.com/embed/FBEgZeIhVPI',
+                'https://www.youtube.com/embed/hKXbvd7TqbQ'
             ]
         ],
         [
@@ -38,8 +38,8 @@ function exclusivos() {
             ],
             'image' => asset('/images/productos/exclusivos//nueva-pasta-ceramica-sin-horno.webp'),
             'youtube' => [
-                'https://www.youtube.com/embed/jsglAGqyydg?rel=0',
-                'https://www.youtube.com/embed/UPHB6KmPA60?rel=0'
+                'https://www.youtube.com/embed/jsglAGqyydg',
+                'https://www.youtube.com/embed/UPHB6KmPA60'
             ]
         ],
         [
@@ -51,8 +51,8 @@ function exclusivos() {
             'price' => '7040',
             'image' => asset('/images/productos/exclusivos/efecto-gaudi.webp'),
             'youtube' => [
-                'https://www.youtube.com/embed/iuHUOMvmnNU?rel=0',
-                'https://www.youtube.com/embed/9xEnBE1Kzhg?rel=0'
+                'https://www.youtube.com/embed/iuHUOMvmnNU',
+                'https://www.youtube.com/embed/9xEnBE1Kzhg'
             ]
         ],
         [

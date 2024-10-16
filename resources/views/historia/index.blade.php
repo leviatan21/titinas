@@ -4,9 +4,9 @@
 <div id="page-wrap">
     <div class="page-content">
 
-        <div class="post-header my-4">
-            <h1 class="post-title">{{$SEO->TITLE}}</h1>
-        </div>
+        <header class="page-header my-4">
+            <h1 class="page-title">{{$SEO->TITLE}}</h1>
+        </header>
 
         <div class="container my-4">
             <p>Quiero contarles un poco la historia de <em class="font-weight-bold">Titina's</em> y sobre mi amor por el arte manual.</p>

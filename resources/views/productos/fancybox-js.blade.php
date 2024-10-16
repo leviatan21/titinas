@@ -12,8 +12,8 @@
 <div id="page-wrap">
     <div class="page-content">
 
-        <div class="post-header full-width pb-4">
-            <h1 class="post-title">{{$SEO->TITLE}}</h1>
+        <div class="page-header full-width pb-4">
+            <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </div>
 
         @isset($paragraph)
@@ -29,7 +29,7 @@
 
             <article id="gallery-wrap-{{$key}}" class="gallery-wrap">
 
-                <header class="post-header">
+                <header class="page-header">
                     @if(!empty($item['title']))
                     <h2 class="page-title @isset ($item['important'])important @endisset">{!!$item['title']!!}</h2>
                     @endif

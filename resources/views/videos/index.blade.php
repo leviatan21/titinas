@@ -5,8 +5,8 @@
 
     <div class="container">
         <section class="article">
-            <div class="post-header">
-                <h1 class="post-title">{{$SEO->TITLE}}</h1>
+            <div class="page-header">
+                <h1 class="page-title">{{$SEO->TITLE}}</h1>
             </div>
         </section>
 

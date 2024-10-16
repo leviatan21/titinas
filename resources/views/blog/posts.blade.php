@@ -4,8 +4,8 @@
 <div class="page-content py-4">
 
     <div class="container">
-        <header class="post-header">
-            <h1 class="post-title">{{$SEO->TITLE}}</h1>
+        <header class="page-header">
+            <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </header>
     </div>
 
@@ -15,7 +15,7 @@
             <div class="post-content">
 
                 @if (!empty($author['image']))
-                <div class="post-media float-md-left pr-4">
+                <div class="post-media float-left pr-4">
                     <img src="{{$author['image']}}"  alt="{{$author['title']}}" class="author-image" width="500" height="380" decoding="async" loading="lazy" />
                 </div>
                 @endif

@@ -77,7 +77,7 @@ function comercios() {
                     'Villa Tesei'
                 ],
                 'href' => [
-                    'web' => 'https://www.estaciondelarte.com',
+                    'Web' => 'https://www.estaciondelarte.com',
                 ],
                 'email' => [
                     'artistica.estaciondelarte@gmail.com'
@@ -531,11 +531,11 @@ function comercios() {
         'mendoza' => [],
         'misiones' => [
             [
-                'name' => 'TALLER VIVÍ ARTE',
+                'name' => 'TALLER VIVI ARTE',
                 'address' => [
                     'Mariano Moreno y Río de la Plata',
                     'CP(3364) - Aristóbulo del Valle',
-                    'Tel: 15 3755 30-7685'
+                    'Tel: +54 9 3755 67-1170'
                 ],
                 'href' => [
                     'Facebook' => 'https://www.facebook.com/vivian.centeno'

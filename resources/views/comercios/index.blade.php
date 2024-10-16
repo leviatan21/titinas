@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-content">
+<div class="page-content page-shops">
 
     <div class="container">
         <section class="article">
-            <div class="post-header">
-                <h1 class="post-title">{{$SEO->TITLE}}</h1>
+            <div class="page-header">
+                <h1 class="page-title">{{$SEO->TITLE}}</h1>
             </div>
             <div class="border rounded bg-light text-dark mt-4 p-4">
                 <p class="post-content h5">
@@ -26,66 +26,68 @@
     </div>
 
     @foreach ($comercios as $key => $items)
-    <div class="container blog-classic-style py-4">
+    <div class="container my-4">
+        <div class="panel">
 
-        <h2 class="post-title" id="shops-{{Str::slug($key, '-')}}">
-            <a class="bd-content-title" href="#shops-{{Str::slug($key, '-')}}">
-                {{$key}}
-            </a>
-        </h2>
-
-        @if(count($items))
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-            @foreach ($items as $item)
-            <div class="col mb-3">
-                <article class="card shop h-100">
-
-                    <header class="card-header">
-                        <h3 class="card-title">
-                            {!!$item['name']!!}
-                        </h3>
-                    </header>
-
-                    <div class="card-body d-flex flex-column">
-                        @isset($item['address'])
-                            @foreach ($item['address'] as $address)
-                                <span class="card-address">{!!$address!!}</span>
-                            @endforeach
-                        @endisset
-                    </div>
-
-                    <footer class="card-footer d-flex flex-column">
-                        @isset($item['href'])
-                            @foreach ($item['href'] as $text => $href)
-                                <span class="block">
-                                    <a href="{{$href}}" rel="nofollow noopener" target="_blank">{{$text}}</a>
-                                </span>
-                            @endforeach
-                        @endisset
-                        @isset($item['email'])
-                            @foreach ($item['email'] as $email)
-                                <span class="block">
-                                    <a href="mailto:{{$email}}">Email</a>
-                                </span>
-                            @endforeach
-                        @endisset
-                    </footer>
-
-                </article>
-            </div>
-            @endforeach
-        </div>
-        @else
-        <div class="row row-cols-1">
-            <div class="col mb-3">
-                Aún no tenemos comercios asociados en {{ucfirst($key)}}
-                <br /> 
-                <a href="{{$CONFIG->PUNTO_VENTA}}" target="_blank" rel="opener noreferrer nofollow">
-                    Quiero convertirme en punto de venta oficial.
+            <h2 class="post-title" id="shops-{{Str::slug($key, '-')}}">
+                <a class="bd-content-title" href="#shops-{{Str::slug($key, '-')}}" data-anchorjs-icon="#">
+                    {{$key}}
                 </a>
+            </h2>
+
+            @if(count($items))
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 pt-4">
+                @foreach ($items as $item)
+                <div class="col mb-3">
+                    <article class="card shop h-100">
+
+                        <header class="card-header">
+                            <h3 class="card-title">
+                                {!!$item['name']!!}
+                            </h3>
+                        </header>
+
+                        <div class="card-body d-flex flex-column">
+                            @isset($item['address'])
+                                @foreach ($item['address'] as $address)
+                                    <span class="card-address">{!!$address!!}</span>
+                                @endforeach
+                            @endisset
+                        </div>
+
+                        <footer class="card-footer d-flex flex-column">
+                            @isset($item['href'])
+                                @foreach ($item['href'] as $text => $href)
+                                    <span class="block">
+                                        <a href="{{$href}}" rel="nofollow noopener" target="_blank">{{$text}}</a>
+                                    </span>
+                                @endforeach
+                            @endisset
+                            @isset($item['email'])
+                                @foreach ($item['email'] as $email)
+                                    <span class="block">
+                                        <a href="mailto:{{$email}}">Email</a>
+                                    </span>
+                                @endforeach
+                            @endisset
+                        </footer>
+
+                    </article>
+                </div>
+                @endforeach
             </div>
+            @else
+            <div class="row row-cols-1">
+                <div class="col mb-3">
+                    Aún no tenemos comercios asociados en {{ucfirst($key)}}
+                    <br /> 
+                    <a href="{{$CONFIG->PUNTO_VENTA}}" target="_blank" rel="opener noreferrer nofollow">
+                        Quiero convertirme en punto de venta oficial.
+                    </a>
+                </div>
+            </div>
+            @endif
         </div>
-        @endif
     </div>
     @endforeach
 

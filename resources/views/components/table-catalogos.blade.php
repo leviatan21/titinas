@@ -1,9 +1,9 @@
 
 @isset($items)
-<header class="post-header">
+<div class="page-header">
     <h2 class="post-title" id="cat-{{$title}}"><a href="#cat-{{$title}}">{{$title}}</a></h2>
-</header>
-<div class="post-content">
+</div>
+<div class="post-content pt-4">
     <div class="woocommerce">
         <table class="shop_table shop_table_responsive" cellspacing="0">
             <thead>

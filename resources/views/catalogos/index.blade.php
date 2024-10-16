@@ -13,8 +13,8 @@
 
 @section('content')
     <div class="page-content">
-        <header class="post-header">
-            <h1 class="post-title">{{$SEO->TITLE}}</h1>
+        <header class="page-header">
+            <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </header>
 
         <div class="container pt-4">

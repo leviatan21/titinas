@@ -4,8 +4,8 @@
 <div class="page-content">
     <div class="container">
         <article class=" page type-page status-publish has-post-thumbnail hentry">
-            <header class="post-header">
-                <h1 class="post-title">{{$SEO->TITLE}}</h1>
+            <header class="page-header">
+                <h1 class="page-title">{{$SEO->TITLE}}</h1>
             </header>
             <div class="post-content">
                 <ul class="blog-grid">
@@ -64,7 +64,7 @@
     </div>
 
     <div class="container">
-        <header class="post-header">
+        <header class="page-header">
             <h2 class="page-title">Cursos y seminarios</h2>
         </header>
 

@@ -1,7 +1,7 @@
 
 <div id="page-header" class="">
     <div class="boxed-wrapper entry-header">
-        <div class="post-header">
+        <div class="page-header">
             <span class="title-header">Bienvenidos a Titina's materiales para el arte y la creatividad</span>
         </div>
         <div class="header-logo">

@@ -4,7 +4,7 @@
 <div id="page-wrap">
     <div class="page-content">
 
-        <div class="post-header full-width">
+        <div class="page-header full-width">
             <h1 class="hidden">Materiales para el arte decorativo y la creatividad</h1>
         </div>
 

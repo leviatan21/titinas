@@ -4,11 +4,11 @@
 <div id="page-wrap">
     <div class="page-content">
 
-        <div class="post-header full-width">
+        <header class="page-header full-width">
             <h1 class="hidden">Materiales para el arte decorativo y la creatividad</h1>
-        </div>
+        </header>
 
-        <div class="container mb-4">
+        <div class="container my-4">
             <div class="featured-slider-area">
                 <div id="featured-slider" data-slick='{ "autoplay":true, "autoplaySpeed":5000, "slidesToShow":1, "slidesToScroll":1, "fade":true}'>
     @foreach ($slider as $item)

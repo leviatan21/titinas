@@ -163,10 +163,15 @@ trait SchemaMarkupTraits {
                 "hasMerchantReturnPolicy" => [
                     "@type" => "MerchantReturnPolicy",
                     "returnPolicyCategory" => "https://schema.org/MerchantReturnUnspecified",
+                    "applicableCountry" => "AR",
                 ],
                 "shippingDetails" => [
                     "@type" => "OfferShippingDetails",
-                    "doesNotShip" => "http://schema.org/True"
+                    "doesNotShip" => "http://schema.org/True",
+                    "shippingDestination" => [
+                        "@type" => "DefinedRegion",
+                        "addressCountry" => "AR"
+                    ],
                 ],
             ],
             "aggregateRating" => [

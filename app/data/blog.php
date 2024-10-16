@@ -22,7 +22,7 @@ function posts() {
                 'Entre las ciudades italianas más importantes de la historia del Art Nouveau podemos mencionar Turín, Milán y Palermo.'
             ]
         ],
-
+/*
         [
             'datePublished' => '2024-10-10T10:00:00+00:00',
             'dateModified' => '2024-10-10T10:00:00+00:00',
@@ -254,7 +254,7 @@ function posts() {
                 'Entre las ciudades italianas más importantes de la historia del Art Nouveau podemos mencionar Turín, Milán y Palermo.'
             ]
         ],
-
+*/
     ];
 }
 

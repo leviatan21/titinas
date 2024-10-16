@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-content">
+<div class="page-content page-contacts">
 
     <div class="container">
         <header class="page-header">
@@ -10,7 +10,7 @@
 
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
             <div class="col mb-3">
-                <div class="card shop h-100">
+                <div class="card contact h-100">
                     <div class="card-header">
                         <h2 class="card-title">Gestión de pedidos y entregas</h2>
                     </div>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="col mb-3">
-                <div class="card shop h-100">
+                <div class="card contact h-100">
                     <div class="card-header">
                         <h2 class="card-title">Gestión artística</h2>
                     </div>

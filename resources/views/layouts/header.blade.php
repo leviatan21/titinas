@@ -8,7 +8,7 @@
             <a href="{{url('/')}}" title="Titina's" class="logo-main">
                 <img src="{{asset('/images/banner.webp')}}" alt="Titina's" 
                     class="img-fluid" width="1200" height="309" 
-                    decoding="async" loading="lazy" fetchpriority="height"
+                    decoding="async" loading="eager" fetchpriority="high"
                 />
             </a>
         </div>

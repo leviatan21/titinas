@@ -44,7 +44,7 @@
                     <p class="card-text my-4">{!!$item['content'][0]!!}</p>
                     @endif
 
-                    <a class="btn btn-sm btn-outline-secondary mt-auto text-center" href="{{$item['link']['href']}}" title="{{$item['link']['title']}}">
+                    <a class="btn btn-sm btn-outline-brand mt-auto text-center" href="{{$item['link']['href']}}" title="{{$item['link']['title']}}">
                         {{$item['link']['title']}}
                     </a>
 

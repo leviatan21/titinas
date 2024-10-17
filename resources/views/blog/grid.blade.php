@@ -3,7 +3,7 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         @foreach ($posts as $item)
         <div class="col mb-3">
-            <div class="card h-100">
+            <div class="card blog h-100">
                 @if(!empty($item['image']))
                 <a href="{{$item['link']['href']}}" title="{{$item['link']['title']}}">
                     <img src="{{$item['image']}}" class="card-img-top" alt="{{$item['title']}}">

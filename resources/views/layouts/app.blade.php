@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{$SEO->LOCALE}}">
+<html lang="{{$SEO->LOCALE}}" dir="ltr">
     <head>
         <link rel="preconnect"   href="https://fonts.googleapis.com" />
         <link rel="preconnect"   href="https://www.googletagmanager.com" />

@@ -10,7 +10,7 @@
 
         <div class="container my-4">
             <div class="featured-slider-area">
-                <div id="featured-slider" data-slick='{ "autoplay":true, "autoplaySpeed":5000, "slidesToShow":1, "slidesToScroll":1, "fade":true}'>
+                <div id="featured-slider">
     @foreach ($slider as $item)
                 <div class="slider-item">
                     <a href="{{$item['href']}}">

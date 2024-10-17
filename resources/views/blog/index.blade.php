@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-content py-4">
-    <div class="container">
-        <header class="page-header">
-            <h1 class="page-title">{{$SEO->TITLE}}</h1>
-        </header>
-    </div>
+<div class="page-content">
+
+    <header class="page-header">
+        <h1 class="page-title">{{$SEO->TITLE}}</h1>
+    </header>
 
     @include('blog.grid', ['posts'=> $posts])
 

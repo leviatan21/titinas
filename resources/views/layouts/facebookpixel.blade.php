@@ -6,7 +6,7 @@
     fbq('track', 'PageView');
   </script>
   <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{$SEO->FACEBOOK_PIXEL}}&ev=PageView&noscript=1" alt="Facebook Pixel Code" />
+    <img src="https://www.facebook.com/tr?id={{$SEO->FACEBOOK_PIXEL}}&ev=PageView&noscript=1" alt="Facebook Pixel Code" height="1" width="1" style="display:none" />
   </noscript>
   <!-- End Facebook Pixel Code -->
 @endisset

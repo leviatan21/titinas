@@ -16,7 +16,10 @@
 
                 @if (!empty($author['image']))
                 <div class="post-media float-left pr-4">
-                    <img src="{{$author['image']}}"  alt="{{$author['title']}}" class="author-image" width="500" height="380" decoding="async" loading="lazy" />
+                    <img src="{{$author['image']}}" alt="{{$author['title']}}" 
+                        class="author-image" width="500" height="380" 
+                        decoding="async" loading="lazy" fetchpriority="auto"
+                    />
                 </div>
                 @endif
 

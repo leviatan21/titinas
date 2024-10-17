@@ -6,7 +6,10 @@
         <article class="post type-post status-publish">
             @if(!empty($post['image']))
             <div class="post-media">
-                <img src="{{$post['image']}}" class="card-img-top" alt="{{$post['title']}}" class="attachment-bard-full-thumbnail size-bard-full-thumbnail wp-post-image" decoding="async" />
+                <img src="{{$post['image']}}" alt="{{$post['title']}}"
+                    class="card-img-top" width="1200"
+                    decoding="async" loading="lazy" fetchpriority="auto"
+                />
             </div>
             @endif
 
@@ -66,7 +69,10 @@
                 @if (!empty($prev['image']))
                 <div class="post-media">
                     <a href="{{$prev['link']['href']}}" title="{{$prev['title']}}">
-                        <img src="{{$prev['image']}}" alt="{{$prev['title']}}" class="img-fluid" decoding="async" loading="lazy" />
+                        <img src="{{$prev['image']}}" alt="{{$prev['title']}}" 
+                            class="img-fluid" width="75"
+                            decoding="async" loading="lazy" fetchpriority="auto"
+                        />
                     </a>
                 </div>
                 @endif
@@ -87,8 +93,11 @@
             <div class="next-post">
                 @if (!empty($next['image']))
                 <div class="post-media">
-                    <a href="https://bard-free.wp-royal-themes.com/demo/must-look-fashionable/" title="{{$next['title']}}">
-                        <img src="{{$next['image']}}" alt="{{$next['title']}}" class="img-fluid" decoding="async" loading="lazy" />
+                    <a href="{{$next['link']['href']}}" title="{{$next['title']}}">
+                        <img src="{{$next['image']}}" alt="{{$next['title']}}" 
+                            class="img-fluid" width="75"
+                            decoding="async" loading="lazy" fetchpriority="auto"
+                        />
                     </a>
                 </div>
                 @endif
@@ -110,19 +119,19 @@
             <h3>You May Also Like</h3>
         
             <section>
-                <a href="https://bard-free.wp-royal-themes.com/demo/jump-shots-mood/"><img width="500" height="380" src="https://bard-free.wp-royal-themes.com/demo/wp-content/uploads/sites/2/2018/05/bard-v2-37-1-500x380.jpg" class="attachment-bard-grid-thumbnail size-bard-grid-thumbnail wp-post-image" alt="" decoding="async" loading="lazy"></a>
+                <a href="https://bard-free.wp-royal-themes.com/demo/jump-shots-mood/"><img src="https://bard-free.wp-royal-themes.com/demo/wp-content/uploads/sites/2/2018/05/bard-v2-37-1-500x380.jpg" class="attachment-bard-grid-thumbnail size-bard-grid-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" width="500" height="380" ></a>
                 <h5><a href="https://bard-free.wp-royal-themes.com/demo/jump-shots-mood/">Jump Shots Mood</a></h5>
                 <span class="related-post-date">December 17, 2023</span>
             </section>
 
             <section>
-                <a href="https://bard-free.wp-royal-themes.com/demo/must-look-fashionable/"><img width="500" height="380" src="https://bard-free.wp-royal-themes.com/demo/wp-content/uploads/sites/2/2018/04/bard-26-500x380.jpg" class="attachment-bard-grid-thumbnail size-bard-grid-thumbnail wp-post-image" alt="" decoding="async" loading="lazy"></a>
+                <a href="https://bard-free.wp-royal-themes.com/demo/must-look-fashionable/"><img src="https://bard-free.wp-royal-themes.com/demo/wp-content/uploads/sites/2/2018/04/bard-26-500x380.jpg" class="attachment-bard-grid-thumbnail size-bard-grid-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" width="500" height="380"></a>
                 <h5><a href="https://bard-free.wp-royal-themes.com/demo/must-look-fashionable/">Must Look Fashionable!</a></h5>
                 <span class="related-post-date">December 22, 2023</span>
             </section>
 
             <section>
-                <a href="https://bard-free.wp-royal-themes.com/demo/lonely-heart-marie/"><img width="500" height="380" src="https://bard-free.wp-royal-themes.com/demo/wp-content/uploads/sites/2/2018/04/bard-35-500x380.jpg" class="attachment-bard-grid-thumbnail size-bard-grid-thumbnail wp-post-image" alt="" decoding="async" loading="lazy"></a>
+                <a href="https://bard-free.wp-royal-themes.com/demo/lonely-heart-marie/"><img src="https://bard-free.wp-royal-themes.com/demo/wp-content/uploads/sites/2/2018/04/bard-35-500x380.jpg" class="attachment-bard-grid-thumbnail size-bard-grid-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" width="500" height="380"></a>
                 <h5><a href="https://bard-free.wp-royal-themes.com/demo/lonely-heart-marie/">Lonely Heart Marie</a></h5>
                 <span class="related-post-date">December 17, 2023</span>
             </section>

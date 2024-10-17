@@ -5,7 +5,7 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" type="text/javascript" defer></script>
 @endsection
 
 @section('content')
@@ -47,13 +47,19 @@
 
                 <div class="f-carousel">
                     @if(empty($item['images']))
-                    <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="200" loading="lazy" fetchpriority="high" />
+                    <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" 
+                        class="rounded" height="200" 
+                        decoding="async" loading="lazy" fetchpriority="auto"
+                    />
                     @else
                     <a href="javascript:void(0);" id="gallery-trigger-{{$key}}">
                         @if(!empty($item['text']))
                         {!!$item['text']!!}
                         @else
-                        <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="200" loading="lazy" fetchpriority="high" />
+                            <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" 
+                            class="rounded" height="200" 
+                            decoding="async" loading="lazy" fetchpriority="auto"
+                        />
                         @endif
                     </a>
                     @endif

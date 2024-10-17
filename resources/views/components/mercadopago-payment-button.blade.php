@@ -5,4 +5,5 @@
     data-preference-id="{{$preference_id}}" 
     data-source="{{$type ?? 'button'}}" 
     data-button-label="{{$title ?? 'Mercado Pago'}}"
+    defer
 ></script>

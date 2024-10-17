@@ -52,7 +52,10 @@
                 </header>
 
                 <div class="f-carousel">
-                    <img src="{{$item['image']}}" alt="{!!$item['title']!!}" class="rounded" width="800" height="200" loading="lazy" fetchpriority="high" />
+                    <img src="{{$item['image']}}" alt="{!!$item['title']!!}" 
+                        class="rounded" width="800" height="200" 
+                        decoding="async" loading="lazy" fetchpriority="high"
+                    />
                 </div>
 
                 @isset($item['youtube'])

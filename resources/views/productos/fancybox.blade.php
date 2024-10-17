@@ -5,7 +5,7 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" type="text/javascript" defer></script>
 @endsection
 
 @section('content')
@@ -46,21 +46,30 @@
 
                 <div class="f-carousel">
                 @if(empty($item['images']))
-                    <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="200" loading="lazy" fetchpriority="high" />
+                    <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" 
+                        class="rounded" height="200" 
+                        decoding="async" loading="lazy" fetchpriority="auto"
+                    />
                 @else
 
                     <a href="javascript:void(0);" data-fancybox-trigger="gallery-{{$key}}">
                     @if(!empty($item['text']))
                         {!!$item['text']!!}
                     @else
-                        <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" class="rounded" height="200" loading="lazy" fetchpriority="high" />
+                        <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" 
+                            class="mg-fluid rounded" height="200" 
+                            decoding="async" loading="lazy" fetchpriority="auto"
+                        />
                     @endif
                     </a>
 
                     <div class="d-none">
                     @foreach ($item['images'] as $image)
                         <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
-                            <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" height="200" loading="lazy" fetchpriority="low" />
+                            <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
+                                class="mg-fluid rounded" height="200" 
+                                decoding="async" loading="lazy" fetchpriority="low"
+                            />
                         </a>
                     @endforeach
                     </div>

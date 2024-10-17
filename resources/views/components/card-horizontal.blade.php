@@ -14,7 +14,10 @@
             <article class="md:flex">
                 <div class="md:w-1/5 mr-4 mt-4 d-flex flex-column">
                     <div class="horizontal-cards-image">
-                        <img src="{{$step['image-cover']}}" alt="{!!$step['alt-cover']!!}" loading="lazy" fetchpriority="auto" />
+                        <img src="{{$step['image-cover']}}" alt="{!!$step['alt-cover']!!}" 
+                            class="img-fluid" width="263" height="200" 
+                            decoding="async" loading="lazy" fetchpriority="auto" 
+                        />
                         @if(isset($item['special']) && $item['special']==true)
                         <span class="bg-green-500 rounded p-1 text-white inline-block position-absolute pin-t10 pin-r10">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.644 300" class="fill-current w-5 h-5">

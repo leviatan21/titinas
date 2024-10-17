@@ -14,7 +14,10 @@
     @foreach ($slider as $item)
                 <div class="slider-item">
                     <a href="{{$item['href']}}">
-                        <img src="{{$item['image']}}" alt="{{$item['alt']}}" />
+                        <img src="{{$item['image']}}" alt="{{$item['alt']}}" 
+                        class="img-fluid rounded" width="1110" height="443"
+                        decoding="sync" loading="lazy" fetchpriority="high"
+                    />
                     </a>  
 {{--
                     <div class="slider-item-bg" style="background-image: url({{$item['image']}});"></div>

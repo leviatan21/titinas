@@ -5,7 +5,10 @@
         <div class="vertical-card__top">
             <div class="vertical-card__cover">
                 <picture>
-                    <img src="{{$item['image-cover']}}" alt="{{$item['alt-cover'] ?? ''}}" loading="lazy" fetchpriority="auto" class="a-placeholder a-placeholder--standalone" />
+                    <img src="{{$item['image-cover']}}" alt="{{$item['alt-cover'] ?? ''}}" 
+                        class="img-fluid card-img-top" width="360" 
+                        decoding="async" loading="lazy" fetchpriority="auto" 
+                    />
                 </picture>
                 @isset($item['special'])
                 <div class="vertical-card__metadata">
@@ -29,7 +32,10 @@
                 </p>
 
                 @isset($item['image-body'])
-                <img src="{{$item['image-body']}}" alt="{{$item['alt-body']}}" loading="lazy" fetchpriority="auto" class="a-placeholder a-placeholder--standalone" />
+                <img src="{{$item['image-body']}}" alt="{{$item['alt-body']}}" 
+                class="img-fluid card-img-top" 
+                    decoding="async" loading="lazy" fetchpriority="auto" 
+                />
                 @endisset
             </div>
         </div>

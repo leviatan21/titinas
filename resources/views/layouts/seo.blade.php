@@ -5,6 +5,19 @@
 @isset($SEO->DESCRIPTION)<meta name="description" content="{!!$SEO->DESCRIPTION!!}" />@endisset
 @isset($SEO->KEYWORDS)<meta name="keywords" content="{!!$SEO->KEYWORDS!!}" />@endisset
 
+@isset($SEO->DATE_PUBLISHED)
+        <meta property="article:published_time" content="{{$SEO->DATE_PUBLISHED}}" />
+@endisset
+@isset($SEO->DATE_MODIFIED)
+        <meta property="article:modified_time" content="{{$SEO->DATE_MODIFIED}}" />
+@endisset
+
+{{-- ui --}}
+<meta name="theme-color" content="#014d81" />
+<meta name="msapplication-TileColor" content="#014d81" />
+<meta name="msapplication-TileImage" content="{{$SEO->LOGO}}" />
+
+{{-- Open Graph / Facebook --}}
 @isset($SEO->TITLE)<meta property="og:title" content="{!!$SEO->TITLE!!}" />@endisset
 @isset($SEO->DESCRIPTION)<meta property="og:description" content="{!!$SEO->DESCRIPTION!!}" />@endisset
 @isset($SEO->LOCALE)<meta property="og:locale" content="{{$SEO->LOCALE}}" />@endisset
@@ -18,6 +31,7 @@
 <meta property="og:image:height" content="645" />
 @endisset
 
+{{-- Twitter --}}
 <meta name="twitter:widgets:autoload" content="off" />
 <meta name="twitter:widgets:csp" content="on" />
 <meta name="twitter:widgets:theme" content="light" />
@@ -27,10 +41,3 @@
 @isset($SEO->DESCRIPTION)<meta name="twitter:description" content="{!!$SEO->DESCRIPTION!!}" />@endisset
 @isset($SEO->TWITTER_SITE)<meta name="twitter:site" content="{{$SEO->TWITTER_SITE}}" />@endisset
 @isset($SEO->LOGO)<meta property="twitter:image" content="{{$SEO->LOGO}}" />@endisset
-
-@isset($SEO->DATE_PUBLISHED)
-        <meta property="article:published_time" content="{{$SEO->DATE_PUBLISHED}}" />
-@endisset
-@isset($SEO->DATE_MODIFIED)
-        <meta property="article:modified_time" content="{{$SEO->DATE_MODIFIED}}" />
-@endisset

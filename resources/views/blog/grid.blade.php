@@ -6,7 +6,10 @@
             <div class="card blog h-100">
                 @if(!empty($item['image']))
                 <a href="{{$item['link']['href']}}" title="{{$item['link']['title']}}">
-                    <img src="{{$item['image']}}" class="card-img-top" alt="{{$item['title']}}">
+                    <img src="{{$item['image']}}" alt="{{$item['title']}}" 
+                        class="card-img-top" width="500"
+                        decoding="async" loading="lazy" fetchpriority="auto"
+                    />
                 </a>
                 @endif
                 <div class="card-body d-flex flex-column">

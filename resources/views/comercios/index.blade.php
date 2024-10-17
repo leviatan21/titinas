@@ -18,7 +18,10 @@
                     Para consultas y pedidos de cursos a distancia escribirnos a
                     <a href="mailto:{{$CONFIG->EMAIL_ADISTANCIA}}">{{$CONFIG->EMAIL_ADISTANCIA}}</a>
                     <a href="{{$CONFIG->PUNTO_VENTA}}" title="Quiero convertirme en punto de venta oficial." target="_blank" rel="opener noreferrer nofollow">
-                        <img src="{{asset('/images/puntoventa.webp')}}" class="my-4"  alt="puntoventa"/>
+                        <img src="{{asset('/images/puntoventa.webp')}}" alt="puntoventa" 
+                            class="my-4" width="1200"
+                            decoding="async" loading="lazy" fetchpriority="auto" 
+                        />
                     </a>
                 </p>
             </div>

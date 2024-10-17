@@ -67,7 +67,10 @@
                     @if(!empty($item['youtube-embed']))
                         @include('components.iframe-youtube-vertical', ['url'=>$item['youtube-embed'], 'title'=>$item['title']] )
                     @else
-                    <img src="{{$item['image']}}" alt="{{$item['title']}}" height="200" class="img-thumbnail border border-light" />
+                    <img src="{{$item['image']}}" alt="{{$item['title']}}" 
+                        class="img-thumbnail border border-light" height="200" 
+                        decoding="async" loading="lazy" fetchpriority="auto"
+                    />
                     @endif
                     <div class="card-body d-flex flex-column">
                         <h2 class="text-center h4">

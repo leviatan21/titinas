@@ -19,7 +19,7 @@
 @foreach ($MENU as $item)
                     <li class="menu-item menu-item-type-custom menu-item-object-custom {{$SEO->CANONICAL == $item['href'] ? 'current-menu-ancestor' : ''}}" itemprop="name" role="menuitem">
                         <a href="{{$item['href']}}" @isset($item['target']) target="{{$item['target']}}" @endisset @isset($item['rel']) rel="{{$item['rel']}}" @endisset @isset($item['label']) title="{{$item['label']}}" @endisset>
-                            @isset($item['image']) <img src="{{$item['image']}}" class="menu-item-image" alt="{{$item['label']}}" width="30" height="25" /> @endisset
+                            @isset($item['image']) <img src="{{$item['image']}}" class="menu-item-image" alt="{{$item['label']}}" width="30" height="25" decoding="async" loading="lazy" fetchpriority="high" /> @endisset
                             {{$item['text']}}
                         </a>
                     </li>
@@ -31,7 +31,7 @@
 @foreach ($MENU as $item)
                     <li class="menu-item menu-item-type-custom menu-item-object-custom">
                         <a href="{{$item['href']}}" @isset($item['target']) target="{{$item['target']}}" @endisset @isset($item['rel']) rel="{{$item['rel']}}" @endisset @isset($item['label']) aria-label="{{$item['label']}}" @endisset>
-                            @isset($item['image']) <img src="{{$item['image']}}" class="menu-item-image" alt="{{$item['label']}}" width="30" height="25" /> @endisset
+                            @isset($item['image']) <img src="{{$item['image']}}" class="menu-item-image" alt="{{$item['label']}}" width="30" height="25" decoding="async" loading="lazy" fetchpriority="high" /> @endisset
                             {{$item['text']}}
                         </a>
                     </li>

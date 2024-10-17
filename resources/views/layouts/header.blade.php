@@ -6,7 +6,10 @@
         </div>
         <div class="header-logo">
             <a href="{{url('/')}}" title="Titina's" class="logo-main">
-                <img src="{{asset('/images/banner.webp')}}" alt="Titina's" width="1200" height="309" />
+                <img src="{{asset('/images/banner.webp')}}" alt="Titina's" 
+                    class="img-fluid" width="1200" height="309" 
+                    decoding="async" loading="lazy" fetchpriority="height"
+                />
             </a>
         </div>
     </div>

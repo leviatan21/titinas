@@ -8,7 +8,7 @@
 @endsection
 
 @section('js')
-<script type='text/javascript' src="{{asset('/js/plugins/woocommerce/woocommerce.min.js?ver=7.2.2')}}"></script>
+<script type='text/javascript' src="{{asset('/js/plugins/woocommerce/woocommerce.min.js?ver=7.2.2')}}" defer></script>
 @endsection
 
 @section('content')

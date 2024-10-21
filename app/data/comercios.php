@@ -1,4 +1,5 @@
 <?php
+
 function comercios() {
     return [
         'caba' => [

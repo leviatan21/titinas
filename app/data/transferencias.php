@@ -7,7 +7,7 @@ function transferencias() {
             'description' => "Papel especial 70gr<br />
                             Excelente calidad en Láminas de Transferencia<br />
                             Método de retirado de pulpa<br />
-                            Presentación: 5u x modelo",
+                            Presentación: 3u x modelo",
             'image' => asset('/images/productos/transferencias/negra-a4.webp'),
             'gallery' => 'productos/transferencias/negra-a4'
         ],
@@ -16,24 +16,26 @@ function transferencias() {
             'description' => "Papel especial 70gr<br />
                             Excelente calidad en Láminas de Transferencia<br />
                             Método de retirado de pulpa<br />
-                            Presentación: 5u x modelo",
+                            Presentación: 3u x modelo",
             'image' => asset('/images/productos/transferencias/color-a4.webp'),
             'gallery' => 'productos/transferencias/color-a4'
         ],
         [// Transferencia negra A3+
-            'title' => "Transferencia Tinta negra A3+ (32x47cm)",
+            'title' => "Transferencia Tinta negra A3+",
             'description' => "Papel especial 70gr<br />
                             Excelente calidad en Láminas de Transferencia<br />
                             Método de retirado de pulpa<br />
+                            Tamaño: 32x47cm<br />
                             Presentación: 3u x modelo",
             'image' => asset('/images/productos/transferencias/negra-a3-plus.webp'),
             'gallery' => 'productos/transferencias/negra-a3-plus'
         ],
         [// Transferencia color A3+
-            'title' => "Transferencia Tinta color A3+ (32x47cm)",
+            'title' => "Transferencia Tinta color A3+",
             'description' => "Papel especial 70gr<br />
                             Excelente calidad en Láminas de Transferencia<br />
                             Método de retirado de pulpa<br />
+                            Tamaño: 32x47cm<br />
                             Presentación: 3u x modelo",
             'image' => asset('/images/productos/transferencias/color-a3-plus.webp'),
             'gallery' => 'productos/transferencias/color-a3-plus'
@@ -47,7 +49,9 @@ function transferencias() {
                             Se activa con plancha, secador de pelo o pistola de calor, lo mas conveniente según la superficie elegida.<br />
                             Frotar. Ira pasando a la superficie y despegándose del soporte transparente.<br />
                             El soporte es apto para el calor, y es grueso.<br />
-                            Tela, Madera, Cartón, Latas, Vidrio.",
+                            Tela, Madera, Cartón, Latas, Vidrio.<br />
+                            Tamaño: 20x24cm<br />
+                            Presentación: 3u x modelo",
             'image' => asset('/images/productos/transferencias/multitransfer.webp'),
             'gallery' => 'productos/transferencias/multitransfer',
         ],

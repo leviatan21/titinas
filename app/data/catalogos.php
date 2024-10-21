@@ -1,4 +1,5 @@
 <?php
+
 function exclusivos() {
     // Productos Exclusivos.pdf
     return [
@@ -43,6 +44,7 @@ function exclusivos() {
         ],
     ];
 }
+
 function especiales() {
     return [
         [// Dia de las Madres 2022.pdf
@@ -91,6 +93,7 @@ function especiales() {
         ],
     ];
 }
+
 function generales() {
     return [
         [// 30x30 Decoupage 01

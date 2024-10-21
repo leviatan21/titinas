@@ -1,5 +1,6 @@
 /.phpunit.cache
 /node_modules
+/public/_images
 /public/images
 /storage/*.key
 /mix

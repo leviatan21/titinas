@@ -11,12 +11,6 @@ function stenciles() {
         ],
         [
             'title' => 'Stenciles',
-            'description' => "Tamaño: de 40x55cm",
-            'image' => asset('/images/productos/stenciles/40x55.webp'),
-            'gallery' => 'productos/stenciles/40x55'
-        ],
-        [
-            'title' => 'Stenciles',
             'description' => "Tamaño: de 5x24cm",
             'image' => asset('/images/productos/stenciles/5x24.webp'),
             'gallery' => 'productos/stenciles/5x24'
@@ -44,6 +38,12 @@ function stenciles() {
             'description' => "Tamaño: de 30x30cm",
             'image' => asset('/images/productos/stenciles/30x30.webp'),
             'gallery' => 'productos/stenciles/30x30'
+        ],
+        [
+            'title' => 'Stenciles',
+            'description' => "Tamaño: de 40x55cm",
+            'image' => asset('/images/productos/stenciles/40x55.webp'),
+            'gallery' => 'productos/stenciles/40x55'
         ],
     ];
 }

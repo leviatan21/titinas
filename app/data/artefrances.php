@@ -1,6 +1,7 @@
 <?php
-// Arte Frances A4
+
 function artefrances() {
+    // Arte Frances A4
     return [
         [
             'title' => 'Láminas para Arte Frances',

@@ -2,38 +2,8 @@
 
 function decoupage() {
     return [
-        [// Decoupage común A4
-            'title' => 'Decoupage A4',
-            'description' => "Papel obra<br />
-                            Tamaño 21x29cm<br />
-                            Presentación: 3u x modelo",
-            'image' => asset('/images/productos/decoupage/obra-a4.webp'),
-            'gallery' => 'productos/decoupage/obra-a4'
-        ],
-        [// Decoupage común A3
-            'title' => 'Decoupage A3+',
-            'description' => "Papel obra<br />
-                            Tamaño: 32x47cm<br />
-                            Presentación: 3u x modelo",
-            'image' => asset('/images/productos/decoupage/obra-a3-plus.webp'),
-            'gallery' => 'productos/decoupage/obra-a3-plus'
-        ],
-        [// Decoupage común 30x30
-            'title' => 'Decoupage',
-            'description' => "Papel obra<br />
-                            Tamaño: 30x30cm",
-            'image' => asset('/images/productos/decoupage/obra-30x30.webp'),
-            'gallery' => 'productos/decoupage/obra-30x30'
-        ],
-        [// Tablitas papel común
-            'title' => 'Decoupage',
-            'description' => "Papel obra<br />
-                            Tamaño: 12x30cm",
-            'image' => asset('/images/productos/decoupage/obra-12x30.webp'),
-            'gallery' => 'productos/decoupage/obra-12x30'
-        ],
         [// Etiquetas Latas Papel comun
-            'title' => 'Etiquetas autoadhesivas',
+            'title' => 'Decoupage latas',
             'description' => "Papel obra<br />
                             Etiquetas para LATAS<br />
                             Tomate 25cm<br />
@@ -41,6 +11,13 @@ function decoupage() {
                             Durazno 33cm",
             'image' => asset('/images/productos/decoupage/latas.webp'),
             'gallery' => 'productos/decoupage/latas'
+        ],
+        [// Tablitas papel común
+            'title' => 'Decoupage',
+            'description' => "Papel obra<br />
+                            Tamaño: 12x30cm",
+            'image' => asset('/images/productos/decoupage/obra-12x30.webp'),
+            'gallery' => 'productos/decoupage/obra-12x30'
         ],
         [// Decoupage en humedo 14x20
             'important' => true,
@@ -51,6 +28,31 @@ function decoupage() {
             'image' => asset('/images/productos/decoupage/humedo-14x20.webp'),
             'gallery' => 'productos/decoupage/humedo-14x20'
         ],
+        [// Decoupage común A4
+            'title' => 'Decoupage A4',
+            'description' => "Papel obra<br />
+                            Tamaño 21x29cm<br />
+                            Presentación: 3u x modelo",
+            'image' => asset('/images/productos/decoupage/obra-a4.webp'),
+            'gallery' => 'productos/decoupage/obra-a4'
+        ],        
+        [// Decoupage común 30x30
+            'title' => 'Decoupage',
+            'description' => "Papel obra<br />
+                            Tamaño: 30x30cm<br />
+                            Presentación: 3u x modelo",
+            'image' => asset('/images/productos/decoupage/obra-30x30.webp'),
+            'gallery' => 'productos/decoupage/obra-30x30'
+        ],
+        [// Decoupage común A3
+            'title' => 'Decoupage A3+',
+            'description' => "Papel obra<br />
+                            Tamaño: 32x47cm<br />
+                            Presentación: 3u x modelo",
+            'image' => asset('/images/productos/decoupage/obra-a3-plus.webp'),
+            'gallery' => 'productos/decoupage/obra-a3-plus'
+        ],
+
         [// Kraft A4
             'title' => 'Inspiración Kraft A4',
             'description' => 'Inspirados en la decoración moderna<br />

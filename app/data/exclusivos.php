@@ -76,7 +76,7 @@ function exclusivos() {
         ],
         [
             'title' => 'Textura piedra',
-            'subtitle' => "Presentación 6u natural y 6u concreto",
+            'subtitle' => "Presentación 6 unidades natural y 6 unidades concreto",
             'description' => "Es un revestimiento que se puede pasar a espátula o pincel<br />
                             La versíon \"Natural\" se puede colorear con acrílicos, tintas, pigmentos en polvo, etc<br />
                             La versíon \"Concreto\" es gris y se puede colorear para lograr colores oscurso como negro, marrón, tonos grisaceos. <br />",

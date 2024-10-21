@@ -24,7 +24,7 @@ function decoupage() {
             'title' => 'Decoupage en húmedo',
             'description' => "<strong style='color:red'>!!! LIQUIDACIÓN !!!</strong><br />
                             Tamaño 14x20cm<br />
-                            Presentación 4u",
+                            Presentación 4 unidades",
             'image' => asset('/images/productos/decoupage/humedo-14x20.webp'),
             'gallery' => 'productos/decoupage/humedo-14x20'
         ],
@@ -32,7 +32,7 @@ function decoupage() {
             'title' => 'Decoupage A4',
             'description' => "Papel obra<br />
                             Tamaño 21x29cm<br />
-                            Presentación: 3u x modelo",
+                            Presentación: 3 unidades por modelo",
             'image' => asset('/images/productos/decoupage/obra-a4.webp'),
             'gallery' => 'productos/decoupage/obra-a4'
         ],        
@@ -40,7 +40,7 @@ function decoupage() {
             'title' => 'Decoupage',
             'description' => "Papel obra<br />
                             Tamaño: 30x30cm<br />
-                            Presentación: 3u x modelo",
+                            Presentación: 3 unidades por modelo",
             'image' => asset('/images/productos/decoupage/obra-30x30.webp'),
             'gallery' => 'productos/decoupage/obra-30x30'
         ],
@@ -48,7 +48,7 @@ function decoupage() {
             'title' => 'Decoupage A3+',
             'description' => "Papel obra<br />
                             Tamaño: 32x47cm<br />
-                            Presentación: 3u x modelo",
+                            Presentación: 3 unidades por modelo",
             'image' => asset('/images/productos/decoupage/obra-a3-plus.webp'),
             'gallery' => 'productos/decoupage/obra-a3-plus'
         ],
@@ -61,7 +61,7 @@ function decoupage() {
                             Se pegan con Pegamento Multipropósito o cola de carpintero<br />
                             Ideal para muebles: mesas, placard, cómodas, cajones y baules, etc.<br />
                             Tamaño: 21x29cm Muy fuertes - 80gr<br />
-                            Presentación: 3u x modelo',
+                            Presentación: 3 unidades por modelo',
             'image' => asset('/images/productos/decoupage/kraft-a4.webp'),
             'gallery' => 'productos/decoupage/kraft-a4'
         ],
@@ -73,7 +73,7 @@ function decoupage() {
                             Se pegan con Pegamento Multipropósito o cola de carpintero<br />
                             Ideal para muebles: mesas, placard, cómodas, cajones y baules, etc.<br />
                             Tamaño: A3, Muy fuertes - 80gr<br />
-                            Presentación: 3u x modelo',
+                            Presentación: 3 unidades por modelo',
             'image' => asset('/images/productos/decoupage/kraft-a3.webp'),
             'gallery' => 'productos/decoupage/kraft-a3'
         ],
@@ -86,7 +86,7 @@ function decoupage() {
                             Pinta de un color claro previamente, ya que las láminas de seda son traslúcidas<br />
                             Aplicá barníz, cera, laca o el material que más te guste directamente sobre la lámina<br />
                             Tamaño: 50x70cm<br />
-                            Presentación: 2u x modelo",
+                            Presentación: 2 unidades por modelo",
             'image' => asset('/images/productos/decoupage/seda-hibrida-50x70.webp'),
             'gallery' => 'productos/decoupage/seda-hibrida-50x70'
         ],
@@ -97,7 +97,7 @@ function decoupage() {
                             Se pueden barnizar, sin mojar el pincel con agua.<br />
                             Se puede proteger con cualquier barniz al agua, lacas, cera, etc<br />
                             Tamaño: 50x70cm<br />
-                            Presentación: 2u x modelo",
+                            Presentación: 2 unidades por modelo",
             'image' => asset('/images/productos/decoupage/seda-lavable-50x70.webp'),
             'gallery' => 'productos/decoupage/seda-lavable-50x70',
             'links' => [
@@ -114,7 +114,7 @@ function decoupage() {
                             Se pueden barnizar, sin mojar el pincel con agua.<br />
                             Se puede proteger con cualquier barniz al agua, lacas, cera, etc<br />
                             Tamaño: 22x36cm<br />
-                            Presentación: 2u x modelo",
+                            Presentación: 2 unidades por modelo",
             'image' => asset('/images/productos/decoupage/seda-lavable-22x36.webp'),
             'gallery' => 'productos/decoupage/seda-lavable-22x36'
         ],

@@ -22,7 +22,7 @@ function autoadhesivos() {
         [// Decoupage Adhesivo 14x20 Sin Troquel
             'title' => 'Papel mate Autoadhesivo',
             'description' => "Tamaño 14x20cm<br />
-                            Presentación: 4u x modelo",
+                            Presentación: 4 unidades por modelo",
             'image' => asset('/images/productos/autoadhesivos/mate-14x20.webp'),
             'gallery' => 'productos/autoadhesivos/mate-14x20'
         ],

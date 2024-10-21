@@ -8,7 +8,7 @@ use App\Http\Traits\SchemaMarkupTraits;
 use App\Http\Traits\ProductosTraits;
 
 class ProductosController extends Controller {
-    // OK
+    //
     public function index() {
 
         static::seo([
@@ -23,7 +23,7 @@ class ProductosController extends Controller {
         return view('productos.index')
             ->with('products', $products);
     }
-    // OK
+    //
     public function exclusivos() {
         static::seo([
             'title' => "Productos Exclusivos - Titina's",
@@ -40,7 +40,7 @@ class ProductosController extends Controller {
         return view('productos.exclusivos')
             ->with('productos', $productos);
     }
-    // OK
+    //
     public function pasta() {
         static::seo([
             'title' => "Pasta cerámica sin horno - Titina's",
@@ -62,7 +62,7 @@ class ProductosController extends Controller {
                 ->with('paragraph', $paragraph)
                 ->with('productos', $productos);
     }
-    // OK
+    //
     public function tintas() {
         static::seo([
             'title' => "Tintas al alcohol - Titina's",
@@ -81,7 +81,7 @@ class ProductosController extends Controller {
             ->with('paragraph', $paragraph)
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-18
+    //
     public function transferencias() {
         static::seo([
             'title' => "Láminas de Transferencia y Multitransfer - Titina's",
@@ -95,7 +95,7 @@ class ProductosController extends Controller {
         return view('productos.fancybox')
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-19
+    //
     public function decoupage() {
         static::seo([
             'title' => "Todo para Decoupage - Titina's",
@@ -109,7 +109,7 @@ class ProductosController extends Controller {
         return view('productos.fancybox')
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-19
+    //
     public function cartulinas() {
         static::seo([
             'title' => "Cartulinas - Titina's",
@@ -123,7 +123,7 @@ class ProductosController extends Controller {
         return view('productos.fancybox')
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-21 -SEO
+    //
     public function autoadhesivos() { 
         static::seo([
             'title' => "Láminas autoadhesivas - Titina's",
@@ -137,7 +137,7 @@ class ProductosController extends Controller {
         return view('productos.fancybox')
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-18
+    //
     public function vinilos() {
         static::seo([
             'title' => "Vinilos - Titina's",
@@ -151,7 +151,7 @@ class ProductosController extends Controller {
         return view('productos.fancybox')
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-21
+    //
     public function sublimacion() {
         static::seo([
             'title' => "Láminas para sublimación - Titina's",
@@ -171,7 +171,7 @@ class ProductosController extends Controller {
             ->with('paragraph', $paragraph)
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-19
+    //
     public function artefrances() {
         static::seo([
             'title' => "Laminas para Arte Frances - Titina's",
@@ -185,7 +185,7 @@ class ProductosController extends Controller {
         return view('productos.fancybox')
             ->with('productos', $productos);
     }
-    // OK Stock 2024-10-19
+    //
     public function sellos() {
         static::seo([
             'title' => "Sellos bajo relieve - Titina's",
@@ -203,7 +203,7 @@ class ProductosController extends Controller {
                 ->with('paragraph', $paragraph)
                 ->with('productos', $productos);
     }
-    // OK Stock 2024-10-19
+    //
     public function stenciles() {
         static::seo([
             'title' => "Stenciles - Titina's",

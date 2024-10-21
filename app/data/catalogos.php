@@ -88,7 +88,7 @@ function especiales() {
             Transferencia o decoupage en húmedo - 
             Cartulinas - 
             Sublimación por pliego',
-            'size' => 'Presentación: 4u x modelo',
+            'size' => 'Presentación: 4 unidades por modelo',
             'link' => 'https://drive.google.com/file/d/1XIv8mAr17yHdPE37wSvRxRrRp4hVFRTn/view?usp=sharing',
         ],
     ];

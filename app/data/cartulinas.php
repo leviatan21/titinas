@@ -6,7 +6,7 @@ function cartulinas() {
             'title' => 'Cartulinas Simple Faz',
             'description' => "Tamaño: A4 21x29cm<br />
                             180gr.<br />
-                            Presentación: 2u x modelo",
+                            Presentación: 2 unidades por modelo",
             'image' => asset('/images/productos/cartulinas/simple-faz.webp'),
             'gallery' => 'productos/cartulinas/simple-faz'
         ],
@@ -14,7 +14,7 @@ function cartulinas() {
             'title' => 'Cartulinas doble Faz',
             'description' => "Tamaño: A3+ 32x47cm<br />
                             180gr.<br />
-                            Presentación: 2u x modelo",
+                            Presentación: 2 unidades por modelo",
             'image' => asset('/images/productos/cartulinas/doble-faz.webp'),
             'gallery' => '/productos/cartulinas/doble-faz'
         ]

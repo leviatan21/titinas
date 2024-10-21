@@ -11,6 +11,27 @@
         </section>
 
         {{--
+        <div class="container">
+            <iframe 
+            src="https://www.instagram.com/p/CgPvB3oDzMb/embed/" 
+            scrolling="no" 
+            allowtransparency="true" 
+            allowfullscreen="true" 
+            frameborder="0">Iframe not supported</iframe>
+        </div>
+        --}}
+        {{--
+        <div class="container">
+            <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/CgPvB3oDzMb/?utm_source=ig_embed&amp;utm_campaign=loading"
+                data-instgrm-version="14"
+                style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px;max-width: 540px; min-width: 326px; padding: 0;width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px);"
+            ></blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+        --}}
+        {{--
         <!-- Load Facebook SDK for JavaScript -->
         <div id="fb-root"></div>
         <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>

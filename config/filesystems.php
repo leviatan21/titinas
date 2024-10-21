@@ -30,6 +30,12 @@ return [
 
     'disks' => [
 
+        'stock' => [
+            'driver' => 'local',
+            'root' => storage_path('app/stock'),
+            'throw' => false
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/private'),

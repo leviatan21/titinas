@@ -4,21 +4,21 @@ function exclusivos() {
     return [
         [
             'name' => 'Espatul-Art',
-            'description' => 'Pasta para realizar flores con volumen,<br/>
+            'description' => 'Pasta para realizar flores con volumen,<br />
             Técnica rusa de modelado con espátula.',
             'size' => 'Un pote de 200gr de polvo 2 componentes, más un envase de 80ml medium líquido',
             'link' => 'https://drive.google.com/file/d/149v4PA8_eAfvR8nSdD39avkxSrjf4ftt/view?usp=sharing',
         ],
         [
             'name' => 'Pasta cerámica sin horno',
-            'description' => 'Producto en polvo de fácil preparación,<br/>
+            'description' => 'Producto en polvo de fácil preparación,<br />
             Solo con agua, para modelar, moldear, tallar, esculpir y crear',
             'size' => 'Bolsa de 1kg de polvo',
             'link' => 'https://drive.google.com/file/d/149v4PA8_eAfvR8nSdD39avkxSrjf4ftt/view?usp=sharing',
         ],
         [
             'name' => 'Efecto Gaudí',
-            'description' => 'Producto de textura cremosa y color blanco<br/>
+            'description' => 'Producto de textura cremosa y color blanco<br />
             Se aplica con espátula para realziar falso mosaico en combinación con lacas vitrales y puntillas flexibles con moldes de silicona',
             'size' => 'Pote de 200cc',
             'link' => 'https://drive.google.com/file/d/149v4PA8_eAfvR8nSdD39avkxSrjf4ftt/view?usp=sharing',
@@ -53,7 +53,7 @@ function especiales() {
         ],
         [// Nav Decou A4.pdf
             'name' => 'Navidad',
-            'description' => 'Láminas para decoupage<br/>Papel Ilustración autoadhesivo<br/>Papel obra de 70gr',
+            'description' => 'Láminas para decoupage<br />Papel Ilustración autoadhesivo<br />Papel obra de 70gr',
             'size' => 'A4 (21 x 29,7cm)',
             'link' => 'https://drive.google.com/file/d/1awEpFrq745nlTwvB9Iw8NUa99qzRZaTs/view?usp=sharing',
         ],
@@ -95,13 +95,13 @@ function generales() {
     return [
         [// 30x30 Decoupage 01
             'name' => 'Láminas de Decoupage 1',
-            'description' => 'Papel ilustración autoadesivo o <br/>Papel obra 75gr',
+            'description' => 'Papel ilustración autoadesivo o <br />Papel obra 75gr',
             'size' => '30 x 30cm',
             'link' => 'https://drive.google.com/file/d/17T7uEnao0oFougJFx2gYqLvZ_ZsVSXmD/view?usp=sharing',
         ],
         [// 30x30 Decoupage 02
             'name' => 'Láminas de Decoupage 2',
-            'description' => 'Papel ilustración autoadesivo o <br/>Papel obra 75gr',
+            'description' => 'Papel ilustración autoadesivo o <br />Papel obra 75gr',
             'size' => '30 x 30cm',
             'link' => 'https://drive.google.com/file/d/1aWTaFVNRh3gRvsCXXf78l8qCHnoRuEch/view?usp=sharing',
         ],
@@ -125,7 +125,7 @@ function generales() {
         ],
         [// Decoupage 12x30 Tablitas.pdf
             'name' => 'Láminas para Decoupage',
-            'description' => 'Papel ilustración o<br/>Papel Obra 75gr',
+            'description' => 'Papel ilustración o<br />Papel Obra 75gr',
             'size' => 'Línea tablitas 12 x 30cm',
             'link' => 'https://drive.google.com/file/d/1LwxT0T3co7bao8h0GaSkAnJNtYi8n6hL/view?usp=sharing',
         ],
@@ -137,7 +137,7 @@ function generales() {
         ],
         [// Decoupage A4 17042021.pdf
             'name' => 'Láminas de Decoupage',
-            'description' => 'Papel mate autoadhesivo o<br/>Papel obra 75gr',
+            'description' => 'Papel mate autoadhesivo o<br />Papel obra 75gr',
             'size' => 'A4 (21 x 29,7cm)',
             'link' => 'https://drive.google.com/file/d/1AAHbdniK3FhMwxHyhIOkElrCnR64KgHR/view?usp=sharing',
         ],
@@ -162,14 +162,14 @@ function generales() {
         [// Etiquetas para Latas.pdf
             'name' => 'Etiquetas autoadhesivas para Latas',
             'description' => 'Papel ilustración',
-            'size' => 'Lata clásica 25cm<br/>Lata ananá 29cm<br/>Lata durazno 33cm',
+            'size' => 'Lata clásica 25cm<br />Lata ananá 29cm<br />Lata durazno 33cm',
             'link' => 'https://drive.google.com/file/d/14JsOY057enOoG3U9OySQnVqBsDVqbScU/view?usp=sharing',
         ],
         [// Foil Estampado Negro MAYO 2024.pdf
             'name' => 'Foil Estampado Negro',
             'description' => '',
             'size' => 'A4',
-            'link' => 'https://drive.google.com/file/d/1u5Sc0YSmpvwrfw0puJrKHQnkF9FE99DT/view?usp=sharing',
+            'link' => 'https://drive.google.com/file/d/1BqHV-pEkHPBEV96sYhL4u24tTcqlS72C/view?usp=sharing',
         ],
         [// Folex Mayo 2024.pdf
             'name' => 'FOLEX',
@@ -239,7 +239,7 @@ function generales() {
         ],
         [// Sellos Bajo Relieve TITINAS.pdf
            'name' => 'Sellos Bajo Relieve',
-            'description' => 'Diseños con muchos detallles<br/>
+            'description' => 'Diseños con muchos detallles<br />
             Goma de 5.5mm color gris',
             'size' => '',
             'link' => 'https://drive.google.com/file/d/1_YzoWVgnch7_o1E_ATzkJT3SQk0A33N9/view?usp=sharing',

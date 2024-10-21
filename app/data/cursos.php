@@ -48,7 +48,7 @@ function cursosHorizontal() {
                 [
                     'image-cover' => asset('/images/cursos/CAPGAUDI3.webp'),
                     'alt-cover' => 'Efecto Gaudí nivel 3',
-                    'title' => 'SOMOS MUY CREATIVOS<br/>EL EFECTO GAUDÍ TIENE MUCHOS USOS',
+                    'title' => 'SOMOS MUY CREATIVOS<br />EL EFECTO GAUDÍ TIENE MUCHOS USOS',
                     'description' => [
                         'En este nivel aprenderas',
                         '* Marmolados',
@@ -63,7 +63,7 @@ function cursosHorizontal() {
                 [
                     'image-cover' => asset('/images/cursos/CAPGAUDI4.webp'),
                     'alt-cover' => 'Efecto Gaudí nivel 4',
-                    'title' => 'YA SOMOS GRANDES<br/>AHORA PINTAMOS CON EFCETO GAUDÍ',
+                    'title' => 'YA SOMOS GRANDES<br />AHORA PINTAMOS CON EFCETO GAUDÍ',
                     'description' => [
                         'En este nivel aprenderas',
                         '* Composición',
@@ -83,14 +83,14 @@ function cursosHorizontal() {
                 [
                     'image-cover' => asset('/images/cursos/CAPGAUDI5.webp'),
                     'alt-cover' => 'Efecto Gaudí nivel 5',
-                    'title' => 'MEZCLAMOS EL EFECTO GAUDÍ<br/>CON OTROS MATERIALES',
+                    'title' => 'MEZCLAMOS EL EFECTO GAUDÍ<br />CON OTROS MATERIALES',
                     'description' => [
                         'En este nivel aprenderas',
                         '* Técnica de símil esmaltado',
                         '* Pigmentación de juntas',
                         '* Fondos esfumados',
                         '* Matices con Tintas',
-                        '<br/>',
+                        '<br />',
                         '*** PLUS ***',
                         '* Técnica de stencil, superficie afelpada'
                     ],
@@ -132,9 +132,9 @@ function cursosVertical() {
             'description' => [
                 'Te invito a transitar conmigo esta experiencia.',
                 'Una técnica que podrás utilizar en muchas superficies,',
-                '<br/>¡¡¡INCLUSO MUEBLES!!!',
+                '<br />¡¡¡INCLUSO MUEBLES!!!',
                 '¡QUEDA BUENÍSIMO!',
-                '<br/>No incluye materiales',
+                '<br />No incluye materiales',
             ],
           //'mercadopago' => '65692463-76064bfa-3a8b-456e-96e1-3fddc7508146',
             'price' => '15000',
@@ -148,8 +148,8 @@ function cursosVertical() {
             'alt-cover' => 'Bouquet de rosas espatul-art',
             'description' => [
                 'TECNICA RUSA - ESPATULADO',
-                '<br/>En este seminario comenzaremos a desarrollar la técnicacon estas rosas.',
-                '<br/>Son 2 videos:',
+                '<br />En este seminario comenzaremos a desarrollar la técnicacon estas rosas.',
+                '<br />Son 2 videos:',
                 'Parte 1: preparacion y practica de peétalos / Rosa grande',
                 'Parte 2: Bouquet de Rosas y hojas'
             ],
@@ -186,9 +186,9 @@ function cursosVertical() {
             'image-cover' => asset('/images/cursos/espejado-y-vidrio.webp'),
             'alt-cover' => 'Espejado y vidrio mercurizado',
             'description' => [
-                'Son 2 videos con muchas propuestas<br/>Duración: 1.20Hs en total',
+                'Son 2 videos con muchas propuestas<br />Duración: 1.20Hs en total',
                 'Abordaremos variantes de este atractivo efecto.',
-                '<br/>',
+                '<br />',
                 'Aprenderás:',
                 '* Frasco con tecnica de Espejado, añejado con oro.',
                 '* Frasco con tecnica de Vidrio Mercurizado.',
@@ -209,7 +209,7 @@ function cursosVertical() {
             'description' => [
                 'Trabajamos estampado x adición y sustracción, en madera y en acetato.',
                 'Se puede aplicar a tela la técnica también.',
-                '<br/>',
+                '<br />',
                 'Aprenderás',
                 'Grabado, les enseño a hacer la plantilla de grabado casera y a estampara en papel, pero también puede estamparse en tela, madera, y otras superficies.',
                 'Este seminario a distancia tiene un plus de pasta cerámica sin horno estampada con la plantilla generada.'
@@ -242,7 +242,7 @@ function cursosVertical() {
             'alt-cover' => 'geodas vidrio liguido',
             'description' => [
                 'Consta de 3 videos detalladamente explicados, variedad de ejemplos, colores, terminaciones.',
-                '<br/>Aprenderás:',
+                '<br />Aprenderás:',
                 'Parte 1: Preparación de Vidrio Líquido, Pigmentación, Montaje, Realización de 2 Geodas.',
                 'Parte 2: Realización de Geodas en negro, blanco, plata y oro. Posavasos.',
                 'Parte 3: Desmolde. Detalles de terminación.',
@@ -259,7 +259,7 @@ function cursosVertical() {
             'alt-cover' => 'mandalas',
             'description' => [
                 '3 FORMAS DE HACER MANDALAS',
-                '<br/>',
+                '<br />',
                 'Todas la ideas para que te luzcas en tus trabajos.',
                 'Es un seminario muy completo, que uds pueden desdoblarlo en 3 en sus talleres.',
                 'Siempre con todas las explicaciones y secretitos, saben que no me guardo nada!'
@@ -415,7 +415,7 @@ function cursosVertical() {
             'description' => [
                 'Es super completo, tiene muchos trabajos para realizar y mucha teoría +tecnica',
                 'No incluye materiales',
-                '<br/>',
+                '<br />',
                 'Resumen: Consta de 13 clases',
                 '+11 proyectos de perfeccionamiento paso a paso, con imágenes',
                 '+5 paso a paso en videos',

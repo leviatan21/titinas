@@ -345,7 +345,7 @@ trait SchemaMarkupTraits {
         return static::View($shema);
     }
 
-    static function Breadcrumb() {
+    private static function Breadcrumb() {
         $list       = [];
         $routes     = [];
         $url        = url("");
@@ -380,7 +380,7 @@ trait SchemaMarkupTraits {
         return $list;
     }
 
-    static function SiteNavigation() {
+    private static function SiteNavigation() {
         $list    = [];
         $exclude = [ null, "storage.local", "web.redir" ];
         $routes  = Route::getRoutes();

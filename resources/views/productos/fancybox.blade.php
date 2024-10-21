@@ -30,22 +30,30 @@
 
                 <header class="page-header">
                     @if(!empty($item['title']))
-                    <h2 class="page-title @isset ($item['important'])important @endisset">{!!$item['title']!!}</h2>
+                    <h2 class="page-title @isset ($item['important'])important @endisset" id="gallery-{{Str::slug($key, '-')}}" >
+                        <a class="bd-content-title" href="#gallery-{{Str::slug($key, '-')}}" data-anchorjs-icon="#">
+                        {!!$item['title']!!}
+                        </a>
+                    </h2>
                     @endif
 
                     @if(!empty($item['description']))
                     <p>{!!$item['description']!!}</p>
                     @endif
 
-                    @if(!empty($item['instagram']))
-                    <a href="{{$item['instagram']['link']}}" title="instagram" target="_blank" rel="opener noreferrer nofollow">
-                        {{$item['instagram']['text']}}
-                    </a>
+                    @if(!empty($item['links']))
+                    @foreach ($item['links'] as $link)
+                    <p>
+                        <a href="{{$link['href']}}" title=" {{$link['text']}}" target="_blank" rel="opener noreferrer nofollow">
+                            {{$link['text']}}
+                        </a>
+                    </p>
+                    @endforeach
                     @endif
                 </header>
 
                 <div class="f-carousel">
-                @if(empty($item['images']))
+                @if(empty($item['images']) && empty($item['gallery']))
                     <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" 
                         class="rounded" height="200" 
                         decoding="async" loading="lazy" fetchpriority="auto"
@@ -63,15 +71,27 @@
                     @endif
                     </a>
 
-                    <div class="d-none">
-                    @foreach ($item['images'] as $image)
-                        <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
-                            <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
-                                class="mg-fluid rounded" height="200" 
-                                decoding="async" loading="lazy" fetchpriority="low"
-                            />
-                        </a>
-                    @endforeach
+                    <div class="d-none" data-images="{{count($item['images']??[])}}"  data-gallery="{{count($item['gallery']??[])}}">
+                    @if(!empty($item['images']))
+                        @foreach ($item['images'] as $image)
+                            <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
+                                <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
+                                    class="mg-fluid rounded" height="200" 
+                                    decoding="async" loading="lazy" fetchpriority="low"
+                                />
+                            </a>
+                        @endforeach
+                    @endif
+                    @if(!empty($item['gallery']))
+                        @foreach ($item['gallery'] as $image)
+                            <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
+                                <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
+                                    class="mg-fluid rounded" height="200" 
+                                    decoding="async" loading="lazy" fetchpriority="low"
+                                />
+                            </a>
+                        @endforeach
+                    @endif
                     </div>
                 @endif
                 </div>
@@ -80,7 +100,7 @@
         </div>
         @endforeach
 
-        @include('components.footer-shop')
+        @include('components.footer-tienda')
         @include('components.footer-pedidos')
 
     </div>

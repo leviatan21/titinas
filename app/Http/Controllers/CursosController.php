@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-
 use App\Http\Traits\SchemaMarkupTraits;
-
-include_once(app_path() . '/data/cursos.php');
 
 class CursosController extends Controller {
     public function index() {
@@ -17,6 +14,7 @@ class CursosController extends Controller {
             'keywords' => "Compras, Cursos, Seminarios, Gaudí, Pasta Cerámica, Espatul-art, Efecto oxido, Videos, Azulejos, Espejos, Grabado, Estampados",
         ]);
 
+        include_once(app_path() . '/data/cursos.php');
         $horizontal = cursosHorizontal();
         foreach($horizontal as $index => $item) {
             foreach($item['steps'] as $key => $step) {

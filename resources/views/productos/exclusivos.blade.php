@@ -75,7 +75,7 @@
             @endforeach
         </div>
 
-        @include('components.footer-shop')
+        @include('components.footer-tienda')
         @include('components.footer-pedidos')
     </div>
 </div>

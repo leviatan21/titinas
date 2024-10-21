@@ -44,7 +44,7 @@
         </div>
 
         @include('components.products-grid', ['products' => $products])
-        @include('components.footer-shop')
+        @include('components.footer-tienda')
         @include('components.footer-pedidos')
 
     </div>

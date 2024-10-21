@@ -5,7 +5,7 @@
         <h2>{!!$item['title']!!}</h2> 
         <p>
             @foreach ($item['description'] as $description)
-            {!!$description!!}@if(!$loop->last)<br/>@endif
+            {!!$description!!}@if(!$loop->last)<br />@endif
             @endforeach
         </p>
         <div class="mt-8">

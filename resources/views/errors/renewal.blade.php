@@ -27,8 +27,8 @@
                             <h1>!!! Hola !!!</h1>
                             <h2>Nos renovamos !!!!</h2>
                             <p class="py-2">
-                                Te invitamos a recorrer la nueva y renovada<br/>web de Titina's<br/>
-                                donde encontrarás todos nuestros productos<br/>
+                                Te invitamos a recorrer la nueva y renovada<br />web de Titina's<br />
+                                donde encontrarás todos nuestros productos<br />
                                 con nuevas imágenes y mejoradas características
                             </p>
                             <div class="pt-5">

@@ -67,9 +67,9 @@
                 <div class="card bg-light my-4">
                     <div class="card-body d-flex flex-column">
                         <div class="block">
-                            <strong class="title">Envíos: </strong> <br/>
-                        El pedido se envía por ANDREANI con quienes tenemos descuentos que trasladamos a nuestros clientes<br/>
-                        O por un transporte a coordinar<br/>
+                            <strong class="title">Envíos: </strong> <br />
+                        El pedido se envía por ANDREANI con quienes tenemos descuentos que trasladamos a nuestros clientes<br />
+                        O por un transporte a coordinar<br />
                         También, por supuesto, pueden retirar en nuestra sede de Villa Uquiza CABA, o enviar 
                         un comisionista.
                         </div>
@@ -80,8 +80,8 @@
                     <div class="card-body d-flex flex-column">
                         <div class="block">
                             <strong class="title">Tiempos de entrega: </strong>
-                            <br/>
-                            El pedido se ARMA luego de la aceptación del presupuesto/remito que será enviado por email/whatsapp al cliente<br/>
+                            <br />
+                            El pedido se ARMA luego de la aceptación del presupuesto/remito que será enviado por email/whatsapp al cliente<br />
                             Se despacha una vez acreditado el pago, en un máximo de 7 días hábiles, pero en general es de 72hs.
                         </div>
                     </div>
@@ -91,9 +91,9 @@
                     <div class="card-body d-flex flex-column">
                         <div class="block">
                             <strong class="title">forma de pago: </strong>
-                            <br/>
+                            <br />
                             CABA: pago contra entrega de pedido.
-                            <br/>
+                            <br />
                             Resto del país: a través de transferencia bancaria a <strong>Anabella Audubert</strong>
                             <br />
                             CUIT: 27-23505496-0
@@ -128,7 +128,7 @@
         </div>
     </div>
 
-    @include('components.footer-shop')
+    @include('components.footer-tienda')
     @include('components.footer-pedidos')
     @include('components.footer-catalogos')
 

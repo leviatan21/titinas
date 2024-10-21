@@ -27,7 +27,7 @@
                 
                 <p class="card__teacher">
                     @foreach ($item['description'] as $description)
-                    {!!$description!!}@if(!$loop->last)<br/>@endif
+                    {!!$description!!}@if(!$loop->last)<br />@endif
                     @endforeach
                 </p>
 

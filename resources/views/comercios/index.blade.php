@@ -10,8 +10,8 @@
             </div>
             <div class="border rounded bg-light text-dark mt-4 p-4">
                 <p class="post-content h5">
-                    Buscá el comercio que quede mas cerca de tu casa.<br/>
-                    Si no encontras, podes escribirnos a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a> .<br/>
+                    Buscá el comercio que quede mas cerca de tu casa.<br />
+                    Si no encontras, podes escribirnos a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a> .<br />
                     y darnos los datos de tu comercio mas cercano, que nosotros los contactaremos.
                 </p>
                 <p class="post-footer h5">
@@ -94,7 +94,7 @@
     </div>
     @endforeach
 
-    @include('components.footer-shop')
+    @include('components.footer-tienda')
     @include('components.footer-pedidos')
 
 </div>

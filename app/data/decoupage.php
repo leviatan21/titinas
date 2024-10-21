@@ -90,7 +90,7 @@ function decoupage() {
             'image' => asset('/images/productos/decoupage/seda-hibrida-50x70.webp'),
             'gallery' => 'productos/decoupage/seda-hibrida-50x70'
         ],
-        [// Decoupage Seda Lavable
+        [// Decoupage Seda Lavable [Stock: 2024-10-21]
             'title' => 'Láminas de seda lavables',
             'description' => "Láminas de seda de alta calidad de impresión<br />
                             La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie, y depues la podes lavar<br />
@@ -107,7 +107,7 @@ function decoupage() {
                 ]
             ]
         ],
-        [// Decoupage Seda Lavable
+        [// Decoupage Seda Lavable [Stock: 2024-10-21]
             'title' => 'Láminas de seda lavables',
             'description' => "Láminas de seda de alta calidad de impresión<br />
                             La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie, y depues la podes lavar<br />

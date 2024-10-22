@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Productos para el arte y la creatividad - Titina's",
+        'description' => "Espatul-art - Pasta cerámica sin horno - Efecto Gaudí - Tintas al alcohol - Textura piedra - Craquelador 3D - Efecto óxido",
+        'keywords' => "espatul-art, Pasta, cerámica, sin horno, Efecto, Gaudí, Tintas, Textura, piedra, Craquelador 3D, Efecto óxido, Titina's",
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function productos() {
     return [
         [

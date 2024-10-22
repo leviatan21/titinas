@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Láminas autoadhesivas - Titina's",
+        'description' => "",
+        'keywords' => ""
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function autoadhesivos() {
     return [
         [// Etiquetas Latas adhesivas

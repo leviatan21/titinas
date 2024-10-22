@@ -45,7 +45,7 @@
         a la cerámica.<br />
         Todo ese trayecto nos trajo hasta hoy, siempre trabajando para dar lo mejor y con mucho amor por
         lo que hacemos.</p>
-        <p>El 2022 no encontró emprendiendo un nuevo desafío, llevar lo que hacemos a otras tierras. La
+        <p>El 2022 nos encontró emprendiendo un nuevo desafío, llevar lo que hacemos a otras tierras. La
         marca <em class="font-weight-bold">Titina's</em> continúa en Argentina, mientras me instalo en Italia para enseñar allá también algo
         de lo que hacemos. La vida es un constante cambio, y ampliar horizontes siempre está bueno.</p>
         <p>Sigo estando presente en la redes y en todos los medios de contacto a distancia tanto para

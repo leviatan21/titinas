@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Catálogo de productos - Titinas",
+        'description' => "Productos Exclusivos - Espatul-Art - Pasta cerámica sin horno - Efecto Gaudí - Tintas al alcohol - Craquelador 3D - Transferencias Multitransfer - Cartulinas",
+        'keywords' => "Espatul-Art, Pasta, Cerámica, sin horno, Efecto, Gaudí, Tintas, Alcohol, Craquelador, 3D, Decoupage, ArteFrances, Cartulinas, Kraft, Multitransfer, Seda, Sellos, Stenciles, Transfer, Vinilo"
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function exclusivos() {
     // Productos Exclusivos.pdf
     return [

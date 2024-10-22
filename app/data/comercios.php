@@ -1,13 +1,25 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Comercios y puntos de venta - Titinas",
+        'description' => "Buscá el comercio que quede mas cerca de tu casa.",
+        'keywords' => "venta, comercios, consultas, pedidos, contacto, caba, gba, provincias, argentina"
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function comercios() {
     return [
         'caba' => [
             [
                 'name' => 'EL TIGRE',
                 'address' => [
-                    'Av. Cabildo 3854 - Núñez / Tel: 4703-3527',
-                    'Lope de Vega 3385 - Villa Devoto / Tel: 4568-6813'
+                    'Av. Cabildo 3854 - Tel: 4703-3527 - Núñez',
+                    'Lope de Vega 3385 - Tel: 4568-6813 - Villa Devoto'
                 ],
                 'href' => [
                     'Web' => 'http://www.fibrofacileltigre.com.ar'
@@ -16,7 +28,8 @@ function comercios() {
             [
                 'name' => 'ARTISTICA FEYLO',
                 'address' => [
-                    'Corrientes 2076 - Once (Balvanera)'
+                    'Corrientes 2076',
+                    'Once (Balvanera)'
                 ],
                 'href' => [
                     'Web' => 'http://www.feylo.com'
@@ -62,7 +75,8 @@ function comercios() {
                 'name' => 'ARTESHOP',
                 'address' => [
                     'Tel: +54 911 6597 9206',
-                    'Retiros Yerbal 5950, Caba'
+                    'Retiros Yerbal 5950',
+                    'Caba'
                 ],
                 'href' => [
                     'Web' => 'http://www.arteshop.com.ar',

@@ -1,129 +1,147 @@
 <?php
+function seo() {
+    return [
+        'title' => "Cursos y seminarios a distancia - Titinas",
+        'description' => "Cursos y seminarios en videos - Efecto Gaudí - Pasta cerámica sin horno - Titinas",
+        'keywords' => "Compras, Cursos, Seminarios, Gaudí, Pasta Cerámica, Espatul-art, Efecto oxido, Videos, Azulejos, Espejos, Grabado, Estampados",
+    ];
+}
 
-function cursosHorizontal() {
+function paragraph() {
+    return "Stenciles de excelente calidad<br />
+    200 micrones - Garantia de durabilidad<br />
+    Aptos para todo tipo de manualidades, pintura en tela y repostería";
+}
+
+function horizontal() {
     return [
         [
             'special' => true,
-            'title' => 'Efecto Gaudí',
-            'description' => [],
-            'steps' => [
-                [
-                    'image-cover' => asset('/images/cursos/CAPGAUDI1.webp'),
-                    'alt-cover' => 'Efecto Gaudí nivel 1',
-                    'title' => 'INICIAMOS LA TÉCNICA',
-                    'description' => [
-                        'En este nivel aprenderas',
-                        '* Recomendación de marcas de lacas vitrales y datos técnicos',
-                        '* Herramientas',
-                        '* Técnica en superficies planas',
-                        '* Técnica en figuras caladas',
-                        '* Técnica para superficies curvas',
-                        '* Tiempos de secado',
-                        '* Formas de uso y de pegado posterior en superficies curvas'
-                    ],
-                  //'mercadopago' => '65692463-933c5c4e-28e1-4df4-ba81-20f543f6d690',
-                    'price' => '20000',
-                    'prices' => [
-                        'Valor por depósito o transferencia bancaria $20.000.-',
-                        'PROMO NIVEL 1 Y 2 :',
-                        'Valor por depósito o transferencia bancaria $35.000'
-                    ]
-                ],
-                [
-                    'image-cover' => asset('/images/cursos/CAPGAUDI2.webp'),
-                    'alt-cover' => 'Efecto Gaudí nivel 2',
-                    'title' => 'AVANZAMOS, SEGUIMOS CREANDO',
-                    'description' => [
-                        'En este nivel aprenderas',
-                        '* Aditivos : combinación con otras sustancias',
-                        '* Técnica de apliques / siluetas',
-                        '* Aplicación sobre superficies muy porosas',
-                        '* Refuerzo de técnica de flores'
-                    ],
-                  //'mercadopago' => '65692463-e28deba7-dfb9-4978-b7a1-14d590b7ce82',
-                    'price' => '20000',
-                    'prices' => [
-                        'Valor por depósito o transferencia bancaria $20.000.-'
-                    ]
-                ],
-                [
-                    'image-cover' => asset('/images/cursos/CAPGAUDI3.webp'),
-                    'alt-cover' => 'Efecto Gaudí nivel 3',
-                    'title' => 'SOMOS MUY CREATIVOS<br />EL EFECTO GAUDÍ TIENE MUCHOS USOS',
-                    'description' => [
-                        'En este nivel aprenderas',
-                        '* Marmolados',
-                        '* Mosaicos en combinación con decoupage'
-                    ],
-                  //'mercadopago' => '65692463-600fd4d7-6e47-4d30-92f9-9fd9f0f99c86',
-                    'price' => '20000',
-                    'prices' => [
-                        'Valor por depósito o transferencia bancaria $20.000.-'
-                    ]
-                ],
-                [
-                    'image-cover' => asset('/images/cursos/CAPGAUDI4.webp'),
-                    'alt-cover' => 'Efecto Gaudí nivel 4',
-                    'title' => 'YA SOMOS GRANDES<br />AHORA PINTAMOS CON EFCETO GAUDÍ',
-                    'description' => [
-                        'En este nivel aprenderas',
-                        '* Composición',
-                        '* Ritmos',
-                        '* Lectura visual',
-                        '* Perspectiva',
-                        '* Manejo del color',
-                        '* Inclusiones',
-                        '* Matices'
-                    ],
-                  //'mercadopago' => '65692463-d00e9e72-a89d-4e0d-8e76-70333b0abf26',
-                    'price' => '20000',
-                    'prices' => [
-                        'Valor por depósito o transferencia bancaria $20.000.-'
-                    ]
-                ],
-                [
-                    'image-cover' => asset('/images/cursos/CAPGAUDI5.webp'),
-                    'alt-cover' => 'Efecto Gaudí nivel 5',
-                    'title' => 'MEZCLAMOS EL EFECTO GAUDÍ<br />CON OTROS MATERIALES',
-                    'description' => [
-                        'En este nivel aprenderas',
-                        '* Técnica de símil esmaltado',
-                        '* Pigmentación de juntas',
-                        '* Fondos esfumados',
-                        '* Matices con Tintas',
-                        '<br />',
-                        '*** PLUS ***',
-                        '* Técnica de stencil, superficie afelpada'
-                    ],
-                  //'mercadopago' => '65692463-76cb28fc-425e-4cda-86ff-7c9c6ab45034',
-                    'price' => '20000',
-                    'prices' => [
-                        'Valor por depósito o transferencia bancaria $20.000.-'
-                    ]
-                ],
-                [
-                    'image-cover' => asset('/images/cursos/CAPGAUDI6.webp'),
-                    'alt-cover' => 'Efecto Gaudí nivel 6',
-                    'title' => 'NUEVA TÉCNICA',
-                    'description' => [
-                        'Te invito a transitar conmigo esta experiencia.',
-                        'Una técnica que podrás utilizar en muchas superficies,',
-                        '¡¡¡INCLUSO MUEBLES!!!',
-                        'Aprende y aplicala con los colores que a vos te gusten.',
-                        'Te va a encantar ;)'
-                    ],
-                  //'mercadopago' => '65692463-063bedba-72be-46f8-8027-207b92509ef1',
-                    'price' => '20000',
-                    'prices' => [
-                        'Valor por depósito o transferencia bancaria $20.000.-'
-                    ]
-                ]
+            'title' => 'Efecto Gaudí: nivel 1',
+            'sub-title' => 'INICIAMOS LA TÉCNICA',
+            'image-cover' => asset('/images/cursos/CAPGAUDI1.webp'),
+            'alt-cover' => 'Efecto Gaudí nivel 1',
+            'description' => [
+                'En este nivel aprenderas',
+                '* Recomendación de marcas de lacas vitrales y datos técnicos',
+                '* Herramientas',
+                '* Técnica en superficies planas',
+                '* Técnica en figuras caladas',
+                '* Técnica para superficies curvas',
+                '* Tiempos de secado',
+                '* Formas de uso y de pegado posterior en superficies curvas'
+            ],
+            //'mercadopago' => '65692463-933c5c4e-28e1-4df4-ba81-20f543f6d690',
+            'price' => '20000',
+            'prices' => [
+                'Valor por depósito o transferencia bancaria $20.000.-',
+                'PROMO NIVEL 1 Y 2 :',
+                'Valor por depósito o transferencia bancaria $35.000'
+            ]
+        ],
+        [
+            'special' => true,
+            'title' => 'Efecto Gaudí: nivel 2',
+            'sub-title' => 'AVANZAMOS, SEGUIMOS CREANDO',
+            'image-cover' => asset('/images/cursos/CAPGAUDI2.webp'),
+            'alt-cover' => 'Efecto Gaudí nivel 2',
+            'description' => [
+                'En este nivel aprenderas',
+                '* Aditivos : combinación con otras sustancias',
+                '* Técnica de apliques / siluetas',
+                '* Aplicación sobre superficies muy porosas',
+                '* Refuerzo de técnica de flores'
+            ],
+            //'mercadopago' => '65692463-e28deba7-dfb9-4978-b7a1-14d590b7ce82',
+            'price' => '20000',
+            'prices' => [
+                'Valor por depósito o transferencia bancaria $20.000.-'
+            ]
+        ],
+        [
+            'special' => true,
+            'title' => 'Efecto Gaudí: nivel 3',
+            'sub-title' => 'SOMOS MUY CREATIVOS, EL EFECTO GAUDÍ TIENE MUCHOS USOS',
+            'image-cover' => asset('/images/cursos/CAPGAUDI3.webp'),
+            'alt-cover' => 'Efecto Gaudí nivel 3',
+            'description' => [
+                'En este nivel aprenderas',
+                '* Marmolados',
+                '* Mosaicos en combinación con decoupage'
+            ],
+            //'mercadopago' => '65692463-600fd4d7-6e47-4d30-92f9-9fd9f0f99c86',
+            'price' => '20000',
+            'prices' => [
+                'Valor por depósito o transferencia bancaria $20.000.-'
+            ]
+        ],
+        [
+            'special' => true,
+            'title' => 'Efecto Gaudí: nivel 4',
+            'sub-title' => 'YA SOMOS GRANDES<br />AHORA PINTAMOS CON EFCETO GAUDÍ',
+            'image-cover' => asset('/images/cursos/CAPGAUDI4.webp'),
+            'alt-cover' => 'Efecto Gaudí nivel 4',
+            'description' => [
+                'En este nivel aprenderas',
+                '* Composición',
+                '* Ritmos',
+                '* Lectura visual',
+                '* Perspectiva',
+                '* Manejo del color',
+                '* Inclusiones',
+                '* Matices'
+            ],
+            //'mercadopago' => '65692463-d00e9e72-a89d-4e0d-8e76-70333b0abf26',
+            'price' => '20000',
+            'prices' => [
+                'Valor por depósito o transferencia bancaria $20.000.-'
+            ]
+        ],
+        [
+            'special' => true,
+            'title' => 'Efecto Gaudí: nivel 5',
+            'sub-title' => 'MEZCLAMOS EL EFECTO GAUDÍ<br />CON OTROS MATERIALES',
+            'image-cover' => asset('/images/cursos/CAPGAUDI5.webp'),
+            'alt-cover' => 'Efecto Gaudí nivel 5',
+            'description' => [
+                'En este nivel aprenderas',
+                '* Técnica de símil esmaltado',
+                '* Pigmentación de juntas',
+                '* Fondos esfumados',
+                '* Matices con Tintas',
+                '<br />',
+                '*** PLUS ***',
+                '* Técnica de stencil, superficie afelpada'
+            ],
+            //'mercadopago' => '65692463-76cb28fc-425e-4cda-86ff-7c9c6ab45034',
+            'price' => '20000',
+            'prices' => [
+                'Valor por depósito o transferencia bancaria $20.000.-'
+            ]
+        ],
+        [
+            'special' => true,
+            'title' => 'Efecto Gaudí: nivel 6',
+            'sub-title' => 'NUEVA TÉCNICA',
+            'image-cover' => asset('/images/cursos/CAPGAUDI6.webp'),
+            'alt-cover' => 'Efecto Gaudí nivel 6',
+            'description' => [
+                'Te invito a transitar conmigo esta experiencia.',
+                'Una técnica que podrás utilizar en muchas superficies,',
+                '¡¡¡INCLUSO MUEBLES!!!',
+                'Aprende y aplicala con los colores que a vos te gusten.',
+                'Te va a encantar ;)'
+            ],
+            //'mercadopago' => '65692463-063bedba-72be-46f8-8027-207b92509ef1',
+            'price' => '20000',
+            'prices' => [
+                'Valor por depósito o transferencia bancaria $20.000.-'
             ]
         ]
     ];
 }
 
-function cursosVertical() {
+function vertical() {
     return [
         [
             'special' => 'Nueva Técnica',

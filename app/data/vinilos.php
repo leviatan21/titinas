@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Vinilos - Titina's",
+        'description' => "Vinilos transparentes - esmerilados - blanco mate - Para vidrio, acetato, acrílico, plástico y madera - Excelente terminación y protección",
+        'keywords' => "Vinilos, Transparentes, Esmerilados, Blanco, Mate"
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function vinilos() {
     return [
         [// Vinilo Blanco Mate 8x11

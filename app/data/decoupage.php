@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Todo para Decoupage - Titina's",
+        'description' => "Decoupage húmedo - Papel ilustración - Papel mate - Papel de seda - Etiquetas - Kraft",
+        'keywords' => "Decoración, Decoupage, Papel, Ilustración, Mate, Seda, Etiquetas, Kraft"
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function decoupage() {
     return [
         [// Etiquetas Latas Papel comun

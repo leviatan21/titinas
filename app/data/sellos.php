@@ -1,5 +1,18 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Sellos bajo relieve - Titina's",
+        'description' => "Sellos bajo relieve - Goma de 5.5mm color gris",
+        'keywords' => "Sello, Sellos, Goma"
+    ];
+}
+
+function paragraph() {
+    return "Diseños con mucho detalle<br />
+                     Goma de 5.5mm color gris";
+}
+
 function sellos() {
     // Sellos
     return [

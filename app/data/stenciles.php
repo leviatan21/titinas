@@ -1,5 +1,19 @@
 <?php
 
+function seo() {
+    return[
+        'title' => "Stenciles - Titina's",
+        'description' => "Stenciles de 200 micrones - Aptos para todo tipo de manualidades, pintura en tela y repostería",
+        'keywords' => "Stencil, Stenciles, Manualidades, Pintura, Tela, Repostería"
+    ];
+}
+
+function paragraph() {
+    return "Stenciles de excelente calidad<br />
+    200 micrones - Garantia de durabilidad<br />
+    Aptos para todo tipo de manualidades, pintura en tela y repostería";
+}
+
 function stenciles() {
     // Stenciles
     return [

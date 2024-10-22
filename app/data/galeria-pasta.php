@@ -1,6 +1,23 @@
 <?php
 
-function galeriaPasta() {
+function seo() {
+    return [
+        'title' => "Pasta cerámica sin horno - Titina's",
+        'description' => "Pasta cerámica sin horno en polvo presentación en bolsa de un kilo",
+        'keywords' => "Pasta, cerámica, sin horno, Trabajos, Talleres, Souvenirs"
+    ];
+}
+
+function paragraph() {
+    return "<p>La mejor opción para desarrollar tu hobby con esta pasta cerámica de fácil preparación y de secado al aire, no requiere horneado. Sólo hay que mezclar el producto con agua. Una vez amasada queda una arcilla blanca de textura suave y fina al tacto, sin olor. Prepará la porción de material que vayas a usar, por ejemplo 250gr para un plato de 15cm y 6mm de espesor.</p>
+            <p>Es muy maleable, ideal para modelar. Podés crear todo tipo de objetos decorativos de uso en seco, bijou, souvenires, platos, cuencos, alhajeros, porta sahumerios, portavelas, luminarias y muchos adornos más.</p>
+            <p>Con varillas niveladoras y palo de amasar se pueden hacer planchas y copiar por afuera moldes de cuencos o cajas de bordes redondeados. Pueden copiarse por adentro platos o formas de concavidad suave, también se puede usar en moldes de silicona de molduras y apliques florales.</p>
+            <p>La pasta cerámica no contrae, no se achica. Tiene un acabado similar al bizcocho cerámico. El secado a temperatura ambiente oscila entre uno y cuatro días, ese tiempo variará dependiendo de las condiciones climáticas, la humedad ambiente, el tamaño y espesor de la pieza. Luego de las primeras 24hs, se debe desmoldar, y pasadas las 48hs se puede colocar la pieza al sol o cerca de una fuente de calor para completar la evaporación del agua.</p>
+            <p>La pasta cerámica se puede teñir con pigmentos secos durante la preparación o pintar la pieza una vez seca con pinturas acrílicas, a la tiza, tintas, acuarelas, esmaltes, lacas y barnices.</p>
+            <p>Es poco recomendable exponer la pieza al aire libre, puesto que la lluvia o humedad constantes terminarían degradando el material, los objetos creados con pasta cerámica se pueden impermeabilizar con productos especiales para frentes y ladrillos. Es importante elegir un buen barniz o laca poliuretánica que sea para exterior. La pasta cerámica no es apta para uso culinario o alimenticio, las piezas no resisten la exposición constante al agua, pero se pueden limpiar con un trapo húmedo.</p>";
+}
+
+function pasta() {
     return [
         [
             'title' => "Antología - trabajos de los inicios 2002 a 2006",

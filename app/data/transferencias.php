@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Láminas de Transferencia y Multitransfer - Titina's",
+        'description' => "Transferencia - Tintas negas - Tintas color - Línea Oro - Línea Sepia - Multitransfer",
+        'keywords' => "Papel especial, Calidad, Pultas, Tintas, Oro, Sepia, Multitransfer"
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function transferencias() {
     return [
         [// Transferencia negra A4

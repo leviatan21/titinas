@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Videos - Titinas",
+        'description' => 'Videos en vivo - mirá el que más te guste - Youtube - Facebook',
+        'keywords' => "Multitransfer, Stencil, Cerámica, Tintas, Gaudí, Láminas, Decoupage, Bandejas"
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function videos() {
     // 101_Transferencia en tela    https://www.youtube.com/watch?v=c8vZQaj9Pg4
     // 101_Transferencia en tela_ LAVADO *  https://www.youtube.com/watch?v=lfPiouvUaTY

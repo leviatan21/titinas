@@ -1,5 +1,17 @@
 <?php
 
+function seo() {
+    return [
+        'title' => "Cartulinas - Titina's",
+        'description' => "Cartulinas Simple Faz, Doble Faz, Cartulinas para Scrapbooking y manualidades",
+        'keywords' => "Cartulinas, Simple faz, Doble faz, Packs, Scrapbooking, Manualidades"
+    ];
+}
+
+function paragraph() {
+    return ;
+}
+
 function cartulinas() {
     return [
         [// Cartulinas Simple Faz

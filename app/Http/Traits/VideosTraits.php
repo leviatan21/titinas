@@ -8,15 +8,14 @@ use Carbon\Carbon;
 include_once(app_path() . '/data/videos.php');
 
 trait VideosTraits {
-    public static function GetVideos($seo) {
-        $videos = videos();
+    public static function GetVideos($seo, $items) {
 
-        foreach($videos as $index => $item) {
-            $videos[$index]['dateHumans']   = static::parseDate($item['datePublished'] ?? '');
-            $videos[$index]['schemamarkup'] = SchemaMarkupTraits::VideoObject($seo, $item);
+        foreach($items as $index => $item) {
+            $items[$index]['dateHumans']   = static::parseDate($item['datePublished'] ?? '');
+            $items[$index]['schemamarkup'] = SchemaMarkupTraits::VideoObject($seo, $item);
         }
 
-        return collect($videos)->chunk(3);
+        return collect($items)->chunk(3);
     }
 
     private static function parseDate($string='') {

@@ -4,9 +4,9 @@
 <div id="page-wrap">
     <div class="page-content">
 
-        <header class="page-header full-width">
-            <h1 class="hidden">Materiales para el arte decorativo y la creatividad</h1>
-        </header>
+        <div class="page-header full-width pb-4">
+            <h1 class="page-title">{{$SEO->TITLE}}</h1>
+        </div>
 
         <div class="container my-4">
             <div class="featured-slider-area">

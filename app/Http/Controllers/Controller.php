@@ -10,8 +10,8 @@ use App\Http\Traits\SchemaMarkupTraits;
 
 class Controller {
     static $menu    = [];
-    static $seo     = [];
     static $config  = [];
+    static $seo     = [];
     static $social  = [];
     static $shema   = [];
 
@@ -19,7 +19,8 @@ class Controller {
         static::menu();
         static::config();
         static::seo();
-        static::$shema = SchemaMarkupTraits::Global( static::$seo, static::$config );
+        static::social();
+        static::$shema = SchemaMarkupTraits::Global(static::$seo, static::$config);
 
         static::ViewShare();
     }
@@ -46,7 +47,7 @@ class Controller {
         });
     }
 
-    static function menu( ) {
+    static function menu() {
         static::$menu = [
             [
                 'href' => url('/redirect?to=shop'),
@@ -83,7 +84,7 @@ class Controller {
         ];
     }
 
-    static function config( ) {
+    static function config() {
         static::$config = (object) [
             'ANA_NAME'          => config('custom.AnaName', 'Anabella'),
             'ANA_TEL'           => config('custom.AnaTel', '+54911 5562-9418'),
@@ -99,7 +100,7 @@ class Controller {
         ];
     }
 
-    static function seo( $seo = [] ) {
+    static function seo(array $seo=[]) {
         static::$seo = (object) [
             'CANONICAL'         => url()->current(),
             'SITEURL'           => url(''),
@@ -116,7 +117,9 @@ class Controller {
             'GOOGLE_TAGMANAGER' => config('custom.googletagmanager', null),
             'FACEBOOK_PIXEL'    => config('custom.facebookpixel', null),
         ];
+    }
 
+    static function social() {
         static::$social = (object) [
             'facebook'          => config('custom.facebook', null),
             'youtube'           => config('custom.youtube', null),

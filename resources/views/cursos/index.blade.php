@@ -52,12 +52,6 @@
                     <li class="blog-list-style">
                         Para consultas y pedidos de cursos a distancia escribirnos a <a href="mailto:{{$CONFIG->EMAIL_ADISTANCIA}}">{{$CONFIG->EMAIL_ADISTANCIA}}</a>
                     </li>
-                    <li class="blog-list-style">
-                        Buscá el comercio que quede mas cerca de tu casa.
-                        Si no encontras, podes escribirnos a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a>
-                        y darnos los datos de tu comercio mas cercano.
-                        Nosotros los contactaremos.
-                    </li>
                 </ul>
             </div>
         </article>

@@ -16,7 +16,7 @@ use App\Http\Controllers\ProductosController;
 // Global .html redirection
 Route::get( '{any}.{extension}', function($route, $extension) { 
     return RedirectController::renovado($route, $extension);
-})->where(['any'=>'([^\s"]+)', 'extension'=>'(php|html|htm)'])->name('old');
+})->where(['any'=>'([^\s"]+)', 'extension'=>'(php7|php|html|htm)'])->name('old');
 
 Route::get( '/',                    [HomeController::class, 'index']                )->name('web.home');
 Route::get( '/catalogos',           [CatalogosController::class, 'index']           )->name('web.catalogos');
@@ -49,8 +49,8 @@ Route::prefix('/productos')->group(function () {
 });
 Route::prefix('/blog')->group(function () {
     Route::get( '/',                 [BlogController::class, 'index']                )->name('web.blog');
-    Route::get( '/{post}',           [BlogController::class, 'post']                 )->name('web.post');
-    Route::get( '/categoria/{cat}',  [BlogController::class, 'categoria']            )->name('web.categoria');
-    Route::get( '/tag/{tag}',        [BlogController::class, 'tag']                  )->name('web.tag');
-    Route::get( '/author/{author}',  [BlogController::class, 'author']               )->name('web.author');
+    Route::get( '/{post}',           [BlogController::class, 'post']                 )->name('blog.post');
+    Route::get( '/categoria/{cat}',  [BlogController::class, 'categoria']            )->name('blog.categoria');
+    Route::get( '/tag/{tag}',        [BlogController::class, 'tag']                  )->name('blog.tag');
+    Route::get( '/author/{author}',  [BlogController::class, 'author']               )->name('blog.author');
 });

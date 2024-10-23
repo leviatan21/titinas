@@ -54,14 +54,14 @@ function transferencias() {
         ],
         [// Multitransfer
             'title' => "Multitransfer",
-            'description' => "Última tecnología.<br />
-                            Listas para usar.<br />
-                            No necesitan pegamento<br />
-                            Sobre vidrio puede colocarse multipropósito para reforzar el engomado.<br />
-                            Se activa con plancha, secador de pelo o pistola de calor, lo mas conveniente según la superficie elegida.<br />
-                            Frotar. Ira pasando a la superficie y despegándose del soporte transparente.<br />
-                            El soporte es apto para el calor, y es grueso.<br />
-                            Tela, Madera, Cartón, Latas, Vidrio.<br />
+            'description' => "Láminas para transferir con calor (termotransferibles) listas para usar sobre tela y superficies rígidas: mdf, madera, vidrio, chapa u otros materiales donde se pueda aplicar el calor de una plancha.<br />
+                            No necesitan pegamento.<br />
+                            Retirar el soporte una vez que la aplicación está fría al tacto.<br />
+                            Si la imagen no se pegó del todo se puede repetir la operación.<br />
+                            Sobre vidrio: se puede aplicar adhesivo multipropósito en el revés de la imagen, dejar orear hasta que alcance el punto etiqueta o tac.<br />
+                            Posicionar la imagen presionar con espátula y frotar hasta que se pegue (no es necesario aplicar calor) y luego retirar el acetato soporte.<br />
+                            Los trabajos terminados se pueden barnizar.<br />
+                            Ideales para trabajar en tela: bolsos, almohadones, zapatillas, etc (las UV no sirven para tela)<br />
                             Tamaño: 20x24cm<br />
                             Presentación: 3 unidades por modelo",
             'image' => asset('/images/productos/transferencias/multitransfer.webp'),

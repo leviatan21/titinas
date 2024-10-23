@@ -382,7 +382,6 @@ trait SchemaMarkupTraits {
 
     private static function SiteNavigation() {
         $list    = [];
-        $exclude = [ null, "storage.local", "web.redir" ];
         $routes  = Route::getRoutes();
 
         $routes = collect($routes)->filter(function($route) {

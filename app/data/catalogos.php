@@ -9,7 +9,7 @@ function seo() {
 }
 
 function paragraph() {
-    return ;
+    return "";
 }
 
 function exclusivos() {
@@ -224,14 +224,14 @@ function generales() {
         [// Puntillismo SET FB.jpg
             'name' => 'Stenciles 1',
             'description' => 'Set para Puntillismo',
-            'size' => '14 x 14cn, 15 x 15cm, 25 x 25cm',
+            'size' => '14 x 14cm, 15 x 15cm, 25 x 25cm',
             'link' => 'https://drive.google.com/file/d/1ynhmZ1kaUcN7AxZkjahBUThIG08UPBGt/view?usp=sharing',
         ],
         */
         [// Puntillismo SET
             'name' => 'Stenciles',
             'description' => 'Set para Puntillismo',
-            'size' => '14 x 14cn, 15 x 15cm, 25 x 25cm',
+            'size' => '14 x 14cm, 15 x 15cm, 25 x 25cm',
             'link' => 'https://drive.google.com/file/d/1npAuhQl9egPa53DkHm0p81nOp-4h9ERm/view?usp=sharing',
         ],
         [// Seda 22x36.pdf
@@ -363,13 +363,13 @@ function generales() {
         ],
         [// VINILO Transparente_MINI.pdf
            'name' => 'Vinilos transparentes mini',
-            'description' => 'Vinilo transparente autoadhesivo lcon aminado brillante',
+            'description' => 'Vinilo transparente autoadhesivo con laminado brillante',
             'size' => '8 x 11cm',
             'link' => 'https://drive.google.com/file/d/15Q9vgG3OT0tTGzkZOCGahGaObO1iZBvF/view?usp=sharing',
         ],
         [// Vinilos Esmerilados.pdf
            'name' => 'Esmerilados mini',
-            'description' => 'Vinilo transparente autoadhesivo lcon aminado brillante',
+            'description' => 'Vinilo transparente autoadhesivo con laminado brillante',
             'size' => '8 x 11cm',
             'link' => 'https://drive.google.com/file/d/1S_Vk7xjCLfltvcj0ZgMbxAQF91aBXQ1R/view?usp=sharing',
         ],

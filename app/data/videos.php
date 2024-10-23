@@ -9,7 +9,7 @@ function seo() {
 }
 
 function paragraph() {
-    return ;
+    return "";
 }
 
 function videos() {
@@ -34,7 +34,7 @@ function videos() {
         ],
         [
             'title' => 'Stencil',
-            'description' => '',
+            'description' => "Jugando con stenciles Titina's",
             'datePublished' => '2021-08-07T16:00:00+00:00',
             'image' => asset('/images/videos/stenciles.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/336816370819342'
@@ -69,35 +69,35 @@ function videos() {
         ],
         [
             'title' => 'Láminas Kraft 2 trabajos',
-            'description' => '',
+            'description' => 'Decoupage con laminas "Inspiración Kraft" de Titinas',
             'datePublished' => '2021-04-09T16:00:00+00:00',
             'image' => asset('/images/videos/laminas-kraft.webp'),
             'facebook-share'=> 'https://www.facebook.com/100063854735111/videos/1898569826977707'
         ],
         [
             'title' => 'Cerámica Portuguesa sin horno',
-            'description' => '',
+            'description' => 'Peces ceramica portuguesa',
             'datePublished' => '2021-03-05T16:00:00+00:00',
             'image' => asset('/images/videos/ceramica-portuguesa.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/1145236429251079'
         ],
         [
             'title' => 'Vinilos y puntillas Efecto Gaudí',
-            'description' => '',
+            'description' => "Vinilos Titina's y puntillas",
             'datePublished' => '2021-02-26T14:16:00+00:00',
             'image' => asset('/images/videos/efecto-gaudi-vinilos-y-puntillas.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/430496251370920'
         ],
         [
             'title' => 'Caja cerámica sin horno',
-            'description' => '',
+            'description' => 'Cajitas para regalar',
             'datePublished' => '2021-02-12T16:00:00+00:00',
             'image' => asset('/images/videos/caja-ceramica-sin-horno.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/165851591796453'
         ],
         [
             'title' => 'Decoupage en húmedo con Frascos',
-            'description' => '',
+            'description' => "Decoupage en Húmedo sobre vidrio Titina's",
             'datePublished' => '2021-01-29T16:00:00+00:00',
             'image' => asset('/images/videos/decoupage-humedo.webp'),
             'facebook-share'=> 'https://www.facebook.com/100063854735111/videos/441507490536315'
@@ -111,28 +111,28 @@ function videos() {
         ],
         [
             'title' => 'Jarra con cerámica sin honro y transferencia',
-            'description' => '',
+            'description' => "Pasta Cerámica sin horno - reciclamos",
             'datePublished' => '2020-11-06T16:00:00+00:00',
             'image' => asset('/images/videos/jarra-ceramica-y-transfer.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/754230205133068'
         ],
         [
             'title' => 'Efecto Gaudí en Espejo',
-            'description' => '',
+            'description' => "Efecto Gaudi de Titina's",
             'datePublished' => '2020-11-27T16:00:00+00:00',
             'image' => asset('/images/videos/efecto-gaudi-espejo.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/1018073165270190'
         ],
         [
             'title' => 'Efecto gaudí con stencil',
-            'description' => '',
+            'description' => "Efecto Gaudí de Titina's",
             'datePublished' => '2020-10-30T16:00:00+00:00',
             'image' => asset('/images/videos/efecto-gaudi-mas-stencil.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/1002491650247462'
         ],
         [
             'title' => 'Efecto gaudí con Tintas al alcohol',
-            'description' => '',
+            'description' => 'Técnica de Afelpado con Efecto Gaudi de Titinas',
             'datePublished' => '2020-08-14T16:00:00+00:00',
             'image' => asset('/images/videos/efecto-gaudi-con-tintas.webp'),
             'facebook-share'=> 'https://www.facebook.com/espaciotitinas/videos/1222464338086083'

@@ -74,7 +74,7 @@
                     <div class="d-none" data-images="{{count($item['images']??[])}}"  data-gallery="{{count($item['gallery']??[])}}">
                     @if(!empty($item['images']))
                         @foreach ($item['images'] as $image)
-                            <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
+                            <a href="{{$image['src']}}" title="{{$image['caption']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
                                 <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
                                     class="mg-fluid rounded" height="200" 
                                     decoding="async" loading="lazy" fetchpriority="low"
@@ -84,7 +84,7 @@
                     @endif
                     @if(!empty($item['gallery']))
                         @foreach ($item['gallery'] as $image)
-                            <a href="{{$image['src']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
+                            <a href="{{$image['src']}}" title="{{$image['caption']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
                                 <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
                                     class="mg-fluid rounded" height="200" 
                                     decoding="async" loading="lazy" fetchpriority="low"

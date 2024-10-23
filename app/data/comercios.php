@@ -9,14 +9,14 @@ function seo() {
 }
 
 function paragraph() {
-    return ;
+    return "";
 }
 
 function comercios() {
     return [
         'caba' => [
             [
-                'name' => 'EL TIGRE',
+                'name' => 'El Tigre',
                 'address' => [
                     'Av. Cabildo 3854 - Tel: 4703-3527 - Núñez',
                     'Lope de Vega 3385 - Tel: 4568-6813 - Villa Devoto'
@@ -26,7 +26,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTISTICA FEYLO',
+                'name' => 'Artística Feylo',
                 'address' => [
                     'Corrientes 2076',
                     'Once (Balvanera)'
@@ -36,7 +36,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'FIBROBAIRES',
+                'name' => 'Fibrobaires',
                 'address' => [
                     'Av. San Martin 1480 - Caballito'
                 ],
@@ -46,7 +46,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'LIBRERÍA THESIS',
+                'name' => 'Librería Thesis',
                 'address' => [
                     'Raúl Scalabrini Ortiz 1828 - Palermo',
                     'Tel: +54 11 48319323 / +54 11 48316090'
@@ -72,7 +72,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTESHOP',
+                'name' => 'Arte Shop',
                 'address' => [
                     'Tel: +54 911 6597 9206',
                     'Retiros Yerbal 5950',
@@ -87,19 +87,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ESTACIÓN DE ARTE',
-                'address' => [
-                    'Villa Tesei'
-                ],
-                'href' => [
-                    'Web' => 'https://www.estaciondelarte.com',
-                ],
-                'email' => [
-                    'artistica.estaciondelarte@gmail.com'
-                ]
-            ],
-            [
-                'name' => 'LOVE TODO',
+                'name' => 'Love Todo',
                 'address' => [
                     'CABA'
                 ],
@@ -108,7 +96,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'BELLAS ARTES BA',
+                'name' => 'Bellas Artes BA',
                 'address' => [
                     'Tel: +54 911 323 45284',
                     'Campichuelo al 200 ( Solo Entregas )'
@@ -155,7 +143,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'EL NUEVO PALACIO',
+                'name' => 'El nuevo palacio',
                 'address' => [
                     'Av. Maipú 408 - Florida'
                 ],
@@ -165,7 +153,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'DIAGONAL DE ARTE',
+                'name' => 'Diagonal De Arte',
                 'address' => [
                     'Luis M. Drago 477 - Villa Adelina',
                     'Dicta clases de Efecto Gaudí'
@@ -176,7 +164,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'LIBRERÍA ARTÍSTICA MyC',
+                'name' => 'Librería artística MyC',
                 'address' => [
                     'Victor Mercante 70 - Barrio Libertad',
                     'CP 1716 Merlo',
@@ -190,7 +178,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTÍSTICA BERLIAN',
+                'name' => 'Artística Berlian',
                 'address' => [
                     '25 de mayo 3825 - San Martín',
                     'Tel: (011) 6435-0726'
@@ -204,19 +192,19 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ESTACIÓN DE ARTE',
+                'name' => 'Estación del arte',
                 'address' => [
                     'Villa Tesei'
                 ],
                 'href' => [
-                    'Web' => 'https://www.estaciondelarte.com'
+                    'Web' => 'https://www.estaciondelarte.com',
                 ],
                 'email' => [
                     'artistica.estaciondelarte@gmail.com'
                 ]
             ],
             [
-                'name' => 'EL TALLER DE AMI',
+                'name' => 'El taller de AMI',
                 'address' => [
                     'Lanús Este',
                     'Tel: 1167086577'
@@ -229,7 +217,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'CREARTE MANUALIDADES',
+                'name' => 'Crearte manualidade',
                 'address' => [
                     'Calle 149 Numero 1440, entre 14 y 15 - Berazategui'
                 ],
@@ -240,7 +228,7 @@ function comercios() {
             ],
             /*
             [
-                'name' => 'CREAR ARTISTICA ',
+                'name' => 'Aartistica Crear',
                 'address' => [
                     'Monte Grande'
                 ],
@@ -253,7 +241,7 @@ function comercios() {
         ],
         'provincia de bs as' => [
             [
-                'name' => 'LA BAMBOLA',
+                'name' => 'La Bambola',
                 'address' => [
                     'Calle 28 N° 140 - La Plata',
                     'Tel: 0221 4794775'
@@ -305,7 +293,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTÍSTICA ANIM-ARTE',
+                'name' => 'Artística ANIM-ARTE',
                 'address' => [
                     'Rivadavia 50 - Castelli'
                 ],
@@ -314,7 +302,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTISTICAMENTE',
+                'name' => 'Artisticamente',
                 'address' => [
                     'Dorrego 3160 - Olavarría'
                 ],
@@ -324,7 +312,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'PEQUEÑOS DETALLES de Jorgelina Susseret',
+                'name' => 'Pequeños detalles de Jorgelina Susseret',
                 'address' => [
                     'Taller y almacén de insumos',
                     'Viegas 1046 - 9 de Julio'
@@ -335,7 +323,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'CASA ALMACEN ARTE Y DECO',
+                'name' => 'Casa almacen Arte y deco',
                 'address' => [
                     'Killari Arte Creativo',
                     'Taller y almacén de insumos',
@@ -346,7 +334,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'LOCAS POR EL ARTE',
+                'name' => 'Locas por el arte',
                 'address' => [
                     'Av. Libertad 5851, B7606 - Mar del Plata',
                     'Tel: +54 223 438-6693'
@@ -357,7 +345,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTISTICA OTOÑAL',
+                'name' => 'Artística Otoñal',
                 'address' => [
                     'Alberti 5695 - Mar del Plata'
                 ],
@@ -380,7 +368,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'LIBRERÍA COLORES de Laura Roche',
+                'name' => 'Librería Colores de Laura Roche',
                 'address' => [
                     'Moreno 1057 - Pérez Millán - Ramallo'
                 ],
@@ -389,7 +377,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'TIMORA - Romina Amutio',
+                'name' => 'Timora - Romina Amutio',
                 'address' => [
                     '9 de Julio 380 - TRES LOMAS'
                 ],
@@ -398,7 +386,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'TALLER ILUSIONES - Sandra Miró',
+                'name' => 'Taller ilusiones - Sandra Miró',
                 'address' => [
                     'Barrio los Olmos Tucumán 277 - Salliquelo'
                 ],
@@ -411,7 +399,7 @@ function comercios() {
         ],
         'catamarca' => [
             [
-                'name' => 'LIBERÍA DEL PATIO',
+                'name' => 'Libreria del patio',
                 'address' => [
                     'Avda Pte Castillo 254 - Valle Viejo',
                     'Tel: 0383 4737405'
@@ -424,7 +412,7 @@ function comercios() {
         ],
         'chaco' => [
             [
-                'name' => 'PROYECTO LIBRERÍA',
+                'name' => 'Proyecto librería',
                 'address' => [
                     'Las Heras 502 - Resistencia',
                     'Tel: 0362 443-2664'
@@ -438,7 +426,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'DC ART&amp;DECO by Autoservicio del Campo',
+                'name' => 'DC ART&DECO by Autoservicio del Campo',
                 'address' => [
                     'Monteagudo 45 - Villa Angela',
                     'Tel: +54 9 3735 62 9958'
@@ -448,7 +436,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'PINTA CONMIGO by Yanina Viera',
+                'name' => 'Pinta conmigo by Yanina Viera',
                 'address' => [
                     'Calle 12 esquina 41 - Barrio San Martín',
                     'Roque Saenz Peña - Chaco'
@@ -461,7 +449,7 @@ function comercios() {
         'chubut' => [],
         'cordoba' => [
             [
-                'name' => 'ARTÍSTICA GLASS',
+                'name' => 'Artística glass',
                 'address' => [
                     'Tucumán 474 - Córdoba Cap.',
                     'Tel: 351 2132060'
@@ -471,7 +459,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'MERCERÍA SOL',
+                'name' => 'Mercería SOL',
                 'address' => [
                     'Bv. Ascasubi 301 - Bell Ville',
                     'Tel: +54 3564 443937',
@@ -490,7 +478,7 @@ function comercios() {
         'corrientes' => [],
         'entre rios' => [
             [
-                'name' => 'ARTÍSTICA SU ARTE',
+                'name' => 'Artística Su Arte',
                 'address' => [
                     'Maipu 131 - Gualeguaychú'
                 ],
@@ -502,7 +490,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'EL ESPACIO DE ARTE',
+                'name' => 'El espacio de arte',
                 'address' => [
                     'Avda San Martin 286 - Bovril',
                     'Tel: 549 3438 453416'
@@ -514,7 +502,7 @@ function comercios() {
         ],
         'formosa' => [
             [
-                'name' => 'TALLER DE TITINA',
+                'name' => 'Taller de Titina',
                 'address' => [
                     'Maipú 389 - 3600 - Formosa'
                 ],
@@ -530,7 +518,7 @@ function comercios() {
         'jujuy' => [],
         'la pampa' => [
             [
-                'name' => 'MAGENTA LA PAMPA',
+                'name' => 'Magenta La Pampa',
                 'address' => [
                     'Hugo del Carril 1850 - Plan 5000 - SANTA ROSA'
                 ],
@@ -546,7 +534,7 @@ function comercios() {
         'mendoza' => [],
         'misiones' => [
             [
-                'name' => 'TALLER VIVI ARTE',
+                'name' => 'Taller Vivi Arte',
                 'address' => [
                     'Mariano Moreno y Río de la Plata',
                     'CP(3364) - Aristóbulo del Valle',
@@ -560,7 +548,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'PLACAS & MADERAS',
+                'name' => 'Placas & maderas',
                 'address' => [
                     'RUTA NACIONAL 14 KM 974',
                     'SAN VICENTE',
@@ -578,7 +566,7 @@ function comercios() {
         ],
         'neuquen' => [
             [
-                'name' => 'EL FUENTÓN',
+                'name' => 'El Fuentón',
                 'address' => [
                     'Belgrano 4400 - Neuquén Cap.',
                     'Tel: 0299-4465885'
@@ -591,7 +579,7 @@ function comercios() {
         ],
         'rio negro' => [
             [
-                'name' => 'PAPELERA CENTRAL de María Gabriela Fiadaron',
+                'name' => 'Papelera central de María Gabriela Fiadaron',
                 'address' => [
                     'Buenos Aires 1525 - General Roca',
                     'Tel: 298 440-4879'
@@ -602,7 +590,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTÍSTICA Y LIBRERÍA RODRIGUEZ',
+                'name' => 'Artística y Librería Rodriguez',
                 'address' => [
                     'Don Bosco 1715 - Cipolletti'
                 ],
@@ -614,7 +602,7 @@ function comercios() {
         ],
         'salta' => [
             [
-                'name' => 'LIBRERÍA LERMA',
+                'name' => 'Libreria Lerma',
                 'address' => [
                     'sucursal artística (Guemes esq Zuviria) - Salta Cap',
                     'Tel: 0387 484-1669'
@@ -630,7 +618,7 @@ function comercios() {
         'san luis' => [],
         'santa cruz' => [
             [
-                'name' => 'RINCÓN DE IDEAS, de Julia Alonso',
+                'name' => 'Rincón de Ideas, de Julia Alonso',
                 'address' => [
                     'Urdin 536 - Pico Truncado',
                     'Tel: 02974744498'
@@ -645,7 +633,7 @@ function comercios() {
         ],
         'santa fe' =>[
             [
-                'name' => 'ILUSIONARTE ROSARIO',
+                'name' => 'Ilusionarte Rosario',
                 'address' => [
                     'Valparaiso 1161 - Rosario'
                 ],
@@ -654,7 +642,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'ARTISTICA EN LO DE FRIDA',
+                'name' => 'Artística en lo de Frida',
                 'address' => [
                     'Av. San Martín 1140, local nº3 de la Ciudad de San Lorenzo'
                 ],
@@ -667,7 +655,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'LIBRERÍA TyP',
+                'name' => 'Librería TyP',
                 'address' => [
                     'Mitre 840 - Tel: (03462) 421772',
                     'Belgrano 667 - Tel: (03462) 438947',
@@ -684,7 +672,7 @@ function comercios() {
         ],
         'santiago del estero' => [
             [
-                'name' => 'ORIGEN CREATIVO',
+                'name' => 'Origen creativo',
                 'address' => [
                     'Sarmiento 116 - Santiago capital',
                     'Whatsapp: 3854168997'
@@ -697,7 +685,7 @@ function comercios() {
         ],
         'tierra del fuego' => [
             [
-                'name' => 'ELLA ART',
+                'name' => 'Ella ART',
                 'address' => [
                     'Posadas 539 - Río Grande'
                 ],
@@ -721,7 +709,7 @@ function comercios() {
                 ]
             ],
             [
-                'name' => 'TALLER DE ARTE CREATIVO de Edith Lairana',
+                'name' => 'Taller de arte creativo de Edith Lairana',
                 'address' => [
                     'La Rioja 1225 - San Miguel de Tucumán'
                 ],

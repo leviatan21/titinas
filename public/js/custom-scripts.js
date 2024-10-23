@@ -2,6 +2,7 @@
 $(document).ready(function() {
 	ScrollTop();
 	MobileMenu();
+	Tooltip();
 });
 
 function ScrollTop() {
@@ -25,6 +26,10 @@ function MobileMenu() {
 			$('.mobile-menu-container').css({'display':'none'});
 		}
 	});
+}
+
+function Tooltip() {
+	$('[data-toggle="tooltip"]').tooltip();
 }
 
 function FancyboxDefaults() {

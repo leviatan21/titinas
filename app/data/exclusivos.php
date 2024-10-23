@@ -9,7 +9,7 @@ function seo() {
 }
 
 function paragraph() {
-    return ;
+    return "";
 }
 
 function exclusivos() {

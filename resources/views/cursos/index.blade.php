@@ -58,16 +58,12 @@
     </div>
 
     <div class="container">
-        <header class="page-header">
-            <h2 class="page-title">Cursos y seminarios</h2>
-        </header>
-
         @if (!empty($horizontal))
-        @include('components.card-horizontal', ['courses' => $horizontal ])
+        @include('components.cursos-horizontal', ['courses' => $horizontal ])
         @endempty
 
         @if (!empty($vertical))
-        @include('components.card-vertical', ['courses' => $vertical ])
+        @include('components.cursos-vertical', ['courses' => $vertical ])
         @endempty
     </div>
 </div>

@@ -27,9 +27,9 @@
                 </div>
             </div>
             <div class="md:w-4/5 ml-4 mt-4 d-flex flex-column">
-                <p class="text-2xl text-green-500 font-semibold">
+                <h2 class="text-2xl text-green-500 font-semibold">
                     {!!$item['title']!!}
-                </p>
+                </h2>
                 <p class="lead font-weight-bold">
                     {!!$item['sub-title']!!}
                 </p>

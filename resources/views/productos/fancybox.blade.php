@@ -65,7 +65,7 @@
                         {!!$item['text']!!}
                     @else
                         <img src="{{$item['image']}}" alt="{{strip_tags($item['title'] ?? '*')}}" 
-                            class="mg-fluid rounded" height="200" 
+                            class="img-fluid rounded" height="200" 
                             decoding="async" loading="lazy" fetchpriority="auto"
                         />
                     @endif
@@ -74,9 +74,9 @@
                     <div class="d-none" data-images="{{count($item['images']??[])}}"  data-gallery="{{count($item['gallery']??[])}}">
                     @if(!empty($item['images']))
                         @foreach ($item['images'] as $image)
-                            <a href="{{$image['src']}}" title="{{$image['caption']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
+                            <a href="{{$image['src']}}" title="{{$image['caption']}}" data-fancybox="gallery-{{$key}}">
                                 <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
-                                    class="mg-fluid rounded" height="200" 
+                                    class="img-fluid rounded" height="200" 
                                     decoding="async" loading="lazy" fetchpriority="low"
                                 />
                             </a>
@@ -84,9 +84,9 @@
                     @endif
                     @if(!empty($item['gallery']))
                         @foreach ($item['gallery'] as $image)
-                            <a href="{{$image['src']}}" title="{{$image['caption']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="800px, 800px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
+                            <a href="{{$image['src']}}" title="{{$image['caption']}}" data-fancybox="gallery-{{$key}}" data-height="800" data-sizes="(max-width: 600px) 480px, 800px" data-thumb="{{$image['thumbnail']}}" data-caption="{{$image['caption']}}">
                                 <img src="{{$image['thumbnail']}}" alt="{{$image['caption']}}" 
-                                    class="mg-fluid rounded" height="200" 
+                                    class="img-fluid rounded" height="200" 
                                     decoding="async" loading="lazy" fetchpriority="low"
                                 />
                             </a>

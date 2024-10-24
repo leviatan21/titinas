@@ -68,4 +68,69 @@ trait ProductosTraits {
             return $image;
         });
     }
+
+    public static function filterNAV() {
+        $productos  = [];
+        $datas      = (object) [];
+
+        $directories = Storage::disk('stock')->directories('productos');
+        foreach($directories as $directory) {
+            $jsons = Storage::disk('stock')->files($directory);
+
+            foreach($jsons as $json) {
+                $items = Storage::disk('stock')->json($json);
+                if ($items && count($items)) {
+                    $items = static::filterJSON($items)->filter(function(array $item) {
+                        return  mb_stripos($item['Nombre'], 'nav') || 
+                                mb_stripos($item['SKU'], 'nav') || 
+                                mb_stripos($item['SKU'], '401') || 
+                                mb_stripos($item['SKU'], '402') || 
+                                mb_stripos($item['SKU'], '403') || 
+                                mb_stripos($item['SKU'], '404') || 
+                                mb_stripos($item['SKU'], '405') || 
+                                mb_stripos($item['SKU'], '406') || 
+                                mb_stripos($item['SKU'], '407') || 
+                                mb_stripos($item['SKU'], '408') || 
+                                mb_stripos($item['SKU'], '409') || 
+                                mb_stripos($item['SKU'], '410');
+                    });
+
+                    if ($items->isNotEmpty()) {
+                        $file       = str_replace('.json', '', $json);
+                        $key        = str_replace('productos/', '', $directory);
+                        $gallery    = static::galleryJSON($items, str_replace('.json', '', $json))->all();
+
+                        if (!isset($datas->$key)) {
+                            $datas->$key = (object) [];          
+                        }
+
+                        if (!isset($datas->$key->$file)) {
+                            $datas->$key->$file['gallery'] = $gallery;
+                        } else {
+                            $datas->$key->$file['gallery'] = array_merge($datas->$key['gallery'], $gallery);
+                        }
+                    }
+                }
+            }
+        }
+
+        foreach($datas as $file => $data) {
+            include(app_path() . "/data/{$file}.php");
+
+            foreach($data as $key => $item) {
+                $filtered = Arr::where($file(), function(array $producto) use ($key) {
+                    return $producto['gallery'] == $key;
+                });
+
+                if ($filtered && count($filtered)) {
+                    $filtered = array_values($filtered)[0];
+                    $filtered['gallery'] = $item['gallery'];
+                    $productos [] = $filtered;
+                }
+            }
+        }
+
+        return $productos;
+    }
+
 }

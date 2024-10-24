@@ -1,20 +1,25 @@
 <?php
 
-function seo() {
-    return [
-        'title' => "Todo para Decoupage - Titina's",
-        'description' => "Decoupage húmedo - Papel ilustración - Papel mate - Papel de seda - Etiquetas - Kraft",
-        'keywords' => "Decoración, Decoupage, Papel, Ilustración, Mate, Seda, Etiquetas, Kraft"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Todo para Decoupage - Titina's",
+            'description' => "Decoupage húmedo - Papel ilustración - Papel mate - Papel de seda - Etiquetas - Kraft",
+            'keywords' => "Decoración, Decoupage, Papel, Ilustración, Mate, Seda, Etiquetas, Kraft"
+        ];
+    }
 }
 
-function paragraph() {
-    return "";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "";
+    }
 }
 
 function decoupage() {
     return [
         [// Etiquetas Latas Papel comun
+            'title-nav' => 'Decoupage papel obra para latas',
             'title' => 'Decoupage latas',
             'description' => "Papel obra<br />
                             Etiquetas para LATAS<br />
@@ -25,6 +30,7 @@ function decoupage() {
             'gallery' => 'productos/decoupage/latas'
         ],
         [// Tablitas papel común
+            'title-nav' => 'Decoupage papel obra 12x30cm',
             'title' => 'Decoupage',
             'description' => "Papel obra<br />
                             Tamaño: 12x30cm",
@@ -41,6 +47,7 @@ function decoupage() {
             'gallery' => 'productos/decoupage/humedo-14x20'
         ],
         [// Decoupage común A4
+            'title-nav' => 'Decoupage papel obra A4',
             'title' => 'Decoupage A4',
             'description' => "Papel obra<br />
                             Tamaño 21x29cm<br />
@@ -49,6 +56,7 @@ function decoupage() {
             'gallery' => 'productos/decoupage/obra-a4'
         ],        
         [// Decoupage común 30x30
+            'title-nav' => 'Decoupage papel obra 30x30cm',
             'title' => 'Decoupage',
             'description' => "Papel obra<br />
                             Tamaño: 30x30cm<br />
@@ -103,6 +111,7 @@ function decoupage() {
             'gallery' => 'productos/decoupage/seda-hibrida-50x70'
         ],
         [// Decoupage Seda Lavable [Stock: 2024-10-21]
+            'title-nav' => 'Láminas de seda lavables 50x70cm',
             'title' => 'Láminas de seda lavables',
             'description' => "Láminas de seda de alta calidad de impresión<br />
                             La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie, y depues la podes lavar<br />
@@ -120,6 +129,7 @@ function decoupage() {
             ]
         ],
         [// Decoupage Seda Lavable [Stock: 2024-10-21]
+            'title' => 'Láminas de seda lavables 22x36cm',
             'title' => 'Láminas de seda lavables',
             'description' => "Láminas de seda de alta calidad de impresión<br />
                             La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie, y depues la podes lavar<br />

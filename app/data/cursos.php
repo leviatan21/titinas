@@ -1,16 +1,21 @@
 <?php
-function seo() {
-    return [
-        'title' => "Cursos y seminarios a distancia - Titinas",
-        'description' => "Cursos y seminarios en videos - Efecto Gaudí - Pasta cerámica sin horno - Titinas",
-        'keywords' => "Compras, Cursos, Seminarios, Gaudí, Pasta Cerámica, Espatul-art, Efecto oxido, Videos, Azulejos, Espejos, Grabado, Estampados",
-    ];
+
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Cursos y seminarios a distancia - Titinas",
+            'description' => "Cursos y seminarios en videos - Efecto Gaudí - Pasta cerámica sin horno - Titinas",
+            'keywords' => "Compras, Cursos, Seminarios, Gaudí, Pasta Cerámica, Espatul-art, Efecto oxido, Videos, Azulejos, Espejos, Grabado, Estampados",
+        ];
+    }
 }
 
-function paragraph() {
-    return "Stenciles de excelente calidad<br />
-    200 micrones - Garantia de durabilidad<br />
-    Aptos para todo tipo de manualidades, pintura en tela y repostería";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "Stenciles de excelente calidad<br />
+        200 micrones - Garantia de durabilidad<br />
+        Aptos para todo tipo de manualidades, pintura en tela y repostería";
+    }
 }
 
 function horizontal() {

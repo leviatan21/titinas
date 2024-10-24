@@ -1,15 +1,19 @@
 <?php
 
-function seo() {
-    return [
-        'title' => "Comercios y puntos de venta - Titinas",
-        'description' => "Buscá el comercio que quede mas cerca de tu casa.",
-        'keywords' => "venta, comercios, consultas, pedidos, contacto, caba, gba, provincias, argentina"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Comercios y puntos de venta - Titinas",
+            'description' => "Buscá el comercio que quede mas cerca de tu casa.",
+            'keywords' => "venta, comercios, consultas, pedidos, contacto, caba, gba, provincias, argentina"
+        ];
+    }
 }
 
-function paragraph() {
-    return "";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "";
+    }
 }
 
 function comercios() {

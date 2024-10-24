@@ -1,16 +1,19 @@
 <?php
-
-function seo() {
-    return [
-        'title' => "Sellos bajo relieve - Titina's",
-        'description' => "Sellos bajo relieve - Goma de 5.5mm color gris",
-        'keywords' => "Sello, Sellos, Goma"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Sellos bajo relieve - Titina's",
+            'description' => "Sellos bajo relieve - Goma de 5.5mm color gris",
+            'keywords' => "Sello, Sellos, Goma"
+        ];
+    }
 }
 
-function paragraph() {
-    return "Diseños con mucho detalle<br />
-                     Goma de 5.5mm color gris";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "Diseños con mucho detalle<br />
+                        Goma de 5.5mm color gris";
+    }
 }
 
 function sellos() {
@@ -59,6 +62,7 @@ function sellos() {
             'gallery' => 'productos/sellos/linea-rosa'
         ],
         [
+            'title-nav' => 'Sellos 10x10cm',
             'title' => '<strong style="font-size:2rem;color:red;">Línea navidad</strong>',
             'description' => 'Tamaño: de 10x10cm',
             'text' => '',
@@ -66,6 +70,7 @@ function sellos() {
             'gallery' => 'productos/sellos/linea-navidad-10x10'
         ],
         [
+            'title-nav' => 'Sellos 15x15cm',
             'title' => '<strong style="font-size:2rem;color:red;">Línea navidad</strong>',
             'description' => 'Tamaño: de 15x15cm',
             'text' => '',

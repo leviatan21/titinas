@@ -35,6 +35,7 @@ Route::prefix('/productos')->group(function () {
         Route::get( '/pasta-ceramica-sin-horno',[ProductosController::class, 'pasta']       )->name('web.pasta-ceramica-sin-horno');
         Route::get( '/tintas-al-alcohol',       [ProductosController::class, 'tintas']      )->name('web.tintas-al-alcohol');
     });
+    Route::get( '/navidad',         [ProductosController::class, 'navidad']         )->name('navidad');
     Route::get( '/transferencias',  [ProductosController::class, 'transferencias']  )->name('web.transferencias');
     Route::get( '/decoupage',       [ProductosController::class, 'decoupage']       )->name('web.decoupage');
     Route::get( '/cartulinas',      [ProductosController::class, 'cartulinas']      )->name('web.cartulinas');

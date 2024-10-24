@@ -1,15 +1,19 @@
 <?php
 
-function seo() {
-    return [
-        'title' => "Cartulinas - Titina's",
-        'description' => "Cartulinas Simple Faz, Doble Faz, Cartulinas para Scrapbooking y manualidades",
-        'keywords' => "Cartulinas, Simple faz, Doble faz, Packs, Scrapbooking, Manualidades"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Cartulinas - Titina's",
+            'description' => "Cartulinas Simple Faz, Doble Faz, Cartulinas para Scrapbooking y manualidades",
+            'keywords' => "Cartulinas, Simple faz, Doble faz, Packs, Scrapbooking, Manualidades"
+        ];
+    }
 }
 
-function paragraph() {
-    return "";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "";
+    }
 }
 
 function cartulinas() {

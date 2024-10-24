@@ -1,21 +1,25 @@
 <?php
 
-function seo() {
-    return [
-        'title' => "Láminas de Transferencia y Multitransfer - Titina's",
-        'description' => "Transferencia - Tintas negas - Tintas color - Línea Oro - Línea Sepia - Multitransfer",
-        'keywords' => "Papel especial, Calidad, Pultas, Tintas, Oro, Sepia, Multitransfer"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Láminas de Transferencia y Multitransfer - Titina's",
+            'description' => "Transferencia - Tintas negas - Tintas color - Línea Oro - Línea Sepia - Multitransfer",
+            'keywords' => "Papel especial, Calidad, Pultas, Tintas, Oro, Sepia, Multitransfer"
+        ];
+    }
 }
 
-function paragraph() {
-    return "";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "";
+    }
 }
 
 function transferencias() {
     return [
         [// Transferencia negra A4
-            'title' => "Transferencia Tinta negra A4",
+            'title' => "Transferencia Tinta Negra A4",
             'description' => "Papel especial 70gr<br />
                             Excelente calidad en Láminas de Transferencia<br />
                             Método de retirado de pulpa<br />
@@ -24,7 +28,7 @@ function transferencias() {
             'gallery' => 'productos/transferencias/negra-a4'
         ],
         [// Transferencia color A4
-            'title' => "Transferencia Tinta color A4",
+            'title' => "Transferencia Tinta Color A4",
             'description' => "Papel especial 70gr<br />
                             Excelente calidad en Láminas de Transferencia<br />
                             Método de retirado de pulpa<br />

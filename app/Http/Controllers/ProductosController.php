@@ -62,6 +62,19 @@ class ProductosController extends Controller {
             ->with('productos', $productos);
     }
     //
+    public function navidad() {
+
+        static::seo([
+            'title' => "Materiales para navidad  Titina's"
+        ]);
+
+        $productos = ProductosTraits::filterNAV();
+
+        return view('productos.navidad')
+            ->with('productos', $productos);
+
+    }
+    //
     public function transferencias() {
         include_once(app_path() . '/data/transferencias.php');
 

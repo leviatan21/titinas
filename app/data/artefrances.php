@@ -1,15 +1,19 @@
 <?php
 
-function seo() {
-    return [
-        'title' => "Laminas para Arte Frances - Titina's",
-        'description' => "Técnica Decorativa Bidimensional, que consiste en transformar una imagen plana, en otra con relieve y profundidad que da un aspecto Natural y Realista",
-        'keywords' => "Arte ,Frances, Técnica, Decorativa, Bidimensional, Relieve, Realista"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Laminas para Arte Frances - Titina's",
+            'description' => "Técnica Decorativa Bidimensional, que consiste en transformar una imagen plana, en otra con relieve y profundidad que da un aspecto Natural y Realista",
+            'keywords' => "Arte ,Frances, Técnica, Decorativa, Bidimensional, Relieve, Realista"
+        ];
+    }
 }
 
-function paragraph() {
-    return "";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "";
+    }
 }
 
 function artefrances() {

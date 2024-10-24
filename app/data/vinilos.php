@@ -1,15 +1,19 @@
 <?php
 
-function seo() {
-    return [
-        'title' => "Vinilos - Titina's",
-        'description' => "Vinilos transparentes - esmerilados - blanco mate - Para vidrio, acetato, acrílico, plástico y madera - Excelente terminación y protección",
-        'keywords' => "Vinilos, Transparentes, Esmerilados, Blanco, Mate"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Vinilos - Titina's",
+            'description' => "Vinilos transparentes - esmerilados - blanco mate - Para vidrio, acetato, acrílico, plástico y madera - Excelente terminación y protección",
+            'keywords' => "Vinilos, Transparentes, Esmerilados, Blanco, Mate"
+        ];
+    }
 }
 
-function paragraph() {
-    return "";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "";
+    }
 }
 
 function vinilos() {
@@ -68,7 +72,7 @@ function vinilos() {
             'gallery' =>'productos/vinilos/blanco-mate-a4'
         ],
         [// Vinilo Transparente 8x11cm
-            'title' => 'Vinilos cristal 8x11cm',
+            'title' => 'Vinilos Cristal 8x11cm',
             'description' => "Como las filminas pero AUTOADHESIVAS<br />
                             Excelente calidad<br />
                             Terminación BRILLANTE<br />
@@ -98,7 +102,7 @@ function vinilos() {
             'gallery' =>'productos/vinilos/mandalas-10x10'
         ],        
         [// Vinilo Transparente 15x15
-            'title' => 'Vinilos cristal 15x15cm',
+            'title' => 'Vinilos Cristal 15x15cm',
             'description' => "Transparentes <br />
                             Laminado<br />
                             Autaodhesivo<br />
@@ -108,7 +112,7 @@ function vinilos() {
 
         ],
         [// Vinilo Transparente 14x20
-            'title' => 'Vinilo cristal 14x20cm',
+            'title' => 'Vinilo Cristal 14x20cm',
             'description' => "Como las filminas pero AUTOADHESIVAS<br />
                             Excelente calidad, Terminación BRILLANTE<br />
                             Laminado protector sobre la impresión<br />
@@ -121,7 +125,7 @@ function vinilos() {
             'gallery' =>'productos/vinilos/cristal-14x20'
         ],        
         [// Vinilo Transparente A3+
-            'title' => 'Vinilos cristal A3+',
+            'title' => 'Vinilos Cristal A3+',
             'description' => " Tamaño: 32x47cm<br />
                                 Presentación: 2 unidades por modelo",
             'image' => asset('/images/productos/vinilos/cristal-a3-plus.webp'),

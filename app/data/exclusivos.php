@@ -1,15 +1,19 @@
 <?php
 
-function seo() {
-    return [
-        'title' => "Productos Exclusivos - Titina's",
-        'description' => "Espatul-Art - Pasta cerámica sin horno - Efecto Gaudí, Tintas al alcohol - Textura piedra - Craquelador 3D - Efecto óxido",
-        'keywords' => "Espatul-Art, Pasta, cerámica, sin horno, Efecto, Gaudí, Tintas, Textura piedra, Craquelador 3D, Efecto óxido"
-    ];
+if (!function_exists('seo')) {
+    function seo() {
+        return [
+            'title' => "Productos Exclusivos - Titina's",
+            'description' => "Espatul-Art - Pasta cerámica sin horno - Efecto Gaudí, Tintas al alcohol - Textura piedra - Craquelador 3D - Efecto óxido",
+            'keywords' => "Espatul-Art, Pasta, cerámica, sin horno, Efecto, Gaudí, Tintas, Textura piedra, Craquelador 3D, Efecto óxido"
+        ];
+    }
 }
 
-function paragraph() {
-    return "";
+if (!function_exists('paragraph')) {
+    function paragraph() {
+        return "";
+    }
 }
 
 function exclusivos() {

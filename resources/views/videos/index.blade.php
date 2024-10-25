@@ -10,6 +10,8 @@
             </div>
         </section>
 
+        @include('components.share')
+
         {{--
         <div class="container">
             <iframe 

@@ -7,6 +7,9 @@
             <header class="page-header">
                 <h1 class="page-title">{{$SEO->TITLE}}</h1>
             </header>
+
+            @include('components.share')
+
             <div class="post-content">
                 <ul class="blog-grid">
                     <li class="blog-list-style">

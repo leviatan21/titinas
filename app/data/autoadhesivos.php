@@ -31,7 +31,7 @@ function autoadhesivos() {
         ],
         [// Tablitas autoadhesivas
             'title-nav' => 'Etiquetas Autoadhesivas 12x30cm',
-            'title' => 'Etiquetas autoadhesivas',
+            'title' => 'Tablitas autoadhesivas',
             'description' => "Papel ilustración<br />
                             Tamaño: 12x30cm",
             'image' => asset('/images/productos/autoadhesivos/tablitas.webp'),

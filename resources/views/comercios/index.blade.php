@@ -8,6 +8,9 @@
             <div class="page-header">
                 <h1 class="page-title">{{$SEO->TITLE}}</h1>
             </div>
+
+            @include('components.share')
+
             <div class="border rounded bg-light text-dark mt-4 p-4">
                 <p class="post-content h5">
                     Buscá el comercio que quede mas cerca de tu casa.<br />

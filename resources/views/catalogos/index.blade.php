@@ -17,6 +17,8 @@
             <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </header>
 
+        @include('components.share')
+
         <div class="container pt-4">
 @isset($exclusivos)
 @include('components.table-catalogos', ['title' => 'Productos Exclusivos', 'items' => $exclusivos ])

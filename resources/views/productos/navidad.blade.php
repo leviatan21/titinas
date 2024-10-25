@@ -16,6 +16,8 @@
             <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </div>
 
+        @include('components.share')
+
         @isset($paragraph)
         <div class="container">
             <div class="post-content pb-5 text-center">
@@ -34,7 +36,7 @@
                     {!! $item['title'] !!}
                     @endif
                 </div>
-                <div class="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-4 pt-4">
+                <div class="row justify-content-center row-cols-2 row-cols-sm-3 row-cols-md-6 pt-4">
                     @foreach ($item['gallery'] as $image)
                     <div class="col text-center mb-3">
                         <a href="{{$image['src']}}" 

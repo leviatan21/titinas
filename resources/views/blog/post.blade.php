@@ -13,7 +13,9 @@
             </div>
             @endif
 
-            <header class="page-header">
+            @include('components.share')
+
+             <header class="page-header">
                 <h1 class="page-title">{!!$post['title']!!}</h1>
 
                 <span class="border-divider"></span>
@@ -25,7 +27,7 @@
                 @endif
             </header>
 
-            <div class="post-content">
+           <div class="post-content">
                 @foreach ($post['content'] as $content)
                 <p>{!!$content!!}</p>
                 @endforeach

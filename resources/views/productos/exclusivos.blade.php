@@ -8,7 +8,9 @@
             <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </div>
 
-        <div class="container">
+        @include('components.share')
+ 
+       <div class="container">
             @foreach ($productos as $key => $item)
             <article id="gallery-wrap-{{$key}}"  class="gallery-wrap">
 

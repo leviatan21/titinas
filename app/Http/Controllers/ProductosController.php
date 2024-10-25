@@ -65,7 +65,9 @@ class ProductosController extends Controller {
     public function navidad() {
 
         static::seo([
-            'title' => "Materiales para navidad  Titina's"
+            'title' => "Materiales para navidad Titina's",
+            'description' => "Sellos de Goma - Stenciles - Vinilos - Sublimación - Transferencia - Multitransfer - Autoadhesivo - Etiquetas - Decoupage - Láminas de seda",
+            'keywords' => "Sello, Stencil, Vinilos, Sublimación, Transferencia, Multitransfer, Autoadhesivo, Etiquetas, Decoupage, Láminas "
         ]);
 
         $productos = ProductosTraits::filterNAV();

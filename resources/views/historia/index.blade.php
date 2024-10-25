@@ -7,6 +7,8 @@
         <h1 class="page-title">{{$SEO->TITLE}}</h1>
     </header>
 
+    @include('components.share')
+
     <div class="container my-4">
         <p>Quiero contarles un poco la historia de <em class="font-weight-bold">Titina's</em> y sobre mi amor por el arte manual.</p>
         <p>Me gusta crear, que surja una pieza últil y decorativa de algo que "no era nada" o era para tirar.

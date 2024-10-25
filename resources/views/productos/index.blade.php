@@ -8,6 +8,8 @@
             <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </div>
 
+        @include('components.share')
+
         @include('components.products-grid', ['products' => $products])
 
     </div>

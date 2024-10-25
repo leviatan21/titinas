@@ -2,6 +2,7 @@
 $(document).ready(function() {
 	ScrollTop();
 	MobileMenu();
+	ShareButton();
 	Tooltip();
 });
 
@@ -25,6 +26,17 @@ function MobileMenu() {
 		if ($('.mobile-menu-btn').css('display') === 'none') {
 			$('.mobile-menu-container').css({'display':'none'});
 		}
+	});
+}
+
+var showButtons = false;
+function ShareButton() {
+	$('#social-share-button').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		showButtons = !showButtons;
+		$('#social-share-buttons').attr('data-show', showButtons);
+		return false;
 	});
 }
 

@@ -31,7 +31,7 @@ function decoupage() {
         ],
         [// Tablitas papel común
             'title-nav' => 'Decoupage papel obra 12x30cm',
-            'title' => 'Decoupage',
+            'title' => 'Decoupage Tablitas',
             'description' => "Papel obra<br />
                             Tamaño: 12x30cm",
             'image' => asset('/images/productos/decoupage/obra-12x30.webp'),
@@ -100,7 +100,10 @@ function decoupage() {
         [// Decoupage Seda Hibrida
             'important' => true,
             'title' => 'Láminas de seda',
-            'description' => "La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie<br />
+            'description' => "Pensadas para grandes superficies y muebles de interior.<br />
+                            Impresas con tinta híbrida, se pueden proteger con cera incolora o con barniz puro sin diluir y sin mojar el pincel con agua. Los trabajos terminados y barnizados se pueden limpiar con un trapo húmedo.<br />
+                            Pintar previamente la superficie de un color claro, ya que estas láminas son traslúcidas.<br />
+                            La aplicas sobre cualquier superficie, con el pegamento adecuado para cada superficie<br />
                             <strong style='color:red'>HASTA AGOTAR STOCK DE ESTOS MODELOS 20% DE DESCUENTO POR MAYOR</strong><br />
                             Para realizar Decoupage en todo tipo de superficies<br />
                             Pinta de un color claro previamente, ya que las láminas de seda son traslúcidas<br />

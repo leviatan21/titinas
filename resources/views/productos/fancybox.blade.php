@@ -16,6 +16,8 @@
             <h1 class="page-title">{{$SEO->TITLE}}</h1>
         </div>
 
+        @include('components.share')
+
         @isset($paragraph)
         <div class="container">
             <div class="post-content pb-5 text-center">

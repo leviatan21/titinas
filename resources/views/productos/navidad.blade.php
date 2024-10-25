@@ -29,12 +29,18 @@
         @foreach ($productos as $key => $item)
         <div class="container my-4">
             <div class="panel">
-                <div class="text-center display-3">
-                    @if (!empty($item['title-nav']))
-                    {!! $item['title-nav'] !!}
-                    @else
-                    {!! $item['title'] !!}
-                    @endif
+                <div class="panel-title">
+                    <h2 class="text-center display-3">
+                        @if (!empty($item['title-nav']))
+                        {!! $item['title-nav'] !!}
+                        @else
+                        {!! $item['title'] !!}
+                        @endif
+                    </h2>
+                    <img  src="{{asset('/images/productos/navidad/logo-navidad.webp')}}" alt="logo navidad" 
+                        class="img-fluid logo-navidad" width="60" height="75"
+                        decoding="async" loading="lazy" fetchpriority="auto"
+                    />
                 </div>
                 <div class="row justify-content-center row-cols-2 row-cols-sm-3 row-cols-md-6 pt-4">
                     @foreach ($item['gallery'] as $image)

@@ -23,7 +23,7 @@ class ProductosController extends Controller {
     public function exclusivos() {
         include_once(app_path() . '/data/exclusivos.php');
 
-        static::seo();
+        static::seo(seo());
 
         $productos = Arr::map(exclusivos(), function(array $item) {
             $item['schemamarkup'] = SchemaMarkupTraits::Product(static::$seo, $item);
@@ -124,7 +124,7 @@ class ProductosController extends Controller {
     public function vinilos() {
         include_once(app_path() . '/data/vinilos.php');
 
-        static::seo( seo());
+        static::seo(seo());
 
         $productos = ProductosTraits::parseJSON(vinilos());
 

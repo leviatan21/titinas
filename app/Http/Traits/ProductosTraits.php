@@ -114,6 +114,10 @@ trait ProductosTraits {
             }
         }
 
+        $datas = collect($datas)->sortBy(function($item, $key) {
+            return $key;
+        });
+
         foreach($datas as $file => $data) {
             include(app_path() . "/data/{$file}.php");
 

@@ -10,7 +10,7 @@
 
         @include('components.share')
  
-       <div class="container">
+       <div class="container mt-4">
             @foreach ($productos as $key => $item)
             <article id="gallery-wrap-{{$key}}"  class="gallery-wrap">
 

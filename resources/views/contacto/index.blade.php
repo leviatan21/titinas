@@ -10,7 +10,7 @@
 
         @include('components.share')
 
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 mt-4">
             <div class="col mb-3">
                 <div class="card contact h-100">
                     <div class="card-header">

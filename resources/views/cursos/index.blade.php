@@ -10,7 +10,7 @@
 
             @include('components.share')
 
-            <div class="post-content">
+            <div class="post-content mt-4">
                 <ul class="blog-grid">
                     <li class="blog-list-style">
                         <strong class="title">Videos: </strong> <br />

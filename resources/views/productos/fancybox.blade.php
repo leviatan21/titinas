@@ -19,7 +19,7 @@
         @include('components.share')
 
         @isset($paragraph)
-        <div class="container">
+        <div class="container mt-4">
             <div class="post-content pb-5 text-center">
                 {!!$paragraph!!}
             </div>
@@ -27,7 +27,7 @@
         @endisset
 
         @foreach ($productos as $key => $item)
-        <div class="container">
+        <div class="container mt-4">
             <article class="gallery-wrap">
 
                 <header class="page-header">

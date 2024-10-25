@@ -37,7 +37,7 @@
                         {!! $item['title'] !!}
                         @endif
                     </h2>
-                    <img  src="{{asset('/images/productos/navidad/logo-navidad.webp')}}" alt="logo navidad" 
+                    <img src="{{asset('/images/productos/navidad/logo-navidad.webp')}}" alt="logo navidad" 
                         class="img-fluid logo-navidad" width="60" height="75"
                         decoding="async" loading="lazy" fetchpriority="auto"
                     />

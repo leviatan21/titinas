@@ -5,15 +5,16 @@ namespace App\Http\Traits;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
-include_once(app_path() . '/data/blog.php');
-
 trait BlogTraits {
 
     public static function GetPosts() {
+        include_once(storage_path('app/data/blog.php'));
+
         $posts = posts();
         foreach($posts as $index => $item) {
             $posts[$index] = static::parsePost($item);
         }
+
         return collect($posts);
     }
 

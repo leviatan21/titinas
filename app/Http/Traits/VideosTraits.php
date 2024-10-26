@@ -5,8 +5,6 @@ namespace App\Http\Traits;
 use App\Http\Traits\SchemaMarkupTraits;
 use Carbon\Carbon;
 
-include_once(app_path() . '/data/videos.php');
-
 trait VideosTraits {
     public static function GetVideos($seo, $items) {
 

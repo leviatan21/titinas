@@ -16,10 +16,10 @@ class BlogController extends Controller {
 
         ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
 
-        $authors = BlogTraits::GetAuthors();
-        $cats   = BlogTraits::GetCategories();
+        $authors            = BlogTraits::GetAuthors();
+        $cats               = BlogTraits::GetCategories();
         $catsDescriptions   = BlogTraits::GetCategoriesDescription();
-        $tags   = BlogTraits::GetTag();
+        $tags               = BlogTraits::GetTag();
         $tagsDescriptions   = BlogTraits::GetTagDescription();
 
         static::seo([

@@ -18,13 +18,15 @@
 
         @include('components.share')
 
-        @isset($paragraph)
+        @if(!empty($paragraph))
         <div class="container mt-4">
             <div class="post-content pb-5 text-center">
-                {!!$paragraph!!}
+                @foreach ($paragraph as $text)
+                <p>{!!$text!!}</p>
+                @endforeach
             </div>
         </div>
-        @endisset
+        @endif
 
         @foreach ($productos as $key => $item)
         <div class="container mt-4">

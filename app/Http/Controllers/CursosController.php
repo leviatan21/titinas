@@ -8,21 +8,24 @@ use App\Http\Traits\SchemaMarkupTraits;
 
 class CursosController extends Controller {
     public function index() {
-        include_once(app_path() . '/data/cursos.php');
+        include_once(storage_path('app/data/cursos.php'));
 
-        static::seo(seo());
+        [ 'seo'=>$seo, 'paragraph'=>$paragraph, 'horizontal'=>$horizontal, 'vertical'=>$vertical ] = cursos();
 
-        $horizontal = Arr::map(horizontal(), function(array $item) {
+        static::seo($seo);
+
+        $horizontal = Arr::map($horizontal, function(array $item) {
             $item['schemamarkup'] = SchemaMarkupTraits::Course(static::$seo, static::$config, $item);
             return $item;
         });
 
-        $vertical = Arr::map(vertical(), function(array $item) {
+        $vertical = Arr::map($vertical, function(array $item) {
             $item['schemamarkup'] = SchemaMarkupTraits::Course(static::$seo, static::$config, $item);
             return $item;
         });
 
         return view('cursos.index')
+                ->with('paragraph', $paragraph)
                 ->with('horizontal', $horizontal)
                 ->with('vertical', $vertical);
     }

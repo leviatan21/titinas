@@ -6,22 +6,19 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller {
     public function index() {
+        include_once(storage_path('app/data/home.php'));
 
-        static::seo([
-            'title' => "Materiales para el arte decorativo y la creatividad",
-            'description' => "Titina's materiales para el arte y la creatividad, videos explicativos, cursos",
-            'keywords' => "Titina's, materiales, arte, creatividad, exclusivos, transferencias, decoupage, cartulinas, autoadhesivos, vinilos, sublimación, arte frances, sellos, stenciles",
-        ]);
+        [
+            'seo-home'  => $seo,
+            'slider'    => $slider,
+            'productos' => $productos
+        ] = home();
 
-        include_once(app_path() . '/data/slider.php');
-        $slider = slider();
-
-        include_once(app_path() . '/data/productos.php');
-        $products = productos();
+        static::seo($seo);
 
         return view('home.index')
             ->with('slider', $slider)
-            ->with('products', $products);
+            ->with('products', $productos);
     }
 
     public function historia() {

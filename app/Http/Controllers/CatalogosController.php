@@ -6,15 +6,20 @@ use App\Http\Controllers\Controller;
 
 class CatalogosController extends Controller {
     public function index() {
-        include_once(app_path() . '/data/catalogos.php');
+        include_once(storage_path('app/data/catalogos.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo, 
+            'paragraph' => $paragraph,
+            'exclusivos'=> $exclusivos,
+            'especiales'=> $especiales,
+            'generales' => $generales
+        ] = catalogos();
 
-        $exclusivos = exclusivos();
-        $especiales = especiales();
-        $generales  = generales();
-        
+        static::seo($seo);
+
         return view('catalogos.index')
+            ->with('paragraph', $paragraph)
             ->with('exclusivos', $exclusivos)
             ->with('especiales', $especiales)
             ->with('generales', $generales);

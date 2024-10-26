@@ -114,15 +114,19 @@ trait ProductosTraits {
             }
         }
 
-        $datas = collect($datas)->sortBy(function($item, $key) {
+        $datas = collect($datas)->sortBy(function ($item, $key) {
             return $key;
         });
 
         foreach($datas as $file => $data) {
-            include(app_path() . "/data/{$file}.php");
+            include(storage_path("app/data/productos/{$file}.php"));
+
+            [
+                'items' => $items
+            ] = $file();
 
             foreach($data as $key => $item) {
-                $filtered = Arr::where($file(), function(array $producto) use ($key) {
+                $filtered = Arr::where($items, function(array $producto) use ($key) {
                     return $producto['gallery'] == $key;
                 });
 

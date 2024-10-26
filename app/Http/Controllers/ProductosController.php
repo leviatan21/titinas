@@ -10,56 +10,76 @@ use App\Http\Traits\ProductosTraits;
 class ProductosController extends Controller {
     //
     public function index() {
-        include_once(app_path() . '/data/productos.php');
+        include_once(storage_path('app/data/home.php'));
 
-        static::seo(seo());
+        [
+            'seo-productos'=> $seo,
+            'paragraph' => $paragraph,
+            'productos' => $productos
+        ] = home();
 
-        $products = productos();
+        static::seo($seo);
 
         return view('productos.index')
-            ->with('products', $products);
+            ->with('paragraph', $paragraph)
+            ->with('products', $productos);
     }
     //
     public function exclusivos() {
-        include_once(app_path() . '/data/exclusivos.php');
+        include_once(storage_path('app/data/exclusivos.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = exclusivos();
 
-        $productos = Arr::map(exclusivos(), function(array $item) {
+        static::seo($seo);
+
+        $items = Arr::map($items, function(array $item) {
             $item['schemamarkup'] = SchemaMarkupTraits::Product(static::$seo, $item);
             return $item;
         });
 
         return view('productos.exclusivos')
-            ->with('productos', $productos);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function pasta() {
-        include_once(app_path() . '/data/galeria-pasta.php');
+        include_once(storage_path('app/data/galeria-pasta.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items 
+        ] = pasta();
 
-        $productos = ProductosTraits::parsePHP(pasta());
+        static::seo($seo);
 
-        $paragraph = paragraph();
-
-        return view('productos.fancybox')
-                ->with('productos', $productos)
-                ->with('paragraph', $paragraph);
-    }
-    //
-    public function tintas() {
-        include_once(app_path() . '/data/galeria-tintas.php');
-
-        static::seo(seo());
-
-        $productos = ProductosTraits::parsePHP(tintas());
-
-        $paragraph = paragraph();
+        $items = ProductosTraits::parsePHP($items);
 
         return view('productos.fancybox')
             ->with('paragraph', $paragraph)
-            ->with('productos', $productos);
+            ->with('productos', $items);
+    }
+    //
+    public function tintas() {
+        include_once(storage_path('app/data/galeria-tintas.php'));
+
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = tintas();
+
+        static::seo($seo);
+
+        $items = ProductosTraits::parsePHP($items);
+
+        return view('productos.fancybox')
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function navidad() {
@@ -70,118 +90,171 @@ class ProductosController extends Controller {
             'keywords' => "Sello, Stencil, Vinilos, Sublimación, Transferencia, Multitransfer, Autoadhesivo, Etiquetas, Decoupage, Láminas "
         ]);
 
-        $productos = ProductosTraits::filterNAV();
+        $items = ProductosTraits::filterNAV();
 
         return view('productos.navidad')
-            ->with('productos', $productos);
-
+            ->with('productos', $items);
     }
     //
     public function transferencias() {
-        include_once(app_path() . '/data/transferencias.php');
+        include_once(storage_path('app/data/productos/transferencias.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = transferencias();
 
-        $productos = ProductosTraits::parseJSON(transferencias());
+        static::seo($seo);
+
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-            ->with('productos', $productos);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function decoupage() {
-        include_once(app_path() . '/data/decoupage.php');
+        include_once(storage_path('app/data/productos/decoupage.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = decoupage();
 
-        $productos = ProductosTraits::parseJSON(decoupage());
+        static::seo($seo);
+
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-            ->with('productos', $productos);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function cartulinas() {
-        include_once(app_path() . '/data/cartulinas.php');
+        include_once(storage_path('app/data/productos/cartulinas.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = cartulinas();
 
-        $productos = ProductosTraits::parseJSON(cartulinas());
+        static::seo($seo);
+
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-            ->with('productos', $productos);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function autoadhesivos() { 
-        include_once(app_path() . '/data/autoadhesivos.php');
+        include_once(storage_path('app/data/productos/autoadhesivos.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items 
+        ] = autoadhesivos();
 
-        $productos = ProductosTraits::parseJSON(autoadhesivos());
+        static::seo($seo);
+
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-            ->with('productos', $productos);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function vinilos() {
-        include_once(app_path() . '/data/vinilos.php');
+        include_once(storage_path('app/data/productos/vinilos.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = vinilos();
 
-        $productos = ProductosTraits::parseJSON(vinilos());
+        static::seo($seo);
+
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-            ->with('productos', $productos);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function sublimacion() {
-        include_once(app_path() . '/data/sublimacion.php');
+        include_once(storage_path('app/data/productos/sublimacion.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = sublimacion();
 
-        $productos = ProductosTraits::parseJSON(sublimacion());
+        static::seo($seo);
 
-        $paragraph = paragraph();
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-                ->with('productos', $productos)
-                ->with('paragraph', $paragraph);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function artefrances() {
-        include_once(app_path() . '/data/artefrances.php');
+        include_once(storage_path('app/data/productos/artefrances.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = artefrances();
 
-        $productos = ProductosTraits::parseJSON(artefrances());
+        static::seo($seo);
+
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-            ->with('productos', $productos);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function sellos() {
-        include_once(app_path() . '/data/sellos.php');
+        include_once(storage_path('app/data/productos/sellos.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = sellos();
 
-        $productos = ProductosTraits::parseJSON(sellos());
+        static::seo($seo);
 
-        $paragraph = paragraph();
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-                ->with('productos', $productos)
-                ->with('paragraph', $paragraph);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
     //
     public function stenciles() {
-        include_once(app_path() . '/data/stenciles.php');
+        include_once(storage_path('app/data/productos/stenciles.php'));
 
-        static::seo(seo());
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph,
+            'items'     => $items
+        ] = stenciles();
 
-        $productos = ProductosTraits::parseJSON(stenciles());
+        static::seo($seo);
 
-        $paragraph = paragraph();
+        $items = ProductosTraits::parseJSON($items);
 
         return view('productos.fancybox')
-                ->with('productos', $productos)
-                ->with('paragraph', $paragraph);
+            ->with('paragraph', $paragraph)
+            ->with('productos', $items);
     }
 }

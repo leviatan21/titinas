@@ -82,9 +82,9 @@
         <iframe src="https://www.facebook.com/plugins/video.php?videos=1560763354786699&height=314&&width=560&show_text=false&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
         --}}
 
-        @foreach($chunks as $chunk)
+        @foreach($videos as $video)
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 my-4">
-            @foreach($chunk as $item)
+            @foreach($video as $item)
             <div class="col mb-3">
                 <div class="card h-100 video-thumbnail">
                     @if(!empty($item['youtube-embed']))

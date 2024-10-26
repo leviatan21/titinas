@@ -1,25 +1,15 @@
 <?php
 
 namespace App\Http\Traits;
+
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
-use Carbon\Carbon;
 
 trait SchemaMarkupTraits {
 
     public static function View($shema) {
         return json_encode($shema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES, 10);
-    }
-
-    private static function SanitizeString( $string ) {
-        if (is_array( $string )) {
-            $string = implode(" ", $string );
-        }
-        $string = strip_tags( $string );
-        $string = preg_replace( "/\s+/", " ", $string );
-        $string = str_replace( ["\r\n", "\n", "\t", "\r"], "", $string );
-        return $string;
     }
 
     public static function VideoObject( $seo, $item=[] ) {
@@ -31,7 +21,7 @@ trait SchemaMarkupTraits {
             "@context" => "https://schema.org",
             "@type" => "VideoObject",
             "name" => $item['title'],
-            "description" => static::SanitizeString($description),
+            "description" => sanitizeString($description),
             "thumbnailUrl" => $item['image'],
             "embedUrl" => $embedUrl,
             "uploadDate" => $item['datePublished']
@@ -61,8 +51,8 @@ trait SchemaMarkupTraits {
             "publisher" => [
                 "@id" => "{$seo->SITEURL}#Organization"
             ],
-            "name" => static::SanitizeString($item["title"]),
-            "description" => static::SanitizeString($item["content"][0]),
+            "name" => sanitizeString($item["title"]),
+            "description" => sanitizeString($item["content"][0]),
             "@id" => "{$seo->SITEURL}#richSnippet",
             "isPartOf" => [
                 "@id" => "{$seo->SITEURL}#WebSite"
@@ -86,7 +76,7 @@ trait SchemaMarkupTraits {
             "@context" =>  "http://schema.org/",
             "@type" =>  "Course",
             "name" => $item["title"],
-            "description" => static::SanitizeString($item["description"]),
+            "description" => sanitizeString($item["description"]),
             "image" => $item["image-cover"],
             "inLanguage" => "es-AR",
             "offers" => [
@@ -120,14 +110,14 @@ trait SchemaMarkupTraits {
 
     public static function Product( $seo, $item=[] ) {
 
-        $priceValidUntil = Carbon::now();
+        $priceValidUntil = parseNow();
         $priceValidUntil->isLastOfMonth() ? $priceValidUntil->addDays(1)->lastOfMonth() : $priceValidUntil->lastOfMonth();
 
         $shema = [
             "@context" => "http://schema.org/",
             "@type" => "Product",
             "name" => $item["title"],
-            "description" => static::SanitizeString($item["description"]),
+            "description" => sanitizeString($item["description"]),
             "image" => $item["image"],
             "inLanguage" => "es-AR",
             "provider" =>  [

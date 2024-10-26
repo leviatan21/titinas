@@ -2,9 +2,6 @@
 
 namespace App\Http\Traits;
 
-use Illuminate\Support\Str;
-use Carbon\Carbon;
-
 trait BlogTraits {
 
     public static function GetPosts() {
@@ -155,7 +152,7 @@ trait BlogTraits {
     }
 
     private static function parsePost($post) {
-        $post['dateHumans'] = static::parseDate($post['dateModified'] ?? '');
+        $post['dateHumans'] = parseDate($post['dateModified'] ?? '');
         $post['link']       = static::parseLink($post['title'] ?? '');
         $post['author']     = static::parseAuthor($post['author'] ?? '');
 
@@ -170,12 +167,8 @@ trait BlogTraits {
         return $post;
     }
 
-    private static function parseDate($string='') {
-        return Carbon::parse($string)->diffForHumans();
-    }
-
     private static function parseLink($string='') {
-        $slug = Str::slug($string, '-');
+        $slug = parseSlug($string, '-');
         $href = url( "/blog/$slug" );
         return [
             'title' => 'Seguir leyendo',
@@ -185,7 +178,7 @@ trait BlogTraits {
     }
 
     private static function parseCategory($string='') {
-        $slug = Str::slug($string, '-');
+        $slug = parseSlug($string, '-');
         $href = url( "/blog/categoria/$slug" );
         return [
             'title' => $string,
@@ -195,7 +188,7 @@ trait BlogTraits {
     }
 
     private static function parseTag($string='') {
-        $slug = Str::slug($string, '-');
+        $slug = parseSlug($string, '-');
         $href = url( "/blog/tag/$slug" );
         return [
             'title' => $string,
@@ -205,7 +198,7 @@ trait BlogTraits {
     }
 
     private static function parseAuthor($string='') {
-        $slug = Str::slug($string, '-');
+        $slug = parseSlug($string, '-');
         $href = url( "/blog/author/$slug" );
         return [
             'title' => $string,

@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Log;
-
 use App\Http\Traits\SchemaMarkupTraits;
+
+include_once(app_path('/Helpers/helpers.php'));
 
 class Controller {
     static $menu    = [];

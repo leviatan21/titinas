@@ -7,12 +7,12 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 trait PaginateTraits {
 
-    static function Paginate( $collection, $perPage = 6 ) {
-        $current    = Request::get( 'page', 1 );
+    static function Paginate($collection, $perPage=6) {
+        $current    = Request::get('page', 1);
         $path       = Request::url();
         $total      = $collection->count();
-        $items      = $collection->forPage( $current, $perPage );
-        $paginator  = new LengthAwarePaginator( $items, $total, $perPage, $current, ['path' => $path] );
+        $items      = $collection->forPage($current, $perPage);
+        $paginator  = new LengthAwarePaginator($items, $total, $perPage, $current, ['path'=>$path]);
         return [
             'paginator' => $paginator,
             'items' => $items

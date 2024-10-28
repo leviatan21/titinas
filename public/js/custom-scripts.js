@@ -44,6 +44,7 @@ function Tooltip() {
 	$('[data-toggle="tooltip"]').tooltip();
 }
 
+var Fancybox = (Fancybox) ? Fancybox : {defaults:{},bind:function(){}};
 function FancyboxDefaults() {
 	Fancybox.defaults = {
         ...Fancybox.defaults,

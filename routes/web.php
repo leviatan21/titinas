@@ -52,9 +52,9 @@ Route::prefix('/productos')->group(function () {
 Route::prefix('/blog')->group(function () {
     Route::get( '/',                 [BlogController::class, 'index']               )->name('web.blog');
     Route::get( '/{post}',           [BlogController::class, 'post']                )->name('blog.post');
+    Route::get( '/author/{author}',  [BlogController::class, 'author']              )->name('blog.author');
     Route::get( '/categoria/{cat}',  [BlogController::class, 'categoria']           )->name('blog.categoria');
     Route::get( '/tag/{tag}',        [BlogController::class, 'tag']                 )->name('blog.tag');
-    Route::get( '/author/{author}',  [BlogController::class, 'author']              )->name('blog.author');
 });
 Route::prefix('/manuales')->group(function () {
     Route::get( '/',                 [ManualesController::class, 'index']           )->name('web.manuales');

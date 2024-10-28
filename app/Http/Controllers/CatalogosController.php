@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 class CatalogosController extends Controller {
+
     public function index() {
         include_once(storage_path('app/data/catalogos.php'));
 

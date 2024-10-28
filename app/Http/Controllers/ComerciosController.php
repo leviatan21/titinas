@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Arr;
 
 class ComerciosController extends Controller {
+
     public function index() {
         include_once(storage_path('app/data/comercios.php'));
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Redirect;
 use Illuminate\Support\Facades\Log;
 
 class RedirectController {
+
     public function index(Request $request) {
         $link   = null;
         $to     = $request->input('to', null);

@@ -7,6 +7,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 // https://drive.google.com/drive/folders/1WVGw_Um5vF5G7j1IeqyooZ-Y46Ube4cU
 trait ProductosTraits {
+
     private static $minStock = 2;
 
     public static function parseJSON(array $productos) {
@@ -140,5 +141,4 @@ trait ProductosTraits {
 
         return $productos;
     }
-
 }

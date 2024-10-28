@@ -1,10 +1,10 @@
 
 
-<div class="horizontal-cards">
-    <div class="panel container mx-auto my-16">
+<div class="horizontal-cards mt-5">
+    <div class="panel mx-auto">
     @foreach ($courses as $item)
-        <article class="md:flex">
-            <div class="md:w-1/5 mr-4 mt-4 d-flex flex-column">
+        <article class="md:flex mb-4">
+            <div class="md:w-2/5 d-flex flex-column">
                 <div class="horizontal-cards-image">
                     <img src="{{$item['image-cover']}}" alt="{!!$item['alt-cover']!!}" 
                         class="img-fluid" width="263" height="200" 
@@ -18,12 +18,12 @@
                 </div>
                 <div class="flex flex-column md:flex-row mt-2">
                     @if (!empty($item['mercadopago']))
-                    @include('components.mercadopago-payment-button', ['preference_id' => $item['mercadopago'] ])
+                    @include('components.mercadopago-payment-button', ['preference_id'=>$item['mercadopago']])
                     @endempty
                 </div>
             </div>
-            <div class="md:w-4/5 ml-4 mt-4 d-flex flex-column">
-                <h2 class="text-2xl text-green-500 font-semibold">
+            <div class="md:w-3/5 ml-md-4 d-flex flex-column">
+                <h2>
                     {!!$item['title']!!}
                 </h2>
                 <p class="lead font-weight-bold">
@@ -51,7 +51,7 @@
             </div>
 
             @if(!empty($item['schemamarkup']))
-            @include('components.schemamarkup', ['schemamarkup' => $item['schemamarkup'] ])
+            @include('components.schemamarkup', ['schemamarkup'=>$item['schemamarkup']])
             @endif
         </article>
         @if(!$loop->last)<hr/>@endif

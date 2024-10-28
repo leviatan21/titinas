@@ -7,6 +7,7 @@ trait BlogTraits {
     static $route = 'blog';
 
     public static function GetPosts() {
+
         include_once(storage_path('app/data/blog.php'));
 
         $posts = posts();
@@ -172,9 +173,9 @@ trait BlogTraits {
     }
 
     private static function parseLink($string='') {
-        $route = static::$route;
-        $slug = parseSlug($string, '-');
-        $href = url( "/$route/$slug" );
+        $route  = static::$route;
+        $slug   = parseSlug($string, '-');
+        $href   = url( "/$route/$slug" );
         return [
             'title' => 'Seguir leyendo',
             'slug'  => $slug,
@@ -183,9 +184,9 @@ trait BlogTraits {
     }
 
     private static function parseCategory($string='') {
-        $route = static::$route;
-        $slug = parseSlug($string, '-');
-        $href = url( "/$route/categoria/$slug" );
+        $route  = static::$route;
+        $slug   = parseSlug($string, '-');
+        $href   = url( "/$route/categoria/$slug" );
         return [
             'title' => $string,
             'slug'  => $slug,
@@ -194,9 +195,9 @@ trait BlogTraits {
     }
 
     private static function parseTag($string='') {
-        $route = static::$route;
-        $slug = parseSlug($string, '-');
-        $href = url( "/$route/tag/$slug" );
+        $route  = static::$route;
+        $slug   = parseSlug($string, '-');
+        $href   = url( "/$route/tag/$slug" );
         return [
             'title' => $string,
             'slug'  => $slug,
@@ -205,9 +206,9 @@ trait BlogTraits {
     }
 
     private static function parseAuthor($string='') {
-        $route = static::$route;
-        $slug = parseSlug($string, '-');
-        $href = url( "/$route/author/$slug" );
+        $route  = static::$route;
+        $slug   = parseSlug($string, '-');
+        $href   = url( "/$route/author/$slug" );
         return [
             'title' => $string,
             'slug'  => $slug,

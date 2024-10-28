@@ -12,7 +12,7 @@ trait SchemaMarkupTraits {
         return json_encode($shema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES, 10);
     }
 
-    public static function VideoObject( $seo, $item=[] ) {
+    public static function VideoObject($seo, $item=[]) {
 
         $embedUrl       = (!empty($item['facebook-share'])) ? $item['facebook-share'] : $item['youtube-share'];
         $description    = (!empty($item['description'])) ? $item['description'] : $item['title'];
@@ -30,12 +30,11 @@ trait SchemaMarkupTraits {
         return static::View($shema);
     }
 
-    public static function BlogPosting( $seo, $item=[] ) {
+    public static function ManualPosting($seo, $item=[]) {
 
         $shema = [
             "@context" => "https://schema.org",
             "@type" => "BlogPosting",
-            "headline" => $item["title"],
             "datePublished" => $item["datePublished"],
             "dateModified" => $item["dateModified"],
             ...!empty($item["author"]["title"]) ? 
@@ -52,6 +51,47 @@ trait SchemaMarkupTraits {
                 "@id" => "{$seo->SITEURL}#Organization"
             ],
             "name" => sanitizeString($item["title"]),
+            "headline" => $item["title"],
+            "description" => sanitizeString($item["description"]),
+            "@id" => "{$seo->SITEURL}#richSnippet",
+            "isPartOf" => [
+                "@id" => "{$seo->SITEURL}#WebSite"
+            ],
+            ...!empty($item["image"]) ? 
+            ["image" => [$item["image"]]] : [],
+            "inLanguage" => "es-AR",
+            "mainEntityOfPage" =>[
+                "@type" => "WebPage",
+                "name" => $seo->SITE_TITLE,
+                "url" => $seo->SITEURL,
+            ]
+        ];
+
+        return static::View($shema);
+    }
+
+    public static function BlogPosting($seo, $item=[]) {
+
+        $shema = [
+            "@context" => "https://schema.org",
+            "@type" => "BlogPosting",
+            "datePublished" => $item["datePublished"],
+            "dateModified" => $item["dateModified"],
+            ...!empty($item["author"]["title"]) ? 
+            ["author" => [
+                "@type" => "Person",
+                "name" => $item["author"]["title"],
+                "url" => $item["author"]["href"]
+            ]] : ["author" => [
+                "@type" => "Organization", 
+                "name" => $seo->SITE_TITLE,
+                "url" =>  $seo->SITEURL
+            ]],
+            "publisher" => [
+                "@id" => "{$seo->SITEURL}#Organization"
+            ],
+            "name" => sanitizeString($item["title"]),
+            "headline" => $item["title"],
             "description" => sanitizeString($item["content"][0]),
             "@id" => "{$seo->SITEURL}#richSnippet",
             "isPartOf" => [
@@ -70,7 +110,7 @@ trait SchemaMarkupTraits {
         return static::View($shema);
     }
 
-    public static function Course( $seo, $config, $item=[] ) {
+    public static function Course($seo, $config, $item=[]) {
 
         $shema = [
             "@context" =>  "http://schema.org/",
@@ -108,7 +148,7 @@ trait SchemaMarkupTraits {
         return static::View($shema);
     }
 
-    public static function Product( $seo, $item=[] ) {
+    public static function Product($seo, $item=[]) {
 
         $priceValidUntil = parseNow();
         $priceValidUntil->isLastOfMonth() ? $priceValidUntil->addDays(1)->lastOfMonth() : $priceValidUntil->lastOfMonth();
@@ -187,7 +227,7 @@ trait SchemaMarkupTraits {
         return static::View($shema);
     }
 
-    public static function Global( $seo, $config ) {
+    public static function Global($seo, $config) {
         $ImageUrl       = asset("/images/logo-titinas.jpg");
         $BreadcrumbList = static::Breadcrumb();
         $SiteNavigation = static::SiteNavigation();
@@ -338,7 +378,7 @@ trait SchemaMarkupTraits {
     private static function Breadcrumb() {
         $list       = [];
         $routes     = [];
-        $url        = url("");
+        $url        = url('/');
         $name       = "";
         $position   = 0;
         $current    = url()->current();

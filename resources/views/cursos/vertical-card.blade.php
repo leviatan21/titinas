@@ -1,5 +1,5 @@
 
-<div class="vertical-cards">
+<div class="vertical-cards mt-5">
 @foreach ($courses as $item)
     <article class="vertical-card">
         <div class="vertical-card__top">
@@ -60,14 +60,14 @@
             <div class="mt-1">
                 <div class="d-flex">
                     @if (!empty($item['mercadopago']))
-                    @include('components.mercadopago-payment-button', ['preference_id' => $item['mercadopago'] ])
+                    @include('components.mercadopago-payment-button', ['preference_id'=>$item['mercadopago']])
                     @endempty
                 </div>
             </div>
         </div>
 
         @if(!empty($item['schemamarkup']))
-        @include('components.schemamarkup', ['schemamarkup' => $item['schemamarkup'] ])
+        @include('components.schemamarkup', ['schemamarkup'=>$item['schemamarkup']])
         @endif
     </article>
 @endforeach

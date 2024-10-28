@@ -14,10 +14,13 @@ class ManualesController extends Controller {
 
         $posts  = ManualesTraits::GetPosts();
 
-        ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
+        [
+            'items'     => $items, 
+            'paginator' => $paginator
+        ] = PaginateTraits::Paginate($posts);
 
         static::seo([
-            'title' => "Manuales de Titina's"
+            'title' => "Los manuales de Titina's"
         ]);
 
         return view('manuales.index')
@@ -27,7 +30,11 @@ class ManualesController extends Controller {
 
     public function post($slug='') {
 
-        ['post'=>$post, 'prev'=>$prev, 'next'=>$next] = ManualesTraits::GetBySlug($slug);
+        [
+            'post'  => $post, 
+            'prev'  => $prev, 
+            'next'  => $next
+        ] = ManualesTraits::GetBySlug($slug);
 
         if (!$post) {
             return response()->view(
@@ -36,6 +43,8 @@ class ManualesController extends Controller {
                 404
             );
         }
+
+        $post['schemamarkup'] = SchemaMarkupTraits::ManualPosting(static::$seo, $post);
 
         static::seo([
             'title' => $post['title'],
@@ -60,8 +69,15 @@ class ManualesController extends Controller {
             );
         }
 
-        ['posts'=>$posts,'author'=>$author]         = ManualesTraits::GetByAuthor($slug);
-        ['items'=>$items,'paginator'=>$paginator]   = PaginateTraits::Paginate($posts);
+        [
+            'posts'     => $posts,
+            'author'    => $author
+        ] = ManualesTraits::GetByAuthor($slug);
+
+        [
+            'items'     => $items,
+            'paginator' => $paginator
+        ] = PaginateTraits::Paginate($posts);
 
         $author = array_merge($author, $content);
 

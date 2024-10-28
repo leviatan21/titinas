@@ -1,10 +1,10 @@
 
-@isset($items)
-<div class="page-header">
-    <h2 class="post-title" id="cat-{{$title}}"><a href="#cat-{{$title}}">{{$title}}</a></h2>
-</div>
-<div class="post-content pt-4">
-    <div class="woocommerce">
+<div class="post-content pt-5">
+    <h2 class="post-title" id="catalogo-{{Str::slug($title, '-')}}">
+        <a href="#catalogo-{{Str::slug($title, '-')}}" class="bd-content-title" data-anchorjs-icon="#">{{$title}}</a>
+    </h2>
+
+    <div class="woocommerce pt-2">
         <table class="shop_table shop_table_responsive" cellspacing="0">
             <thead>
                 <tr>
@@ -37,4 +37,3 @@
         </table>
     </div>
 </div>
-@endisset

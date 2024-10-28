@@ -14,7 +14,10 @@ class BlogController extends Controller {
 
         $posts  = BlogTraits::GetPosts();
 
-        ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
+        [
+            'items'     => $items,
+            'paginator' => $paginator
+        ] = PaginateTraits::Paginate($posts);
 
         $authors            = BlogTraits::GetAuthors();
         $cats               = BlogTraits::GetCategories();
@@ -23,24 +26,26 @@ class BlogController extends Controller {
         $tagsDescriptions   = BlogTraits::GetTagDescription();
 
         static::seo([
-            'title' => "Posteos en el blog de Titina's",
+            'title' => "El blog de Titina's",
             'description' => "$catsDescriptions",
             'keywords' => "$tagsDescriptions"
         ]);
 
         return view('blog.index')
-                ->with([
-                    'posts' => $items,
-                    'authors' => collect($authors)->unique('slug')->take(6),
-                    'cats' => collect($cats)->unique('slug')->take(6),
-                    'tags' => collect($tags)->unique('slug')->take(6),
-                    'paginator' => $paginator,
-                ]);
+            ->with('posts', $items)
+            ->with('authors', collect($authors)->unique('slug')->take(6))
+            ->with('cats', collect($cats)->unique('slug')->take(6))
+            ->with('tags', collect($tags)->unique('slug')->take(6))
+            ->with('paginator', $paginator);
     }
 
     public function post($slug='') {
 
-        ['post'=>$post, 'prev'=>$prev, 'next'=>$next] = BlogTraits::GetBySlug($slug);
+        [
+            'post'  => $post, 
+            'prev'  => $prev, 
+            'next'  => $next
+        ] = BlogTraits::GetBySlug($slug);
 
         if (!$post) {
             return response()->view(
@@ -59,16 +64,17 @@ class BlogController extends Controller {
         ]);
 
         return view('blog.post')
-                ->with([
-                    'post' => $post,
-                    'prev' => $prev,
-                    'next' => $next
-                ]);
+            ->with('post', $post)
+            ->with('prev', $prev)
+            ->with('next', $next);
     }
 
     public function categoria($slug='') {
 
-        ['posts'=>$posts,'category'=>$category] = BlogTraits::GetByCategory($slug);
+        [
+            'posts'     => $posts,
+            'category'  => $category
+        ] = BlogTraits::GetByCategory($slug);
 
         if (!$category) {
             return response()->view(
@@ -80,7 +86,10 @@ class BlogController extends Controller {
 
         $cats = BlogTraits::GetCategoriesDescription();
 
-        ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
+        [
+            'items'     => $items,
+            'paginator' => $paginator
+        ] = PaginateTraits::Paginate($posts);
 
         static::seo([
             'title' => "Posteos para la categoría \"{$category['title']}\"",
@@ -89,15 +98,16 @@ class BlogController extends Controller {
         ]);
 
         return view('blog.posts')
-                ->with([
-                    'posts' => $items,
-                    'paginator'=> $paginator
-                ]);
+            ->with('posts', $items)
+            ->with('paginator', $paginator);
     }
 
     public function tag($slug='') {
 
-        ['posts'=>$posts,'tag'=>$tag] = BlogTraits::GetByTag($slug);
+        [
+            'posts' => $posts,
+            'tag'   => $tag
+        ] = BlogTraits::GetByTag($slug);
 
         if (!$tag) {
             return response()->view(
@@ -109,7 +119,10 @@ class BlogController extends Controller {
 
         $tags = BlogTraits::GetTagDescription();
 
-        ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
+        [
+            'items'     => $items,
+            'paginator' => $paginator
+        ] = PaginateTraits::Paginate($posts);
 
         static::seo([
             'title' => "Posteos para el tag \"{$tag['title']}\"",
@@ -118,10 +131,8 @@ class BlogController extends Controller {
         ]);
 
         return view('blog.posts')
-                ->with([
-                    'posts' => $items,
-                    'paginator'=> $paginator
-                ]);
+            ->with('posts', $items)
+            ->with('paginator', $paginator);
     }
 
     public function author($slug='') {
@@ -135,8 +146,15 @@ class BlogController extends Controller {
             );
         }
 
-        ['posts'=>$posts,'author'=>$author]         = BlogTraits::GetByAuthor($slug);
-        ['items'=>$items,'paginator'=>$paginator]   = PaginateTraits::Paginate($posts);
+        [
+            'posts'     => $posts,
+            'author'    => $author
+        ] = BlogTraits::GetByAuthor($slug);
+
+        [
+            'items'     => $items,
+            'paginator' => $paginator
+        ] = PaginateTraits::Paginate($posts);
 
         $author = array_merge($author, $content);
 
@@ -146,10 +164,8 @@ class BlogController extends Controller {
         ]);
 
         return view('blog.posts')
-                ->with([
-                    'author' => $author,
-                    'posts' => $items,
-                    'paginator'=> $paginator
-                ]);
+            ->with('author', $author)
+            ->with('posts', $items)
+            ->with('paginator', $paginator);
     }
 }

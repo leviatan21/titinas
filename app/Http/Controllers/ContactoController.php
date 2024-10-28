@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 class ContactoController extends Controller {
+
     public function index() {
 
         static::seo([

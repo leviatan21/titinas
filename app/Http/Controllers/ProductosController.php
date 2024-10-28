@@ -59,7 +59,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parsePHP($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -77,7 +77,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parsePHP($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -109,7 +109,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -127,7 +127,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -145,7 +145,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -163,7 +163,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -181,7 +181,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -199,7 +199,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -217,7 +217,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -235,7 +235,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }
@@ -253,7 +253,7 @@ class ProductosController extends Controller {
 
         $items = ProductosTraits::parseJSON($items);
 
-        return view('productos.fancybox')
+        return view('productos.gallery')
             ->with('paragraph', $paragraph)
             ->with('productos', $items);
     }

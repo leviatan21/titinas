@@ -85,15 +85,14 @@
             </span>
         </a>
 @endisset
-
     </div>
 
     <div class="footer-copyright">
         <div class="page-footer-inner container">
             <div class="copyright-info">
-                © {{date('Y')}} - All Rights Reserved | 
+                © {{date('Y')}} - Derechos Reservados | 
                 <span class="credit">
-                    Titina's theme by <a href="https://www.linkedin.com/in/gabriel-vazquez-84431531/" title="Desarrollador NodeJs BackEnd" data-toggle="tooltip" data-placement="top" target="_blank" rel="opener noreferrer nofollow">Leviatan21</a>
+                    Diseño y desarrollo <a href="https://www.linkedin.com/in/gabriel-vazquez-84431531/" title="Desarrollador NodeJs BackEnd" data-toggle="tooltip" data-placement="top" target="_blank" rel="opener noreferrer nofollow">Leviatan21</a>
                 </span>
             </div>
         </div>

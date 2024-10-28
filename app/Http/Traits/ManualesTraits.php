@@ -20,7 +20,7 @@ trait ManualesTraits {
     public static function GetBySlug($slug='') {
         $posts  = static::GetPosts();
 
-        $post   = $posts->filter( function($value, $key) use ($slug) {
+        $post   = $posts->filter(function($value, $key) use ($slug) {
             return $value['link']['slug'] == $slug;
         })->first();
 
@@ -68,9 +68,9 @@ trait ManualesTraits {
     }
 
     private static function parseLink($string='') {
-        $route = static::$route;
-        $slug = parseSlug($string, '-');
-        $href = url( "/$route/$slug" );
+        $route  = static::$route;
+        $slug   = parseSlug($string, '-');
+        $href   = url( "/$route/$slug" );
         return [
             'title' => 'Seguir leyendo',
             'slug'  => $slug,
@@ -79,9 +79,9 @@ trait ManualesTraits {
     }
 
     private static function parseAuthor($string='') {
-        $route = static::$route;
-        $slug = parseSlug($string, '-');
-        $href = url( "/$route/author/$slug" );
+        $route  = static::$route;
+        $slug   = parseSlug($string, '-');
+        $href   = url( "/$route/author/$slug" );
         return [
             'title' => $string,
             'slug'  => $slug,

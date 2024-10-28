@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-content">
+<div class="container">
      <div class="page-404">
         <h2>¡Página no encontrada!</h2>
         <p>No podemos encontrar lo que estás buscando.</p>

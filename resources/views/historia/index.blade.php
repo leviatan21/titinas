@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-content">
+<div class="container">
 
     <header class="page-header">
         <h1 class="page-title">{{$SEO->TITLE}}</h1>
@@ -9,7 +9,7 @@
 
     @include('components.share')
 
-    <div class="container my-4">
+    <div class="my-4">
         <p>Quiero contarles un poco la historia de <em class="font-weight-bold">Titina's</em> y sobre mi amor por el arte manual.</p>
         <p>Me gusta crear, que surja una pieza últil y decorativa de algo que "no era nada" o era para tirar.
         Desde chica siempre busqué hacer lo que me llamaba la atención en la TV , o en una vidriera, o en
@@ -61,5 +61,6 @@
         <p><em>Roxana Caballero</em>
         <br />Titina's - Materiales para el Arte Decorativo</p>
     </div>
+
 </div>
 @endsection

@@ -11,26 +11,27 @@
 @endsection
 
 @section('content')
-    <div class="page-content">
-        <header class="page-header">
-            <h1 class="page-title">{{$SEO->TITLE}}</h1>
-        </header>
+<div class="container">
 
-        @include('components.share')
+    <header class="page-header">
+        <h1 class="page-title">{{$SEO->TITLE}}</h1>
+    </header>
 
-        <div class="container pt-4">
-@isset($exclusivos)
-@include('components.table-catalogos', ['title' => 'Productos Exclusivos', 'items' => $exclusivos ])
-@endisset
+    @include('components.share')
 
-@isset($especiales)
-@include('components.table-catalogos', ['title' => 'Especiales', 'items' => $especiales ])
-@endisset
+    @isset($exclusivos)
+    @include('catalogos.table', ['title'=>'Productos Exclusivos', 'items'=>$exclusivos])
+    @endisset
 
-@isset($generales)
-@include('components.table-catalogos', ['title' => 'Generales', 'items' => $generales ])
-@endisset
-        </div>
-        @include('components.footer-catalogos')
-    </div>
+    @isset($especiales)
+    @include('catalogos.table', ['title'=>'Especiales', 'items'=>$especiales])
+    @endisset
+
+    @isset($generales)
+    @include('catalogos.table', ['title'=>'Generales', 'items'=>$generales])
+    @endisset
+</div>
+
+@include('components.footer-catalogos')
+
 @endsection

@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\File;
  * $info = FilesTraits::Folder('images/home/productos');
  * echo "<pre>"; print_r($info); die('</pre>');
  */
-
 trait FilesTraits {
 
     public static function Folder(string $path) { 

@@ -23,7 +23,7 @@ class VideosController extends Controller {
         $items = VideosTraits::GetVideos(static::$seo, $items);
 
         return view('videos.index')
-                ->with('paragraph', $paragraph)
-                ->with('videos', $items);
+            ->with('paragraph', $paragraph)
+            ->with('videos', $items);
     }
 }

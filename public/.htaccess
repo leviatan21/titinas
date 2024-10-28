@@ -1,3 +1,94 @@
+
+## compress
+<IfModule mod_filter.c>
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/javascript
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE image/x-icon
+	AddOutputFilterByType DEFLATE image/svg+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/x-font
+	AddOutputFilterByType DEFLATE application/x-font-truetype
+	AddOutputFilterByType DEFLATE application/x-font-ttf
+	AddOutputFilterByType DEFLATE application/x-font-otf
+	AddOutputFilterByType DEFLATE application/x-font-opentype
+	AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+	AddOutputFilterByType DEFLATE font/ttf
+	AddOutputFilterByType DEFLATE font/otf
+	AddOutputFilterByType DEFLATE font/opentype
+</IfModule>
+
+## EXPIRES HEADER CACHING ##
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+    # Set ETag and cache for one day for all images:
+    <FilesMatch "\.(eot|woff|otf|ttf|svg|ico|jpg|jpeg|png|gif|flv|swf)$">
+        FileETag -INode MTime Size
+        Header set Cache-Control "max-age=86400 public"
+    </FilesMatch>
+    # Set ETag and cache for one day, but assure revalidation, for all CSS, JS assets
+    <filesmatch "\.(css|js)$">
+        FileETag -INode MTime Size
+        Header set Cache-Control "max-age=86400 public must-revalidate"
+    </filesmatch>
+    <filesMatch "\.(x?html?|php)$">
+        Header set Cache-Control "private, no-store, no-cache, must-revalidate"
+    </filesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  SetOutputFilter DEFLATE
+  SetEnvIfNoCase Request_URI \
+  \.(?:gif|webp|jpe?g|png)$ no-gzip dont-vary
+</IfModule>
+
+<IfModule mod_expires.c>
+    # Set Entity Tag header
+    FileETag MTime Size
+
+    # Add correct content-type for fonts
+    AddType application/vnd.ms-fontobject .eot
+    AddType application/x-font-ttf .ttf
+    AddType application/x-font-opentype .otf
+    AddType application/x-font-woff .woff
+    AddType image/svg+xml .svg
+
+    #Enable Expires and reset to zero
+    ExpiresActive On
+    ExpiresDefault A0
+
+    # Configure mime expires
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+    ExpiresByType image/ico "access plus 1 month"
+
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/css "now plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+    ExpiresByType application/x-font-opentype "access plus 1 month"
+    ExpiresByType application/x-font-woff "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType text/html "access plus 60 seconds"
+
+    ExpiresDefault "access plus 2 days"
+</IfModule>
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

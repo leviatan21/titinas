@@ -7,10 +7,16 @@ use Illuminate\Support\Arr;
 use App\Http\Traits\SchemaMarkupTraits;
 
 class CursosController extends Controller {
+
     public function index() {
         include_once(storage_path('app/data/cursos.php'));
 
-        [ 'seo'=>$seo, 'paragraph'=>$paragraph, 'horizontal'=>$horizontal, 'vertical'=>$vertical ] = cursos();
+        [
+            'seo'       => $seo,
+            'paragraph' => $paragraph, 
+            'horizontal'=> $horizontal,
+            'vertical'  => $vertical
+        ] = cursos();
 
         static::seo($seo);
 
@@ -25,8 +31,8 @@ class CursosController extends Controller {
         });
 
         return view('cursos.index')
-                ->with('paragraph', $paragraph)
-                ->with('horizontal', $horizontal)
-                ->with('vertical', $vertical);
+            ->with('paragraph', $paragraph)
+            ->with('horizontal', $horizontal)
+            ->with('vertical', $vertical);
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Traits;
 use App\Http\Traits\SchemaMarkupTraits;
 
 trait VideosTraits {
+
     public static function GetVideos($seo, $items) {
 
         foreach($items as $index => $item) {

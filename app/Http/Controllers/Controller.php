@@ -10,6 +10,7 @@ use App\Http\Traits\SchemaMarkupTraits;
 include_once(app_path('/Helpers/helpers.php'));
 
 class Controller {
+
     static $menu    = [];
     static $config  = [];
     static $seo     = [];
@@ -51,36 +52,36 @@ class Controller {
     static function menu() {
         static::$menu = [
             [
+                'text' => 'Tienda',
                 'href' => url('/redirect?to=shop'),
                 'target' => '_blank', 
                 'rel' => 'opener noreferrer nofollow',
                 'label' => 'Comprar en la Tienda',
-                'text' => 'Tienda',
-                'image' =>  asset('images/logo-tienda.jpg'),
+                'image' =>  asset('/images/logo-tienda.jpg'),
             ],
             [
-                'href' => url('/'),
-                'text' => 'Home'
+                'text' => 'Home',
+                'href' => url('/')
             ],
             [
-                'href' => url('/catalogos'),
-                'text' => 'Catálogos'
+                'text' => 'Catálogos',
+                'href' => url('/catalogos')
             ],
             [
-                'href' => url('/blog'),
-                'text' => 'Blog'
+                'text' => 'Blog',
+                'href' => url('/blog')
             ],
             [
-                'href' => url('/cursos'),
-                'text' => 'Cursos'
+                'text' => 'Cursos',
+                'href' => url('/cursos')
             ],
             [
-                'href' => url('/contacto'),
-                'text' => 'Contacto'
+                'text' => 'Contacto',
+                'href' => url('/contacto')
             ],
             [
-                'href' => url('/comercios'),
-                'text' => 'Puntos de venta'
+                'text' => 'Puntos de venta',
+                'href' => url('/comercios')
             ],
         ];
     }
@@ -104,13 +105,13 @@ class Controller {
     static function seo(array $seo=[]) {
         static::$seo = (object) [
             'CANONICAL'         => url()->current(),
-            'SITEURL'           => url(''),
+            'SITEURL'           => url('/'),
             'LOCALE'            => 'es-AR',
             'SITE_TITLE'        => "Titina's",
             'SITE_DESCRIPTION'  => "Materiales para el arte y la creatividad",
-            'TITLE'             => !empty($seo['title']) ? $seo['title'] : config('custom.title',"materiales para el arte decorativo - Titinas"),
-            'DESCRIPTION'       => !empty($seo['description']) ? $seo['description'] : config('custom.description',"Titina's materiales para el arte decorativo"),
-            'KEYWORDS'          => !empty($seo['keywords']) ? $seo['keywords'] : config('custom.keywords',"Materiales, Arte, Decoración, Pasta cerámica"),
+            'TITLE'             => !empty($seo['title'])        ? $seo['title']         : config('custom.title',"materiales para el arte decorativo - Titinas"),
+            'DESCRIPTION'       => !empty($seo['description'])  ? $seo['description']   : config('custom.description',"Titina's materiales para el arte decorativo"),
+            'KEYWORDS'          => !empty($seo['keywords'])     ? $seo['keywords']      : config('custom.keywords',"Materiales, Arte, Decoración, Pasta cerámica"),
             'LOGO'              => asset('/images/logo-titinas.jpg'),
             'TWITTER_SITE'      => config('custom.twitter_account', null),
             'DATE_PUBLISHED'    => config('custom.datePublished', null),

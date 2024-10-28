@@ -1,7 +1,7 @@
 
-<div class="container">
-    <div class="social-media-container">
-        <div class="social-media">
+
+    <div class="social-share-container">
+        <div class="social-share">
             <div id="social-share-button" title="Compartir" data-toggle="tooltip" data-placement="left">
                 @include('components.svg.share')
             </div>
@@ -19,4 +19,3 @@
             <script src="https://static.addtoany.com/menu/page.js" async></script>
         </div>
     </div>
-</div>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{$SEO->LOCALE}}" dir="ltr">
     <head>
-        <link rel="preconnect"   href="https://fonts.googleapis.com" />
-        <link rel="preconnect"   href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect"  href="https://fonts.googleapis.com" />
+        <link rel="preconnect"  href="https://cdn.jsdelivr.net" />
         @isset($SEO->FACEBOOK_PIXEL)
-        <link rel="preconnect"   href="https://www.facebook.com" />
+        <link rel="preconnect"  href="https://www.facebook.com" />
         @endif
         @isset($SEO->GOOGLE_TAGMANAGER)
-        <link rel="preconnect"   href="https://www.googletagmanager.com" />
-        <link rel="preload"      href={{"https://www.googletagmanager.com/gtag/js?id={$SEO->GOOGLE_TAGMANAGER}"}} as="script" />
+        <link rel="preconnect"  href="https://www.googletagmanager.com" />
+        <link rel="preload"     href={{"https://www.googletagmanager.com/gtag/js?id={$SEO->GOOGLE_TAGMANAGER}"}} as="script" />
         @endif
-        <link rel="preload" href="{{asset("/css/styles.css{$REFRESH}")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload"     href="{{asset("/css/styles.css{$REFRESH}")}}" as="style" />
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -39,19 +39,19 @@
 
         <script src="{{asset("/js/libs/jquery/3.7.1/jquery.min.js{$REFRESH}")}}" type="text/javascript" sync></script>
  
-        @include('layouts.googletagmanager',['mode'=>'head'])
+        @include('layouts.googletagmanager', ['mode'=>'head'])
 
         @include('layouts.facebookpixel')
 
     </head>
 
     <body> 
-        @include('layouts.googletagmanager',['mode'=>'body'])
+        @include('layouts.googletagmanager', ['mode'=>'body'])
         @include('layouts.header')
 
-        <main>
+        <main class="page-content">
             @yield('content')
-            @include('components.schemamarkup',['schemamarkup'=>$SCHEMA_MARKUP])
+            @include('components.schemamarkup', ['schemamarkup'=>$SCHEMA_MARKUP])
         </main>
 
         @include('layouts.footer')

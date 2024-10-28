@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ManualesController;
 use App\Http\Controllers\CatalogosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ContactoController;
@@ -49,9 +50,14 @@ Route::prefix('/productos')->group(function () {
     Route::get( '/pinturas',        [HomeController::class, 'proximamente']         )->name('web.pinturas');
 });
 Route::prefix('/blog')->group(function () {
-    Route::get( '/',                 [BlogController::class, 'index']                )->name('web.blog');
-    Route::get( '/{post}',           [BlogController::class, 'post']                 )->name('blog.post');
-    Route::get( '/categoria/{cat}',  [BlogController::class, 'categoria']            )->name('blog.categoria');
-    Route::get( '/tag/{tag}',        [BlogController::class, 'tag']                  )->name('blog.tag');
-    Route::get( '/author/{author}',  [BlogController::class, 'author']               )->name('blog.author');
+    Route::get( '/',                 [BlogController::class, 'index']               )->name('web.blog');
+    Route::get( '/{post}',           [BlogController::class, 'post']                )->name('blog.post');
+    Route::get( '/categoria/{cat}',  [BlogController::class, 'categoria']           )->name('blog.categoria');
+    Route::get( '/tag/{tag}',        [BlogController::class, 'tag']                 )->name('blog.tag');
+    Route::get( '/author/{author}',  [BlogController::class, 'author']              )->name('blog.author');
+});
+Route::prefix('/manuales')->group(function () {
+    Route::get( '/',                 [ManualesController::class, 'index']           )->name('web.manuales');
+    Route::get( '/{post}',           [ManualesController::class, 'post']            )->name('manuales.post');
+    Route::get( '/author/{author}',  [ManualesController::class, 'author']          )->name('manuales.author');
 });

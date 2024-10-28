@@ -126,9 +126,8 @@ class BlogController extends Controller {
 
     public function author($slug='') {
 
-        ['posts'=>$posts,'author'=>$author] = BlogTraits::GetByAuthor($slug);
-
-        if (!$author) {
+        $content = BlogTraits::GetAuthor($slug);
+        if (!$content) {
             return response()->view(
                 'blog.no-posts',
                 ['title' => "No hay posteos para el autor {$slug}"],
@@ -136,15 +135,14 @@ class BlogController extends Controller {
             );
         }
 
-        ['items'=>$items,'paginator'=>$paginator] = PaginateTraits::Paginate($posts);
+        ['posts'=>$posts,'author'=>$author]         = BlogTraits::GetByAuthor($slug);
+        ['items'=>$items,'paginator'=>$paginator]   = PaginateTraits::Paginate($posts);
 
-        $content = BlogTraits::GetAuthor($slug);
         $author = array_merge($author, $content);
 
         static::seo([
-            'title' => "Posteos para el autor \"{$author['title']}\"",
-            'description' => "{$author['title']} - {$author['content'][0]}",
-            'keywords' => ""
+            'title' => "\"{$author['title']}\" escribe en el blog de Titina's",
+            'description' => "{$author['title']} - {$author['content'][0]}"
         ]);
 
         return view('blog.posts')

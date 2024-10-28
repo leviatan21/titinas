@@ -4,6 +4,8 @@ namespace App\Http\Traits;
 
 trait BlogTraits {
 
+    static $route = 'blog';
+
     public static function GetPosts() {
         include_once(storage_path('app/data/blog.php'));
 
@@ -147,6 +149,8 @@ trait BlogTraits {
     }
 
     public static function GetAuthor($slug='') {
+        include_once(storage_path('app/data/authors.php'));
+
         $authors = authors();
         return ($authors[$slug] ?? []);
     }
@@ -168,42 +172,46 @@ trait BlogTraits {
     }
 
     private static function parseLink($string='') {
+        $route = static::$route;
         $slug = parseSlug($string, '-');
-        $href = url( "/blog/$slug" );
+        $href = url( "/$route/$slug" );
         return [
             'title' => 'Seguir leyendo',
-            'slug' => $slug,
-            'href' => $href
+            'slug'  => $slug,
+            'href'  => $href
         ];
     }
 
     private static function parseCategory($string='') {
+        $route = static::$route;
         $slug = parseSlug($string, '-');
-        $href = url( "/blog/categoria/$slug" );
+        $href = url( "/$route/categoria/$slug" );
         return [
             'title' => $string,
-            'slug' => $slug,
-            'href' => $href
+            'slug'  => $slug,
+            'href'  => $href
         ];
     }
 
     private static function parseTag($string='') {
+        $route = static::$route;
         $slug = parseSlug($string, '-');
-        $href = url( "/blog/tag/$slug" );
+        $href = url( "/$route/tag/$slug" );
         return [
             'title' => $string,
-            'slug' => $slug,
-            'href' => $href
+            'slug'  => $slug,
+            'href'  => $href
         ];
     }
 
     private static function parseAuthor($string='') {
+        $route = static::$route;
         $slug = parseSlug($string, '-');
-        $href = url( "/blog/author/$slug" );
+        $href = url( "/$route/author/$slug" );
         return [
             'title' => $string,
-            'slug' => $slug,
-            'href' => $href
+            'slug'  => $slug,
+            'href'  => $href
         ];
     }
 }

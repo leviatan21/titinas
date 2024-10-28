@@ -84,8 +84,8 @@
 
         @foreach($videos as $video)
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 my-4">
-            @foreach($video as $item)
-            <div class="col mb-3">
+            @foreach($video as $key => $item)
+            <div class="col mb-3" id="videos-{{Str::slug($key, '-')}}">
                 <div class="card h-100 video-thumbnail">
                     @if(!empty($item['youtube-embed']))
                         @include('components.iframe-youtube-vertical', ['url'=>$item['youtube-embed'], 'title'=>$item['title']] )
@@ -97,7 +97,9 @@
                     @endif
                     <div class="card-body d-flex flex-column">
                         <h2 class="text-center h4">
-                            {!!$item['title']!!}
+                            <a class="bd-content-title" href="#videos-{{Str::slug($key, '-')}}" data-anchorjs-icon="#">
+                                {!!$item['title']!!}
+                            </a>
                         </h2>
 
                         @if(!empty($item['dateHumans']))
@@ -114,14 +116,12 @@
 
                         @if(!empty($item['facebook-share']))
                         <a href="{{$item['facebook-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
-                            <svg class="svg-inline--fa fa-video fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
-                            &nbsp;Ver video en Facebook
+                            @include('components.svg.video')&nbsp;Ver video en Facebook
                         </a>
                         @endif
                         @if(empty($item['youtube-embed']) && !empty($item['youtube-share']))
                         <a href="{{$item['youtube-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
-                            <svg class="svg-inline--fa fa-video fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
-                            &nbsp;Ver video en Youtube
+                            @include('components.svg.video')&nbsp;Ver video en Youtube
                         </a>
                         @endif
                     </div>

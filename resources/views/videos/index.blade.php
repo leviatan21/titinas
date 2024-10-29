@@ -88,10 +88,12 @@
                 @if(!empty($item['youtube-embed']))
                     @include('components.iframe-youtube-vertical', ['url'=>$item['youtube-embed'], 'title'=>$item['title']])
                 @else
-                <img src="{{$item['image']}}" alt="{{$item['title']}}" 
-                    class="img-thumbnail border border-light" height="200" 
-                    decoding="async" loading="lazy" fetchpriority="auto"
-                />
+                <a class="video-link" href="{{$item['instagram-share'] ?? $item['facebook-share'] ?? $item['youtube-share']}}" target="_blank" rel="noopener noreferrer nofollow">
+                    <img src="{{$item['image']}}" alt="{{$item['title']}}" 
+                        class="img-thumbnail border border-light" height="200" 
+                        decoding="async" loading="lazy" fetchpriority="auto"
+                    />
+                </a>
                 @endif
                 <div class="card-body d-flex flex-column">
                     <h2 class="text-center h4">

@@ -3,7 +3,7 @@
 @section('content')
 <style>
 .page-content{background:linear-gradient(120deg,rgb(255,245,203) 0%,rgb(182,227,212) 100%);}
-.panel{background-color:#00000010;}
+.panel{background-color:#FFFFFFA6;}
 </style>
 <div class="container page-manuals">
 
@@ -29,7 +29,7 @@
                     </span>
                     <div class="title">
                         Técnica
-                        <h1 class="font-cinzel">{{$post['title']}}</h1>
+                        <h1>{{$post['title']}}</h1>
                     </div>
                     <span class="leaf right">
                         @include('components.svg.leaf')

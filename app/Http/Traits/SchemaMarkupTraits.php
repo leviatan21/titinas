@@ -14,7 +14,8 @@ trait SchemaMarkupTraits {
 
     public static function VideoObject($seo, $item=[]) {
 
-        $embedUrl       = (!empty($item['facebook-share'])) ? $item['facebook-share'] : $item['youtube-share'];
+        $embedUrl       = (!empty($item['instagram-share'])) ? $item['instagram-share'] : (
+                          (!empty($item['facebook-share'])) ? $item['facebook-share'] : $item['youtube-share']);
         $description    = (!empty($item['description'])) ? $item['description'] : $item['title'];
 
         return static::Encode([
@@ -39,10 +40,11 @@ trait SchemaMarkupTraits {
     }
 
     public static function ManualPosting($seo, $item=[]) {
+        $ImageUrl       = asset("/images/logo-titinas.jpg");
         // Article
         return static::Encode([
             "@context" => "https://schema.org",
-            "@type" => "BlogPosting",
+            "@type" => "Article",
             "datePublished" => $item["datePublished"],
             "dateModified" => $item["dateModified"],
             ...!empty($item["author"]["title"]) ? 
@@ -66,7 +68,7 @@ trait SchemaMarkupTraits {
                 "@id" => "{$seo->SITEURL}#WebSite"
             ],
             ...!empty($item["image"]) ? 
-            ["image" => [$item["image"]]] : [],
+            ["image" => [$item["image"]]] : [$ImageUrl],
             "inLanguage" => "es-AR",
             "mainEntityOfPage" =>[
                 "@type" => "WebPage",
@@ -77,7 +79,7 @@ trait SchemaMarkupTraits {
     }
 
     public static function BlogPosting($seo, $item=[]) {
-
+        $ImageUrl       = asset("/images/logo-titinas.jpg");
         return static::Encode([
             "@context" => "https://schema.org",
             "@type" => "BlogPosting",
@@ -104,7 +106,7 @@ trait SchemaMarkupTraits {
                 "@id" => "{$seo->SITEURL}#WebSite"
             ],
             ...!empty($item["image"]) ? 
-            ["image" => [$item["image"]]] : [],
+            ["image" => [$item["image"]]] : [$ImageUrl],
             "inLanguage" => "es-AR",
             "mainEntityOfPage" =>[
                 "@type" => "WebPage",

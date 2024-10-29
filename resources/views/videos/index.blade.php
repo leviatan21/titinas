@@ -112,13 +112,18 @@
                     </p>
                     @endif
 
+                    @if(!empty($item['instagram-share']))
+                    <a href="{{$item['instagram-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="noopener noreferrer nofollow">
+                        @include('components.svg.video')&nbsp;Ver video en Instagram
+                    </a>
+                    @endif
                     @if(!empty($item['facebook-share']))
-                    <a href="{{$item['facebook-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
+                    <a href="{{$item['facebook-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="noopener noreferrer nofollow">
                         @include('components.svg.video')&nbsp;Ver video en Facebook
                     </a>
                     @endif
                     @if(empty($item['youtube-embed']) && !empty($item['youtube-share']))
-                    <a href="{{$item['youtube-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="opener noreferrer nofollow">
+                    <a href="{{$item['youtube-share']}}" title="{{$item['title']}}" class="text-center mt-auto" target="_blank" rel="noopener noreferrer nofollow">
                         @include('components.svg.video')&nbsp;Ver video en Youtube
                     </a>
                     @endif

@@ -2,8 +2,8 @@
 
 @section('content')
 <style>
-.page-content{background:linear-gradient(120deg,rgb(233, 247, 255) 0%,rgb(231, 214, 246) 100%);}
-.panel{background-color:#00000010;}
+.page-content{background:linear-gradient(120deg,rgb(233,247,255) 0%,rgb(231,214,246) 100%);}
+.panel{background-color:#FFFFFFD1;}
 .related-posts{background-color:#00000005;}
 </style>
 <div class="container page-blog">
@@ -21,7 +21,7 @@
         @endif
 
         <header class="page-header">
-            <h1 class="page-title font-cinzel">{!!$post['title']!!}</h1>
+            <h1 class="page-title">{!!$post['title']!!}</h1>
 
             <span class="border-divider"></span>
 
@@ -40,7 +40,7 @@
 
         @if (!empty($post['related-blog']))
             <div class="related-posts">
-                <h2 class="h4">También te puede interesar:</h2>
+                <h2 class="h5">También te puede interesar:</h2>
                 <div class="row">
                     @foreach ($post['related-blog'] as $item)
                     <section class="col col-6">
@@ -53,7 +53,7 @@
 
         @if (!empty($post['related-links']))
             <div class="related-posts">
-                <h2 class="h4">En Titina's tenemos toda esta gama de productos:</h2>
+                <h2 class="h5">En Titina's tenemos toda esta gama de productos:</h2>
                 <div class="row">
                     @foreach ($post['related-links'] as $item)
                     <section class="col col-6">
@@ -66,7 +66,7 @@
 
         @if (!empty($post['related-manual']))
             <div class="related-posts">
-                <h2 class="h4">Manual de esta técnica</h2>
+                <h2 class="h5">Manual de esta técnica</h2>
                 <div class="row">
                     @foreach ($post['related-manual'] as $item)
                     <section class="col col-6">

@@ -1,13 +1,5 @@
 @extends('layouts.app')
 
-@section('css')
-<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet" type="text/css" media="all" />
-@endsection
-
-@section('js')
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" type="text/javascript" defer></script>
-@endsection
-
 @section('content')
 <div class="container page-christmas">
 
@@ -62,16 +54,9 @@
     @endforeach
 </div>
 
+@include('components.script-fancybox', ['items'=>$productos])
+
 @include('components.footer-tienda')
 @include('components.footer-pedidos')
 
-
-<script type="text/javascript">
-$(document).ready(function() {
-    FancyboxDefaults();
-    @foreach ($productos as $key => $item)
-        Fancybox.bind('[data-fancybox="gallery-{{$key}}"]',Fancybox.defaults);
-    @endforeach
-});
-</script>
 @endsection

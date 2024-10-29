@@ -17,7 +17,7 @@
 
 {{-- Open Graph / Facebook --}}
 <meta property="og:type" content="website" />
-@isset($SEO->SITE_TITLE)<meta property="og:site_name" content="{{$SEO->SITE_TITLE}}" />@endisset
+@isset($SEO->SITE_TITLE)<meta property="og:site_name" content="{!!$SEO->SITE_TITLE!!}" />@endisset
 @isset($SEO->TITLE)<meta property="og:title" content="{!!$SEO->TITLE!!}" />@endisset
 @isset($SEO->DESCRIPTION)<meta property="og:description" content="{!!$SEO->DESCRIPTION!!}" />@endisset
 @isset($SEO->LOCALE)<meta property="og:locale" content="{{$SEO->LOCALE}}" />@endisset

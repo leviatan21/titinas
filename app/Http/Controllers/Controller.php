@@ -11,18 +11,18 @@ include_once(app_path('/Helpers/helpers.php'));
 
 class Controller {
 
-    static $menu    = [];
     static $config  = [];
-    static $seo     = [];
     static $social  = [];
+    static $menu    = [];
+    static $seo     = [];
     static $shema   = [];
 
     public function __construct() {
-        static::menu();
         static::config();
-        static::seo();
         static::social();
-        static::$shema = SchemaMarkupTraits::Global(static::$seo, static::$config);
+        static::menu();
+        static::seo();
+        static::shema();
 
         static::ViewShare();
     }
@@ -47,6 +47,34 @@ class Controller {
                 'ERRORPAGE' => true
             ]);
         });
+    }
+
+    static function config() {
+        static::$config = (object) [
+            'ANA_NAME'          => config('custom.AnaName', 'Anabella'),
+            'ANA_TEL'           => config('custom.AnaTel', '+54911 5562-9418'),
+            'ANA_EMAIL'         => config('custom.AnaEmail', 'ana@titinas.com.ar'),
+            'ROX_NAME'          => config('custom.RoxName', 'Roxana Caballero'),
+            'ROX_TEL'           => config('custom.RoxTel', '+54911 5735-9821'),
+            'ROX_EMAIL'         => config('custom.RoxaEmail', 'ventas.titinas@gmail.com'),
+            'EMAIL_VENTAS'      => config('custom.EmailVentas', 'ventas.titinas@gmail.com'),
+            'EMAIL_ADISTANCIA'  => config('custom.EmailAdistancia', 'ventas.titinas+adistancia@gmail.com'),
+            'CATALOGS_LINK'     => url('/redirect?to=catalogos'),
+            'DRIVE_PDF'         => config('custom.drivePdf', 'https://drive.google.com/drive/folders/1W-8xH6l98gaRglPqY1eXhXt-GSArmiHM?usp=sharing'),
+            'PUNTO_VENTA'       => config('custom.puntoventa','https://docs.google.com/forms/d/1snk2faX6IcoLh3iqmX6hgQVNHLD4PZIXwre985aoHyw/edit')
+        ];
+    }
+
+    static function social() {
+        static::$social = (object) [
+            'facebook'          => config('custom.facebook', null),
+            'youtube'           => config('custom.youtube', null),
+            'instagram'         => config('custom.instagram', null),
+            'pinterest'         => config('custom.pinterest', null),
+            'whatsapp'          => config('custom.whatsapp', null),
+            'esperienzadarte'   => config('custom.esperienzadarte', null),
+            'tienda'            => config('custom.tienda', null),
+        ];
     }
 
     static function menu() {
@@ -86,22 +114,6 @@ class Controller {
         ];
     }
 
-    static function config() {
-        static::$config = (object) [
-            'ANA_NAME'          => config('custom.AnaName', 'Anabella'),
-            'ANA_TEL'           => config('custom.AnaTel', '+54911 5562-9418'),
-            'ANA_EMAIL'         => config('custom.AnaEmail', 'ana@titinas.com.ar'),
-            'ROX_NAME'          => config('custom.RoxName', 'Roxana Caballero'),
-            'ROX_TEL'           => config('custom.RoxTel', '+54911 5735-9821'),
-            'ROX_EMAIL'         => config('custom.RoxaEmail', 'ventas.titinas@gmail.com'),
-            'EMAIL_VENTAS'      => config('custom.EmailVentas', 'ventas.titinas@gmail.com'),
-            'EMAIL_ADISTANCIA'  => config('custom.EmailAdistancia', 'ventas.titinas+adistancia@gmail.com'),
-            'CATALOGS_LINK'     => url('/redirect?to=catalogos'),
-            'DRIVE_PDF'         => config('custom.drivePdf', 'https://drive.google.com/drive/folders/1W-8xH6l98gaRglPqY1eXhXt-GSArmiHM?usp=sharing'),
-            'PUNTO_VENTA'       => config('custom.puntoventa','https://docs.google.com/forms/d/1snk2faX6IcoLh3iqmX6hgQVNHLD4PZIXwre985aoHyw/edit')
-        ];
-    }
-
     static function seo(array $seo=[]) {
         static::$seo = (object) [
             'CANONICAL'         => url()->current(),
@@ -121,15 +133,7 @@ class Controller {
         ];
     }
 
-    static function social() {
-        static::$social = (object) [
-            'facebook'          => config('custom.facebook', null),
-            'youtube'           => config('custom.youtube', null),
-            'instagram'         => config('custom.instagram', null),
-            'pinterest'         => config('custom.pinterest', null),
-            'whatsapp'          => config('custom.whatsapp', null),
-            'esperienzadarte'   => config('custom.esperienzadarte', null),
-            'tienda'            => config('custom.tienda', null),
-        ];
+    static function shema() {
+        static::$shema = SchemaMarkupTraits::Global(static::$seo, static::$config);
     }
 }

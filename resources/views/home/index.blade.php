@@ -27,7 +27,8 @@
 
 </div>
 
-@include('components.slider')
+@include('components.script-slider')
+
 @include('components.footer-tienda')
 @include('components.footer-pedidos')
 

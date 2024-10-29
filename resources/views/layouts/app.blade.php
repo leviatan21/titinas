@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{$SEO->LOCALE}}" dir="ltr">
     <head>
-        <link rel="preconnect"  href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect"  href="https://cdn.jsdelivr.net" />
         @isset($SEO->FACEBOOK_PIXEL)
         <link rel="preconnect"  href="https://www.facebook.com" />
         @endif
         @isset($SEO->GOOGLE_TAGMANAGER)
         <link rel="preconnect"  href="https://www.googletagmanager.com" />
-        <link rel="preload"     href={{"https://www.googletagmanager.com/gtag/js?id={$SEO->GOOGLE_TAGMANAGER}"}} as="script" />
+        <link rel="preload"     href={{"https://www.googletagmanager.com/gtm.js?id={$SEO->GOOGLE_TAGMANAGER}"}} as="script" />
         @endif
         <link rel="preload"     href="{{asset("/css/styles.css{$REFRESH}")}}" as="style" />
 

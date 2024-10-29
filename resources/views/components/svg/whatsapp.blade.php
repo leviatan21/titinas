@@ -1,5 +1,5 @@
 <svg 
-    class="svg-inline--fa fa-whatsapp fa-w-18" 
+    class="svg-inline--fa fa-w-{{$faW ?? 18}} fa-whatsapp" 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 448 512"
 >

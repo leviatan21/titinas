@@ -31,6 +31,9 @@ function MobileMenu() {
 
 var showButtons = false;
 function ShareButton() {
+	if (typeof a2a==='undefined') {
+		$(".social-share-container").remove();
+	}
 	$('#social-share-button').on('click', function(e) {
 		e.preventDefault();
 		e.stopPropagation();

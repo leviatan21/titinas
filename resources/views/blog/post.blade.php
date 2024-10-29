@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<style>
+.page-content{background:linear-gradient(120deg,rgb(233, 247, 255) 0%,rgb(231, 214, 246) 100%);}
+.panel{background-color:#00000010;}
+.related-posts{background-color:#00000005;}
+</style>
+<div class="container page-blog">
 
-    <article class="post type-post status-publish">
+    @include('components.share')
+
+    <div class="panel mt-4"> <article class="post status-publish">
         @if(!empty($post['image']))
         <div class="post-media">
             <img src="{{$post['image']}}" alt="{{$post['title']}}"
@@ -13,10 +20,8 @@
         </div>
         @endif
 
-        @include('components.share')
-
         <header class="page-header">
-            <h1 class="page-title">{!!$post['title']!!}</h1>
+            <h1 class="page-title font-cinzel">{!!$post['title']!!}</h1>
 
             <span class="border-divider"></span>
 
@@ -102,6 +107,7 @@
         @include('components.schemamarkup', ['schemamarkup'=>$post['schemamarkup']])
         @endif
     </article>
+    </div>
 
     @if (!empty($prev) || !empty($next))
     @include('components.single-navigation', ['prev'=>$prev, 'next'=>$next])

@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+.page-content{background:linear-gradient(120deg,rgb(255,245,203) 0%,rgb(182,227,212) 100%);}
+.panel{background-color:#00000010;}
+</style>
 <div class="container page-manuals">
 
     @include('components.share')
@@ -25,7 +29,7 @@
                     </span>
                     <div class="title">
                         Técnica
-                        <h1>{{$post['title']}}</h1>
+                        <h1 class="font-cinzel">{{$post['title']}}</h1>
                     </div>
                     <span class="leaf right">
                         @include('components.svg.leaf')
@@ -45,7 +49,7 @@
                     class="link-icon" 
                     rel="opener noreferrer follow"
                 >
-                    @include('components.svg.blog')
+                    @include('components.svg.blog', ['faW'=>20])
                 </a>
             </div>
             @endif
@@ -110,7 +114,7 @@
                             class="link-icon" 
                             rel="opener noreferrer follow"
                         >
-                            @include('components.svg.video')
+                            @include('components.svg.video', ['faW'=>16])
                         </a>
                     </p>
                     @endforeach

@@ -13,6 +13,6 @@ trait VideosTraits {
             $items[$index]['schemamarkup'] = SchemaMarkupTraits::VideoObject($seo, $item);
         }
 
-        return collect($items)->chunk(3);
+        return collect($items)->sortByDesc('datePublished')->chunk(3);
     }
 }

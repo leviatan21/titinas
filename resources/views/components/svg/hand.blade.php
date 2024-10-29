@@ -1,5 +1,5 @@
 <svg 
-    class="svg-inline--fa fa-hand-point-right fa-w-18"
+    class="svg-inline--fa fa-w-{{$faW ?? 18}} fa-hand-point-right"
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 512 512"
 >

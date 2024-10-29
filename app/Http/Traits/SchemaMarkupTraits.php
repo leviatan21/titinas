@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Request;
 
 trait SchemaMarkupTraits {
 
-    public static function View($shema) {
+    public static function Encode($shema) {
         return json_encode($shema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES, 10);
     }
 
@@ -17,22 +17,30 @@ trait SchemaMarkupTraits {
         $embedUrl       = (!empty($item['facebook-share'])) ? $item['facebook-share'] : $item['youtube-share'];
         $description    = (!empty($item['description'])) ? $item['description'] : $item['title'];
 
-        $shema = [
+        return static::Encode([
             "@context" => "https://schema.org",
             "@type" => "VideoObject",
             "name" => $item['title'],
             "description" => sanitizeString($description),
             "thumbnailUrl" => $item['image'],
             "embedUrl" => $embedUrl,
-            "uploadDate" => $item['datePublished']
-        ];
-
-        return static::View($shema);
+            "uploadDate" => $item['datePublished'],
+            "@id" => "{$seo->SITEURL}#richSnippet",
+            "isPartOf" => [
+                "@id" => "{$seo->SITEURL}#WebSite"
+            ],
+            "inLanguage" => "es-AR",
+            "mainEntityOfPage" =>[
+                "@type" => "WebPage",
+                "name" => $seo->SITE_TITLE,
+                "url" => $seo->SITEURL,
+            ]
+        ]);
     }
 
     public static function ManualPosting($seo, $item=[]) {
-
-        $shema = [
+        // Article
+        return static::Encode([
             "@context" => "https://schema.org",
             "@type" => "BlogPosting",
             "datePublished" => $item["datePublished"],
@@ -65,14 +73,12 @@ trait SchemaMarkupTraits {
                 "name" => $seo->SITE_TITLE,
                 "url" => $seo->SITEURL,
             ]
-        ];
-
-        return static::View($shema);
+        ]);
     }
 
     public static function BlogPosting($seo, $item=[]) {
 
-        $shema = [
+        return static::Encode([
             "@context" => "https://schema.org",
             "@type" => "BlogPosting",
             "datePublished" => $item["datePublished"],
@@ -105,14 +111,12 @@ trait SchemaMarkupTraits {
                 "name" => $seo->SITE_TITLE,
                 "url" => $seo->SITEURL,
             ]
-        ];
-
-        return static::View($shema);
+        ]);
     }
 
     public static function Course($seo, $config, $item=[]) {
 
-        $shema = [
+        return static::Encode([
             "@context" =>  "http://schema.org/",
             "@type" =>  "Course",
             "name" => $item["title"],
@@ -143,9 +147,7 @@ trait SchemaMarkupTraits {
                     "name" => $config->ROX_NAME
                 ]
             ],
-        ];
-
-        return static::View($shema);
+        ]);
     }
 
     public static function Product($seo, $item=[]) {
@@ -153,7 +155,7 @@ trait SchemaMarkupTraits {
         $priceValidUntil = parseNow();
         $priceValidUntil->isLastOfMonth() ? $priceValidUntil->addDays(1)->lastOfMonth() : $priceValidUntil->lastOfMonth();
 
-        $shema = [
+        return static::Encode([
             "@context" => "http://schema.org/",
             "@type" => "Product",
             "name" => $item["title"],
@@ -222,9 +224,7 @@ trait SchemaMarkupTraits {
                     "url" => $seo->SITEURL
                 ]
             ]
-        ];
-
-        return static::View($shema);
+        ]);
     }
 
     public static function Global($seo, $config) {
@@ -232,7 +232,7 @@ trait SchemaMarkupTraits {
         $BreadcrumbList = static::Breadcrumb();
         $SiteNavigation = static::SiteNavigation();
 
-        $shema = [
+        return static::Encode([
             "@context" => "https://schema.org",
             "@graph" => [
                 [// WebPage
@@ -370,9 +370,7 @@ trait SchemaMarkupTraits {
                     ]
                 ]
             ]
-        ];
-
-        return static::View($shema);
+        ]);
     }
 
     private static function Breadcrumb() {

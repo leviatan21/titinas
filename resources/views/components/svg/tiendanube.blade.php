@@ -1,5 +1,5 @@
 <svg 
-    class="svg-inline--fa fa-tiendanube fa-w-20" 
+    class="svg-inline--fa fa-w-{{$faW ?? 20}} fa-tiendanube" 
     viewBox="0 0 160 24" 
     fill="currentColor" 
     xmlns="http://www.w3.org/2000/svg"

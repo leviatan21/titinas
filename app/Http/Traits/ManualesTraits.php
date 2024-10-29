@@ -14,7 +14,7 @@ trait ManualesTraits {
             $posts[$index] = static::parsePost($item);
         }
 
-        return collect($posts);
+        return collect($posts)->sortByDesc('datePublished');
     }
 
     public static function GetBySlug($slug='') {

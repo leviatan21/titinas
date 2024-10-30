@@ -11,18 +11,22 @@ include_once(app_path('/Helpers/helpers.php'));
 
 class Controller {
 
-    static $config  = [];
-    static $social  = [];
-    static $menu    = [];
-    static $seo     = [];
-    static $shema   = [];
+    static $config      = [];
+    static $social      = [];
+    static $breadcrumb  = [];
+    static $navigation  = [];
+    static $seo         = [];
+    static $menu        = [];
+    static $shema       = [];
 
     public function __construct() {
-        static::config();
-        static::social();
-        static::menu();
-        static::seo();
-        static::shema();
+        static::Config();
+        static::Social();
+        static::Navigation();
+        static::Breadcrumb();
+        static::Seo();
+        static::Menu();
+        static::Shema();
 
         static::ViewShare();
     }
@@ -31,25 +35,24 @@ class Controller {
         View::composer('*', function ($view) {
             $refresh = config('custom.refresh', '1.0.0');
             $view->with([
-                'MENU'          => static::$menu,
-                'SEO'           => static::$seo,
-                'SOCIAL'        => static::$social,
-                'CONFIG'        => static::$config,
                 'REFRESH'       => "?ver=$refresh",
-                'SCHEMA_MARKUP' => static::$shema
+                'CONFIG'        => static::$config,
+                'SOCIAL'        => static::$social,
+                'BREADCRUMB'    => static::$breadcrumb,
+                'SEO'           => static::$seo,
+                'MENU'          => static::$menu,
+                'SCHEMA_MARKUP' => static::$shema,
             ]);
         });
 
         View::composer('errors::404', function ($view) {
             Log::channel('ErrorPage')->info('Page:', ['page' => url()->current()]);
             static::$seo->TITLE = 'Página de Error';
-            $view->with([
-                'ERRORPAGE' => true
-            ]);
+            $view->with('ERRORPAGE', true);
         });
     }
 
-    static function config() {
+    static function Config() {
         static::$config = (object) [
             'ANA_NAME'          => config('custom.AnaName', 'Anabella'),
             'ANA_TEL'           => config('custom.AnaTel', '+54911 5562-9418'),
@@ -65,7 +68,7 @@ class Controller {
         ];
     }
 
-    static function social() {
+    static function Social() {
         static::$social = (object) [
             'facebook'          => config('custom.facebook', null),
             'youtube'           => config('custom.youtube', null),
@@ -77,44 +80,74 @@ class Controller {
         ];
     }
 
-    static function menu() {
-        static::$menu = [
-            [
-                'text' => 'Tienda',
-                'href' => url('/redirect?to=shop'),
-                'target' => '_blank', 
-                'rel' => 'opener noreferrer nofollow',
-                'label' => 'Comprar en la Tienda',
-                'image' =>  asset('/images/logo-tienda.jpg'),
-            ],
-            [
-                'text' => 'Home',
-                'href' => url('/')
-            ],
-            [
-                'text' => 'Catálogos',
-                'href' => url('/catalogos')
-            ],
-            [
-                'text' => 'Blog',
-                'href' => url('/blog')
-            ],
-            [
-                'text' => 'Cursos',
-                'href' => url('/cursos')
-            ],
-            [
-                'text' => 'Contacto',
-                'href' => url('/contacto')
-            ],
-            [
-                'text' => 'Puntos de venta',
-                'href' => url('/comercios')
-            ],
-        ];
+    static function Navigation() {
+        $list    = [];
+        $routes  = Route::getRoutes();
+
+        $routes = collect($routes)->filter(function($route) {
+            return str_starts_with($route->getName(), "web.");
+        });
+
+        foreach ($routes as $route) {
+            $name   = str_replace(['web.','-'],['',' '], $route->getName());
+            $list[] = [
+                "@type" => "WebPage",
+                "name" =>  ucfirst($name),
+                "url" => url($route->uri())
+            ];
+        }
+
+        static::$navigation = $list;
     }
 
-    static function seo(array $seo=[]) {
+    static function Breadcrumb() {
+        $list       = [];
+        $routes     = [];
+        $url        = url('/');
+        $name       = "";
+        $position   = 1;
+        $current    = url()->current();
+
+        $parse  = parse_url($current);
+        if (isset($parse["path"])) {
+            $routes = explode("/", $parse["path"]);
+            foreach ($routes as $route) {
+                if ($route == "") {
+                    continue;
+                }
+                try {
+                    $url        = "$url/$route";
+                    $position   +=1;
+                    $name       = str_replace('-',' ', $route);
+                    $name       = ucfirst($name);
+
+                    $list[] = [
+                        "@type" => "ListItem",
+                        "position" => $position,
+                        "name" => $name,
+                        "item" => $url,
+                    ];
+                } catch (\Exception $exception) {
+                    $code = $exception->getCode();
+                    $message = $exception->getMessage();
+                    Log::error('Breadcrumb:', ['code'=>$code, 'message'=>$message]);
+                }
+            }
+
+            if (!empty($list)) {
+                array_unshift($list, [
+                    "@type" => "ListItem",
+                    "position" => 1,
+                    "name" => 'Home',
+                    "item" => url('/'),
+                ]);
+            }
+        }
+
+        static::$breadcrumb = $list;
+    }
+
+    static function Seo(array $seo=[]) {
         static::$seo = (object) [
             'CANONICAL'         => url()->current(),
             'SITEURL'           => url('/'),
@@ -133,7 +166,51 @@ class Controller {
         ];
     }
 
-    static function shema() {
-        static::$shema = SchemaMarkupTraits::Global(static::$seo, static::$config);
+    static function Menu() {
+        static::$menu = [
+            [
+                'text' => 'Tienda',
+                'href' => url('/redirect?to=shop'),
+                'current' => false,
+                'target' => '_blank', 
+                'rel' => 'opener noreferrer nofollow',
+                'label' => 'Comprar en la Tienda',
+                'image' =>  asset('/images/logo-tienda.jpg')
+            ],
+            [
+                'text' => 'Home',
+                'href' => url('/'),
+                'current' => static::$seo->CANONICAL===url('/')
+            ],
+            [
+                'text' => 'Catálogos',
+                'href' => url('/catalogos'),
+                'current' => str_contains(static::$seo->CANONICAL, '/catalogos')
+            ],
+            [
+                'text' => 'Blog',
+                'href' => url('/blog'),
+                'current' => str_contains(static::$seo->CANONICAL, '/blog')
+            ],
+            [
+                'text' => 'Cursos',
+                'href' => url('/cursos'),
+                'current' => str_contains(static::$seo->CANONICAL, '/cursos')
+            ],
+            [
+                'text' => 'Contacto',
+                'href' => url('/contacto'),
+                'current' => str_contains(static::$seo->CANONICAL, '/contacto')
+            ],
+            [
+                'text' => 'Puntos de venta',
+                'href' => url('/comercios'),
+                'current' => str_contains(static::$seo->CANONICAL, '/comercios')
+            ],
+        ];
+    }
+
+    static function Shema() {
+        static::$shema = SchemaMarkupTraits::Global(static::$seo, static::$breadcrumb, static::$navigation);
     }
 }

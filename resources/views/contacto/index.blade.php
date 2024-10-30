@@ -49,7 +49,7 @@
     </div>
 
     <div class="page-header pt-5">
-        <h2 class="page-title">Condiciones</h2>
+        <h2 class="page-title">Condiciones generales</h2>
     </div>
     <div class="row">
         <div class="col">
@@ -128,7 +128,9 @@
 </div>
 
 @include('components.footer-tienda')
+
 @include('components.footer-pedidos')
+
 @include('components.footer-catalogos')
 
 @endsection

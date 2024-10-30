@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Redirect;
 use Illuminate\Support\Facades\Log;
 
-class RedirectController {
+class RedirectController extends Controller {
 
     public function index(Request $request) {
         $link   = null;

@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\ManualesController;
 use App\Http\Controllers\CatalogosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ContactoController;
@@ -13,6 +11,8 @@ use App\Http\Controllers\VideosController;
 use App\Http\Controllers\RenewalController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ManualesController;
 
 // Global .html redirection
 Route::get( '{any}.{extension}', function($route, $extension) { 
@@ -24,7 +24,6 @@ Route::get( '/catalogos',           [CatalogosController::class, 'index']       
 Route::get( '/cursos',              [CursosController::class, 'index']              )->name('web.cursos');
 Route::get( '/contacto',            [ContactoController::class, 'index']            )->name('web.contacto');
 Route::get( '/comercios',           [ComerciosController::class, 'index']           )->name('web.comercios');
-Route::get( '/manuales',            [HomeController::class, 'proximamente']         )->name('web.manuales');
 Route::get( '/historia',            [HomeController::class, 'historia']             )->name('web.historia');
 Route::get( '/videos',              [VideosController::class, 'index']              )->name('web.videos');
 Route::get( '/sitio-renovado',      [RenewalController::class, 'index']             )->name('renovado');

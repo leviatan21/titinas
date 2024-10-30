@@ -29,7 +29,6 @@ function MobileMenu() {
 	});
 }
 
-var showButtons = false;
 function ShareButton() {
 	if (typeof a2a==='undefined') {
 		$('.social-share-container').remove();
@@ -39,8 +38,9 @@ function ShareButton() {
 	$('#social-share-button').on('click', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
-		showButtons = !showButtons;
-		$('#social-share-buttons').attr('data-show', showButtons);
+		var showButtons = $('#social-share-buttons').attr('data-show');
+		showButtons = (showButtons==='true') ? true : false;
+		$('#social-share-buttons').attr('data-show', !showButtons);
 		return false;
 	});
 }

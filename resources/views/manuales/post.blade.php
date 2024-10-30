@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+@section('css')
 <style>
 .page-content{background:linear-gradient(120deg,rgb(255,245,203) 0%,rgb(182,227,212) 100%);}
 .panel{background-color:#FFFFFFA6;}
 </style>
+@endsection
+
 <div class="container page-manuals">
 
     @include('components.share')
@@ -13,7 +17,7 @@
         <article class="row manual-container post status-publish">
 
             <div class="col col-12 manual-header">
-                
+
                 @if(!empty($post['image']))
                 <div class="post-media">
                     <img src="{{$post['image']}}" alt="{{$post['title']}}"
@@ -37,6 +41,35 @@
                 </div>
             </div>
 
+            @if(!empty($post['materiales']))
+            <div class="col col-12 manual-materials">
+                <h2 class="h4">Materiales básicos:</h2>
+                <div class="post-content">
+                    <p>{!! $post['materiales'] !!}</p>
+                </div>
+            </div>
+            @endif
+
+            @if(!empty($post['soportes']))
+            <div class="col col-12 manual-soportes">
+                <h2 class="h4">Soportes aptos:</h2>
+                <div class="post-content">
+                    <p>{!! $post['soportes'] !!}</p>
+                </div>
+            </div>
+            @endif
+
+            @if(!empty($post['instrucciones']))
+            <div class="col col-12 manual-instructions">
+                <h2 class="h4">Instrucciones:</h2>
+                <div class="post-content">
+                    @foreach ($post['instrucciones'] as $item)
+                    <p>{!!$item!!}</p>
+                    @endforeach
+                </div>
+            </div>
+            @endif
+
             @if(!empty($post['related-blog']))
             <div class="col col-12 manual-related">
                 <h2 class="h5">Características y particularidades:</h2>
@@ -51,26 +84,6 @@
                 >
                     @include('components.svg.blog', ['faW'=>20])
                 </a>
-            </div>
-            @endif
-
-            @if(!empty($post['materiales']))
-            <div class="col col-12 manual-materials">
-                <h2 class="h4">Materiales básicos:</h2>
-                <div class="post-content">
-                    <p>{!! $post['materiales'] !!}</p>
-                </div>
-            </div>
-            @endif
-
-            @if(!empty($post['instrucciones']))
-            <div class="col col-12 manual-instructions">
-                <h2 class="h4">Instrucciones:</h2>
-                <div class="post-content">
-                    @foreach ($post['instrucciones'] as $item)
-                    <p>{!!$item!!}</p>
-                    @endforeach
-                </div>
             </div>
             @endif
 
@@ -121,6 +134,7 @@
                 </div>
             </div>
             @endif
+
 
             @if(!empty($post['author']))
             <div class="col col-12 manual-footer">

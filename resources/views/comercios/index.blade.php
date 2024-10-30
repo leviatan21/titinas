@@ -16,9 +16,8 @@
                 Si no encontras, podes escribirnos a <a href="mailto:{{$CONFIG->EMAIL_VENTAS}}">{{$CONFIG->EMAIL_VENTAS}}</a> .<br />
                 y darnos los datos de tu comercio mas cercano, que nosotros los contactaremos.
             </p>
+
             <p class="post-footer h5">
-                Para consultas y pedidos de cursos a distancia escribirnos a
-                <a href="mailto:{{$CONFIG->EMAIL_ADISTANCIA}}">{{$CONFIG->EMAIL_ADISTANCIA}}</a>
                 <a href="{{$CONFIG->PUNTO_VENTA}}" title="Quiero convertirme en punto de venta oficial." target="_blank" rel="opener noreferrer nofollow">
                     <img src="{{asset('/images/puntoventa.webp')}}" alt="puntoventa" 
                         class="my-4" width="1200"
@@ -83,9 +82,9 @@
         @else
         <div class="row row-cols-1">
             <div class="col mb-3">
-                Aún no tenemos comercios asociados en {{ucfirst($key)}}
+                Aún no tenemos comercios asociados aquí.
                 <br /> 
-                <a href="{{$CONFIG->PUNTO_VENTA}}" target="_blank" rel="opener noreferrer nofollow">
+                <a href="{{$CONFIG->PUNTO_VENTA}}" title="Quiero convertirme en punto de venta oficial." target="_blank" rel="opener noreferrer nofollow">
                     Quiero convertirme en punto de venta oficial.
                 </a>
             </div>
@@ -96,8 +95,10 @@
 
 </div>
 
-@include('components.footer-tienda')
+@include('components.footer-catalogos')
 
 @include('components.footer-pedidos')
+
+@include('components.footer-tienda')
 
 @endsection

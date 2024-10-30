@@ -47,7 +47,7 @@ class ManualesController extends Controller {
         $post['schemamarkup'] = SchemaMarkupTraits::ManualPosting(static::$seo, $post);
 
         static::seo([
-            'title' => $post['title'],
+            'title' => "Manual {$post['title']}",
             'description' => $post['description'],
             'keywords' => ""
         ]);
@@ -64,7 +64,7 @@ class ManualesController extends Controller {
         if (!$content) {
             return response()->view(
                 'manuales.no-posts',
-                ['title' => "No hay manuales para el autor {$slug}"],
+                ['title' => "No hay contenido para el autor {$slug}"],
                 404
             );
         }

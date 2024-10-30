@@ -3,7 +3,6 @@
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect"  href="https://cdn.jsdelivr.net" />
         @isset($SEO->FACEBOOK_PIXEL)
         <link rel="preconnect"  href="https://www.facebook.com" />
         @endif
@@ -16,7 +15,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        @if (isset($ERRORPAGE))
+        @isset($ERRORPAGE)
         <meta name="robots" content="noindex, nofollow" />
         <meta name="errorpage" content="true" />
         <meta name="errortype" content="404 - Not Found" />
@@ -48,7 +47,10 @@
 
     <body> 
         @include('layouts.googletagmanager', ['mode'=>'body'])
+
         @include('layouts.header')
+
+        @include('layouts.breadcrumb')
 
         <main class="page-content">
             @yield('content')

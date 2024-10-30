@@ -51,7 +51,6 @@
                 decoding="async" loading="lazy" fetchpriority="auto"
             />
         @else
-
             <a href="javascript:void(0);" data-fancybox-trigger="gallery-{{$key}}">
             @if(!empty($item['text']))
                 {!!$item['text']!!}
@@ -95,6 +94,7 @@
 @include('components.script-fancybox', ['items'=>$productos])
 
 @include('components.footer-tienda')
+
 @include('components.footer-pedidos')
 
 @endsection

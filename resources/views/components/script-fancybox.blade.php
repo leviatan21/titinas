@@ -1,7 +1,7 @@
 
 @section('css')
 {{--<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet" type="text/css" media="all" />--}}
-<link href="{{asset('css/libs/fancyapps/ui5.0/fancybox/fancybox.css')}}" rel="stylesheet" type="text/css" media="all" />'
+<link href="{{asset('css/libs/fancyapps/ui5.0/fancybox/fancybox.css')}}" rel="stylesheet" type="text/css" media="all" />
 @endsection
 
 @section('js')

@@ -16,8 +16,30 @@
                         class="featured-slider-image" width="1110" height="443"
                         decoding="sync" loading="lazy" fetchpriority="high"
                     />
-                </a>  
-        
+                </a>
+{{--
+                <div class="cv-container image-overlay">
+                    <div class="cv-outer">
+                        <div class="cv-inner">
+                            <div class="slider-info">	
+
+                                <div class="slider-categories">
+                                    slider-categories
+                                </div> 
+
+                                <h2 class="slider-title"> 
+                                    <a href="#">slider-title</a>	
+                                </h2>
+
+                                <div class="slider-read-more">
+                                    <a href="#">slider-read-more</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+--}}
             </div>
         @endforeach
         </div>
@@ -30,6 +52,7 @@
 @include('components.script-slider')
 
 @include('components.footer-tienda')
+
 @include('components.footer-pedidos')
 
 @endsection

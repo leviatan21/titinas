@@ -58,7 +58,7 @@ class BlogController extends Controller {
         $post['schemamarkup'] = SchemaMarkupTraits::BlogPosting(static::$seo, $post);
 
         static::seo([
-            'title' => $post['title'],
+            'title' => "Posteo {$post['title']}",
             'description' => $post['content'][0],
             'keywords' => ""
         ]);
@@ -67,6 +67,40 @@ class BlogController extends Controller {
             ->with('post', $post)
             ->with('prev', $prev)
             ->with('next', $next);
+    }
+
+    public function author($slug='') {
+
+        $content = BlogTraits::GetAuthor($slug);
+        if (!$content) {
+            return response()->view(
+                'blog.no-posts',
+                ['title' => "No hay contenido para el autor {$slug}"],
+                404
+            );
+        }
+
+        [
+            'posts'     => $posts,
+            'author'    => $author
+        ] = BlogTraits::GetByAuthor($slug);
+
+        [
+            'items'     => $items,
+            'paginator' => $paginator
+        ] = PaginateTraits::Paginate($posts);
+
+        $author = array_merge($author, $content);
+
+        static::seo([
+            'title' => "\"{$author['title']}\" escribe en el blog de Titina's",
+            'description' => "{$author['title']} - {$author['content'][0]}"
+        ]);
+
+        return view('blog.posts')
+            ->with('author', $author)
+            ->with('posts', $items)
+            ->with('paginator', $paginator);
     }
 
     public function categoria($slug='') {
@@ -93,8 +127,7 @@ class BlogController extends Controller {
 
         static::seo([
             'title' => "Posteos para la categoría \"{$category['title']}\"",
-            'description' => "Categorías - $cats",
-            'keywords' => "",
+            'description' => "Categorías - $cats"
         ]);
 
         return view('blog.posts')
@@ -126,45 +159,10 @@ class BlogController extends Controller {
 
         static::seo([
             'title' => "Posteos para el tag \"{$tag['title']}\"",
-            'description' => "Tags: $tags",
-            'keywords' => ""
+            'description' => "Tags: $tags"
         ]);
 
         return view('blog.posts')
-            ->with('posts', $items)
-            ->with('paginator', $paginator);
-    }
-
-    public function author($slug='') {
-
-        $content = BlogTraits::GetAuthor($slug);
-        if (!$content) {
-            return response()->view(
-                'blog.no-posts',
-                ['title' => "No hay posteos para el autor {$slug}"],
-                404
-            );
-        }
-
-        [
-            'posts'     => $posts,
-            'author'    => $author
-        ] = BlogTraits::GetByAuthor($slug);
-
-        [
-            'items'     => $items,
-            'paginator' => $paginator
-        ] = PaginateTraits::Paginate($posts);
-
-        $author = array_merge($author, $content);
-
-        static::seo([
-            'title' => "\"{$author['title']}\" escribe en el blog de Titina's",
-            'description' => "{$author['title']} - {$author['content'][0]}"
-        ]);
-
-        return view('blog.posts')
-            ->with('author', $author)
             ->with('posts', $items)
             ->with('paginator', $paginator);
     }

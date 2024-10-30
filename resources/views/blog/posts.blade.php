@@ -23,8 +23,7 @@
         <p>{!!$content!!}</p>
         @endforeach
     </div>
-    <span class="border-divider"></span>
-    <div class="clearfix"></div>
+    <div class="border-divider clearfix"></div>
     @endif
 
     @include('blog.grid', ['posts'=>$posts])

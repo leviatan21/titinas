@@ -7,8 +7,7 @@
         <h1 class="page-title">{{$title}}</h1>
     </header>
 
-    <div class="post-content" style="height: 50vh">
-    </div>
+    <div class="post-content" style="height: 50vh"></div>
 
 </div>
 @endsection

@@ -40,13 +40,6 @@ trait SchemaMarkupTraits {
                         ]
                     ]
                 ],
-                ...!empty($BreadcrumbList) ?
-                [// BreadcrumbList
-                    "@type" => "BreadcrumbList",
-                    "@id" => "{$seo->SITEURL}#BreadcrumbList",
-                    "name" => $seo->SITE_TITLE,
-                    "itemListElement" => $BreadcrumbList
-                ] : [],
                 [// WebSite
                     "@type" => "WebSite",
                     "@id" => "{$seo->SITEURL}#WebSite",
@@ -59,19 +52,19 @@ trait SchemaMarkupTraits {
                         "@id" => "{$seo->SITEURL}#Organization"
                     ],
                     "hasPart" => $SiteNavigation,
-                    /*
-                    "potentialAction" => [
-                        [
-                            "@type" => "SearchAction",
-                            "name" => $seo->SITE_TITLE,
-                            "target"=> [
-                                "@type" => "EntryPoint",
-                                "urlTemplate" => "{$seo->SITEURL}?s={search_term_string}"
-                            ],
-                            "query-input" => "required name=search_term_string"
-                        ]
-                    ]
-                    */
+
+                    //  "potentialAction" => [
+                    //      [
+                    //          "@type" => "SearchAction",
+                    //          "name" => $seo->SITE_TITLE,
+                    //          "target"=> [
+                    //              "@type" => "EntryPoint",
+                    //              "urlTemplate" => "{$seo->SITEURL}?s={search_term_string}"
+                    //          ],
+                    //          "query-input" => "required name=search_term_string"
+                    //      ]
+                    //  ]
+
                 ],
                 [// LocalBusiness
                     "@type" => "LocalBusiness",
@@ -158,7 +151,14 @@ trait SchemaMarkupTraits {
                     "logo" => $seo->LOGO,
                     "image" => $seo->LOGO,
                     "url" => $seo->SITEURL
-                ]
+                ],
+                ...!empty($BreadcrumbList) ?
+                [[// BreadcrumbList
+                    "@type" => "BreadcrumbList",
+                    "@id" => "{$seo->SITEURL}#BreadcrumbList",
+                    "name" => $seo->SITE_TITLE,
+                    "itemListElement" => $BreadcrumbList
+                ]] : [],
             ]
         ]);
     }
@@ -343,7 +343,7 @@ trait SchemaMarkupTraits {
                 ],
                 "hasMerchantReturnPolicy" => [
                     "@type" => "MerchantReturnPolicy",
-                    "returnPolicyCategory" => "https://schema.org/MerchantReturnUnspecified",
+                    "returnPolicyCategory" => "https://schema.org/MerchantReturnNotPermitted",
                     "applicableCountry" => "AR",
                 ],
                 "shippingDetails" => [
@@ -377,6 +377,6 @@ trait SchemaMarkupTraits {
     }
 
     public static function Encode($shema) {
-        return json_encode($shema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES, 10);
+        return json_encode($shema, /*JSON_PRETTY_PRINT |*/ JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES, 10);
     }
 }

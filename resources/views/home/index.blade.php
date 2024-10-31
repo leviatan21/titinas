@@ -14,7 +14,7 @@
                 <a href="{{$item['href']}}">
                     <img src="{{$item['image']}}" alt="{{$item['alt']}}" 
                         class="featured-slider-image" width="1110" height="443"
-                        decoding="sync" loading="lazy" fetchpriority="high"
+                        decoding="sync" loading="lazy" fetchpriority="{{$loop->index===0 ? 'high' : 'low'}}"
                     />
                 </a>
 {{--
@@ -51,8 +51,8 @@
 
 @include('components.script-slider')
 
-@include('components.footer-tienda')
-
 @include('components.footer-pedidos')
+
+@include('components.footer-tienda')
 
 @endsection

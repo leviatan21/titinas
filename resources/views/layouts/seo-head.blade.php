@@ -8,6 +8,7 @@
 {{-- Schema.org markup for Google+ --}}
 @isset($SEO->TITLE)<meta itemprop="name" content="{!!$SEO->TITLE!!}" />@endisset
 @isset($SEO->DESCRIPTION)<meta itemprop="description" content="{!!$SEO->DESCRIPTION!!}" />@endisset
+@isset($SEO->KEYWORDS)<meta itemprop="keywords" content="{!!$SEO->KEYWORDS!!}" />@endisset
 @isset($SEO->LOGO)<meta itemprop="image" content="{{$SEO->LOGO}}" />@endisset
 
 {{-- ui --}}

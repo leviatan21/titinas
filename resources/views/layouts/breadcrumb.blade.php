@@ -1,4 +1,4 @@
-
+@if(!empty($BREADCRUMB))
 <div class="container breadcrumb">
     <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
         @foreach($BREADCRUMB as $link)
@@ -11,3 +11,4 @@
         @endforeach
     </ol>
 </div>
+@endempty

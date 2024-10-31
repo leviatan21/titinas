@@ -76,8 +76,8 @@
 
 </div>
 
-@include('components.footer-tienda')
-
 @include('components.footer-pedidos')
+
+@include('components.footer-tienda')
 
 @endsection

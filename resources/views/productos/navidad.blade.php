@@ -56,8 +56,8 @@
 
 @include('components.script-fancybox', ['items'=>$productos])
 
-@include('components.footer-tienda')
-
 @include('components.footer-pedidos')
+
+@include('components.footer-tienda')
 
 @endsection

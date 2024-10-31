@@ -54,7 +54,7 @@ class Controller {
 
     static function Config() {
         static::$config = (object) [
-            'ANA_NAME'          => config('custom.AnaName', 'Anabella'),
+            'ANA_NAME'          => config('custom.AnaName', 'Anabella Audubert'),
             'ANA_TEL'           => config('custom.AnaTel', '+54911 5562-9418'),
             'ANA_EMAIL'         => config('custom.AnaEmail', 'ana@titinas.com.ar'),
             'ROX_NAME'          => config('custom.RoxName', 'Roxana Caballero'),

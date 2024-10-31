@@ -88,6 +88,9 @@ trait SchemaMarkupTraits {
                         "@type" => "ImageObject",
                         "url" => $seo->LOGO
                     ],
+                    "brand" =>  [
+                        "@id" => "{$seo->SITEURL}#Brand"
+                    ],
                     "telephone" => config("custom.telephone", null),
                     "email" => config("custom.email", null),
                     "address" =>  [
@@ -143,6 +146,18 @@ trait SchemaMarkupTraits {
                         config("custom.whatsapp", null),
                         config("custom.tienda", null),
                     ]
+                ],
+                [// Brand
+                    "@type" => "Brand",
+                    "@id" => "{$seo->SITEURL}#Brand",
+                    "name" => $seo->SITE_TITLE,
+                    "alternateName" => "Titinas",
+                    "description" => $seo->SITE_DESCRIPTION,
+                    "slogan" => "Titina's materiales para el arte y la creatividad",
+                    "mainEntityOfPage" => $seo->SITEURL,
+                    "logo" => $seo->LOGO,
+                    "image" => $seo->LOGO,
+                    "url" => $seo->SITEURL
                 ]
             ]
         ]);

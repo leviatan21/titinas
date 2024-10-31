@@ -1,4 +1,6 @@
 
+@include('layouts.seo-about')
+
 <footer id="page-footer" class="clearfix">
     <div class="footer-socials">
 @isset($SOCIAL->facebook)

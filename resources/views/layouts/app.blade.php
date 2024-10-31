@@ -32,7 +32,7 @@
 
         <link rel="sitemap" type="application/xml" title="Site map" href={{asset("/sitemap.xml")}} />
 
-        @include('layouts.seo')
+        @include('layouts.seo-head')
 
         <link href="{{asset("/css/styles.css{$REFRESH}")}}" rel="stylesheet" type="text/css" media="all" />
         @yield('css')

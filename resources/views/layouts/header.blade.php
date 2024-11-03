@@ -16,4 +16,6 @@
 
     @include('layouts.navbar')
 
+    @include('layouts.breadcrumb')
+
 </div>

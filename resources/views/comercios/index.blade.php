@@ -28,15 +28,17 @@
         </div>
     </section>
 
-
     @foreach ($comercios as $key => $items)
-    <div class="panel my-4">
+    <div class="panel my-4" id="shops-{{Str::slug($key, '-')}}">
 
-        <h2 class="post-title" id="shops-{{Str::slug($key, '-')}}">
-            <a class="bd-content-title" href="#shops-{{Str::slug($key, '-')}}" data-anchorjs-icon="#">
-                {{$key}}
-            </a>
-        </h2>
+        <div class="d-flex">
+            <hr class="bar" />
+            <h2 class="post-title">
+                <a class="bd-content-title" href="#shops-{{Str::slug($key, '-')}}" data-anchorjs-icon="#">
+                    {{$key}}
+                </a>
+            </h2>
+        </div>
 
         @if(count($items))
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 pt-4">

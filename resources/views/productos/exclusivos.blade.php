@@ -54,7 +54,7 @@
         <div class="f-carousel">
             <img src="{{$item['image']}}" alt="{!!$item['title']!!}" 
                 class="rounded" width="800" height="200" 
-                decoding="async" loading="lazy" fetchpriority="high"
+                decoding="async" loading="lazy" fetchpriority="auto"
             />
         </div>
 

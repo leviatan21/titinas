@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Arr;
+use App\Http\Controllers\Controller;
 use App\Http\Traits\SchemaMarkupTraits;
 use App\Http\Traits\ProductosTraits;
 

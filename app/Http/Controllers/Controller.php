@@ -148,6 +148,8 @@ class Controller {
     }
 
     static function Seo(array $seo=[]) {
+        $env = env('APP_ENV', 'production');
+
         static::$seo = (object) [
             'CANONICAL'         => url()->current(),
             'SITEURL'           => url('/'),
@@ -161,8 +163,8 @@ class Controller {
             'TWITTER_SITE'      => config('custom.twitter_account', null),
             'DATE_PUBLISHED'    => config('custom.datePublished', null),
             'DATE_MODIFIED'     => config('custom.dateModified', date(DATE_ATOM)),
-            'GOOGLE_TAGMANAGER' => config('custom.googletagmanager', null),
-            'FACEBOOK_PIXEL'    => config('custom.facebookpixel', null),
+            'GOOGLE_TAGMANAGER' => $env !== 'production' ? null : config('custom.googletagmanager', null),
+            'FACEBOOK_PIXEL'    => $env !== 'production' ? null : config('custom.facebookpixel', null),
         ];
     }
 

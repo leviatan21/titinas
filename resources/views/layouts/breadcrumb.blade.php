@@ -1,5 +1,5 @@
 @if(!empty($BREADCRUMB))
-<div class="container breadcrumb">
+<div class="container-fluid breadcrumb">
     <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
         @foreach($BREADCRUMB as $link)
         <li class="breadcrumb_item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">

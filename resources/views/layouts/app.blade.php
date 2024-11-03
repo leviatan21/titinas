@@ -45,12 +45,11 @@
 
     </head>
 
-    <body> 
+    <body>
+
         @include('layouts.googletagmanager', ['mode'=>'body'])
 
         @include('layouts.header')
-
-        @include('layouts.breadcrumb')
 
         <main class="page-content">
             @yield('content')
@@ -59,9 +58,8 @@
 
         @include('layouts.footer')
 
-        <script src="{{asset('/js/plugins/js.cookie.min.js?ver=2.1.4-wc.7.2.2')}}" type="text/javascript" defer></script>
         <script src="{{asset("/js/libs/bootstrap/4.6.2/bootstrap.bundle.min.js{$REFRESH}")}}" type="text/javascript" defer></script>
-        <script src="{{asset("/js/custom-scripts.js{$REFRESH}")}}" type="text/javascript" defer></script>
+        <script src="{{asset("/js/scripts.js{$REFRESH}")}}" type="text/javascript" defer></script>
         @yield('js')
 
     </body>

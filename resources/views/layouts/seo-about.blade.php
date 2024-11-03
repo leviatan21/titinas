@@ -18,7 +18,7 @@
         <p class="description">Creadora de Efecto óxido</p>
 
         <p class="description">Pasta Cerámica Sin horno, Arcilla cerámica sin horno, Cerámica Sin horno</p>
-        <p class="description">Base efecto Gaudí, Efecto Gaudí, Base Para Mosaico Efecto Gaudi, Efecto Gaudí Base para mosaico, Jacarelado </p>
+        <p class="description">Base efecto Gaudí, Efecto Gaudí, Base Para Mosaico Efecto Gaudi, Pintura Efecto Gaudi, Efecto Gaudí Base para mosaico, Efecto Mosaico, Jacarelado </p>
         <p class="description">Espatul-Art, Pasta para Modelado Espatul Art, Pasta Para Modelar y Esculpir Con espátula, Pasta modelable con espátula</p>
 
         <p class="description">Transferencias, Transferencia Tinta Negra, Transferencia Tinta Color, Multitransfer, Foil estampado metalizado, Foil estampado Negro</p>

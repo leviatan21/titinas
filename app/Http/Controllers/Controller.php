@@ -163,7 +163,8 @@ class Controller {
             'TWITTER_SITE'      => config('custom.twitter_account', null),
             'DATE_PUBLISHED'    => config('custom.datePublished', null),
             'DATE_MODIFIED'     => config('custom.dateModified', date(DATE_ATOM)),
-            'GOOGLE_TAGMANAGER' => $env !== 'production' ? null : config('custom.googletagmanager', null),
+            'GOOGLE_ANALYTICS4' => $env !== 'production' ? null : config('custom.analytics4', null),
+            'GOOGLE_TAGMANAGER' => null, //$env !== 'production' ? null : config('custom.googletagmanager', null),
             'FACEBOOK_PIXEL'    => $env !== 'production' ? null : config('custom.facebookpixel', null),
         ];
     }

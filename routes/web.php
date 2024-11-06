@@ -28,7 +28,7 @@ Route::get( '/historia',            [HomeController::class, 'historia']         
 Route::get( '/videos',              [VideosController::class, 'index']              )->name('web.videos');
 Route::get( '/sitio-renovado',      [RenewalController::class, 'index']             )->name('renovado');
 Route::get( '/redirect',            [RedirectController::class, 'index']            )->name('redireccion');
-Route::prefix('/productos')->group(function () {
+Route::prefix('/productos')->group(function() {
     Route::get( '/',               [ProductosController::class, 'index']            )->name('web.productos');
     Route::prefix('/exclusivos')->group(function () {
         Route::get( '/',                        [ProductosController::class, 'exclusivos']  )->name('web.exclusivos');
@@ -47,6 +47,8 @@ Route::prefix('/productos')->group(function () {
     Route::get( '/stenciles',       [ProductosController::class, 'stenciles']       )->name('web.stenciles');
     Route::get( '/herramientas',    [HomeController::class, 'proximamente']         )->name('web.herramientas');
     Route::get( '/pinturas',        [HomeController::class, 'proximamente']         )->name('web.pinturas');
+    // https://titinas.com.ar/productos/Transferencia/A4%20NEGRAS/pages/LT128.htm
+    Route::fallback([RenewalController::class, 'index']);
 });
 Route::prefix('/blog')->group(function () {
     Route::get( '/',                 [BlogController::class, 'index']               )->name('web.blog');

@@ -38,7 +38,7 @@
     </div>
 
 </div>
-
+{{--
 <script>
     dataLayer.push({ 
         'event':"pageView", 
@@ -48,4 +48,5 @@
         'event_value':"{{url()->current()}}"
     });
 </script>
+--}}
 @endsection

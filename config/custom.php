@@ -5,8 +5,8 @@ return [
     'description'       => "Titina's materiales para el arte decorativo",
     'keywords'          => "Materiales, Arte, Decoración, Pasta cerámica",
 
-    'analitycs4'        => 'G-HNX2K0SD2W',
-    'googletagmanager'  => 'GTM-WKPSCSZP',
+    'analytics4'        => 'G-HNX2K0SD2W',
+    'googletagmanager'  => null, //'GTM-WKPSCSZP',
     'facebookpixel'     => '381665029069390',
     'datePublished'     => '2017-01-01T00:00:00+03:00',
     'dateModified'      => '2024-11-02T00:00:00+03:00',

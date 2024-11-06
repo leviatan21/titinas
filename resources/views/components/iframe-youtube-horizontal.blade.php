@@ -1,7 +1,7 @@
 
 <div class="embed-responsive embed-responsive-16by9">
     <iframe
-        src="{{$url}}?rel=0" 
+        src="{{$url}}?rel=0&enablejsapi=1" 
         title="{!!$title!!}" 
         width="{{$width ?? 560}}" height="{{$height ?? 315}}" 
         class="embed-responsive-item" 

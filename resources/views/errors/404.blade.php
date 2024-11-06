@@ -8,7 +8,7 @@
         <p>Ir a <a href="{{url('/')}}">Página principal</a></p>
     </div>
 </div>
-
+{{--
 <script>
     dataLayer.push({ 
         'event':"pageView", 
@@ -18,4 +18,5 @@
         'event_value':"{{url()->current()}}"
     });
 </script>
+--}}
 @endsection

@@ -39,7 +39,9 @@
 
         <script src="{{asset("/js/libs/jquery/3.7.1/jquery.min.js{$REFRESH}")}}" type="text/javascript" sync></script>
  
-        @include('layouts.googletagmanager', ['mode'=>'head'])
+        @include('layouts.google-analytics4')
+
+        @include('layouts.google-tagmanager', ['mode'=>'head'])
 
         @include('layouts.facebookpixel')
 
@@ -47,7 +49,7 @@
 
     <body>
 
-        @include('layouts.googletagmanager', ['mode'=>'body'])
+        @include('layouts.google-tagmanager', ['mode'=>'body'])
 
         @include('layouts.header')
 

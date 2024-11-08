@@ -3,6 +3,7 @@
 namespace App\Http\Traits;
 
 trait ManualesTraits {
+    use AuthorsTraits;
 
     static $route = 'manuales';
 
@@ -53,13 +54,6 @@ trait ManualesTraits {
         ];
     }
 
-    public static function GetAuthor($slug='') {
-        include_once(storage_path('app/data/authors.php'));
-
-        $authors = authors();
-        return ($authors[$slug] ?? []);
-    }
-
     private static function parsePost($post) {
         $post['dateHumans'] = parseDate($post['dateModified'] ?? '');
         $post['link']       = static::parseLink($post['title'] ?? '');
@@ -73,17 +67,6 @@ trait ManualesTraits {
         $href   = url( "/$route/$slug" );
         return [
             'title' => 'Seguir leyendo',
-            'slug'  => $slug,
-            'href'  => $href
-        ];
-    }
-
-    private static function parseAuthor($string='') {
-        $route  = static::$route;
-        $slug   = parseSlug($string, '-');
-        $href   = url( "/$route/author/$slug" );
-        return [
-            'title' => $string,
             'slug'  => $slug,
             'href'  => $href
         ];

@@ -3,6 +3,7 @@
 namespace App\Http\Traits;
 
 trait BlogTraits {
+    use AuthorsTraits;
 
     static $route = 'blog';
 
@@ -149,13 +150,6 @@ trait BlogTraits {
         ];
     }
 
-    public static function GetAuthor($slug='') {
-        include_once(storage_path('app/data/authors.php'));
-
-        $authors = authors();
-        return ($authors[$slug] ?? []);
-    }
-
     private static function parsePost($post) {
         $post['dateHumans'] = parseDate($post['dateModified'] ?? '');
         $post['link']       = static::parseLink($post['title'] ?? '');
@@ -198,17 +192,6 @@ trait BlogTraits {
         $route  = static::$route;
         $slug   = parseSlug($string, '-');
         $href   = url( "/$route/tag/$slug" );
-        return [
-            'title' => $string,
-            'slug'  => $slug,
-            'href'  => $href
-        ];
-    }
-
-    private static function parseAuthor($string='') {
-        $route  = static::$route;
-        $slug   = parseSlug($string, '-');
-        $href   = url( "/$route/author/$slug" );
         return [
             'title' => $string,
             'slug'  => $slug,

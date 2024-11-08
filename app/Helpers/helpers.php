@@ -17,12 +17,26 @@ function parseSlug($string='') {
     return Str::slug($string, '-');
 }
 
+function parseLink($string='', $route='', $title='Seguir leyendo') {
+    $slug   = parseSlug($string, '-');
+    $href   = url( "/$route/$slug" );
+    return [
+        'title' => $title,
+        'slug'  => $slug,
+        'href'  => $href
+    ];
+}
+
 function parseNow() {
     return Carbon::now();
 }
 
 function parseDate($string='') {
     return Carbon::parse($string)->diffForHumans();
+}
+
+function parseAsset($string='') {
+    return !empty($string) ? asset($string) : null;
 }
 
 function print_pre($data, $var_dump=false, $exit=true) {

@@ -56,19 +56,9 @@ trait ManualesTraits {
 
     private static function parsePost($post) {
         $post['dateHumans'] = parseDate($post['dateModified'] ?? '');
-        $post['link']       = static::parseLink($post['title'] ?? '');
+        $post['image']      = parseAsset($post['image'] ?? '');
+        $post['link']       = parseLink($post['title'] ?? '', static::$route);
         $post['author']     = static::parseAuthor($post['author'] ?? '');
         return $post;
-    }
-
-    private static function parseLink($string='') {
-        $route  = static::$route;
-        $slug   = parseSlug($string, '-');
-        $href   = url( "/$route/$slug" );
-        return [
-            'title' => 'Seguir leyendo',
-            'slug'  => $slug,
-            'href'  => $href
-        ];
     }
 }

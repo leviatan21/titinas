@@ -18,13 +18,6 @@ trait AuthorsTraits {
     }
 
     private static function parseAuthor($string='') {
-        $route  = static::$route;
-        $slug   = parseSlug($string, '-');
-        $href   = url( "/$route/author/$slug" );
-        return [
-            'title' => $string,
-            'slug'  => $slug,
-            'href'  => $href
-        ];
+        return parseLink($string, static::$route.'/author', $string);
     }
 }

@@ -22,8 +22,8 @@
 
         <header class="page-header">
             @if(!empty($item['title']))
-            <h2 class="page-title @isset ($item['important'])important @endisset" id="gallery-{{Str::slug($key, '-')}}" >
-                <a class="bd-content-title" href="#gallery-{{Str::slug($key, '-')}}" data-anchorjs-icon="#">
+            <h2 class="page-title @isset ($item['important'])important @endisset" id="gallery-{{parseSlug($key)}}" >
+                <a class="bd-content-title" href="#gallery-{{parseSlug($key)}}" data-anchorjs-icon="#">
                 {!!$item['title']!!}
                 </a>
             </h2>

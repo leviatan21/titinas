@@ -1,7 +1,7 @@
 
 <div class="post-content pt-5">
-    <h2 class="post-title" id="catalogo-{{Str::slug($title, '-')}}">
-        <a href="#catalogo-{{Str::slug($title, '-')}}" class="bd-content-title" data-anchorjs-icon="#">{{$title}}</a>
+    <h2 class="post-title" id="catalogo-{{parseSlug($title)}}">
+        <a href="#catalogo-{{parseSlug($title)}}" class="bd-content-title" data-anchorjs-icon="#">{{$title}}</a>
     </h2>
 
     <div class="woocommerce pt-2">

@@ -83,7 +83,7 @@
     @foreach($videos as $video)
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 my-4">
         @foreach($video as $item)
-        <div class="col mb-3" id="videos-{{Str::slug($item['title'], '-')}}">
+        <div class="col mb-3" id="videos-{{parseSlug($item['title'])}}">
             <div class="card h-100 video-thumbnail">
                 @if(!empty($item['youtube-embed']))
                     @include('components.iframe-youtube-vertical', ['url'=>$item['youtube-embed'], 'title'=>$item['title']])
@@ -97,7 +97,7 @@
                 @endif
                 <div class="card-body d-flex flex-column">
                     <h2 class="text-center h4">
-                        <a class="bd-content-title" href="#videos-{{Str::slug($item['title'], '-')}}" data-anchorjs-icon="#">
+                        <a class="bd-content-title" href="#videos-{{parseSlug($item['title'])}}" data-anchorjs-icon="#">
                             {{$item['title']}}
                         </a>
                     </h2>

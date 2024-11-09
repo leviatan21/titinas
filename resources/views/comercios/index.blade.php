@@ -29,12 +29,12 @@
     </section>
 
     @foreach ($comercios as $key => $items)
-    <div class="panel my-4" id="shops-{{Str::slug($key, '-')}}">
+    <div class="panel my-4" id="shops-{{parseSlug($key)}}">
 
         <div class="d-flex">
             <hr class="bar" />
             <h2 class="post-title">
-                <a class="bd-content-title" href="#shops-{{Str::slug($key, '-')}}" data-anchorjs-icon="#">
+                <a class="bd-content-title" href="#shops-{{parseSlug($key)}}" data-anchorjs-icon="#">
                     {{$key}}
                 </a>
             </h2>

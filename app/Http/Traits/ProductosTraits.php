@@ -12,6 +12,7 @@ trait ProductosTraits {
 
     public static function parseJSON(array $productos) {
         return Arr::map($productos, function(array $item) {
+            $item['image']  = parseAsset($item['image']);
             $item['gallery'] = static::stockJSON($item['gallery']);
             return $item;
         });
@@ -43,14 +44,15 @@ trait ProductosTraits {
     private static function galleryJSON(Collection $items, string $path) {
         return $items->map( function(array $item) use ($path) {
             $item['caption']    = "- {$item['Nombre']} -";
-            $item['src']        = asset("/images/{$path}/{$item['SKU']}.webp");
-            $item['thumbnail']  = asset("/images/{$path}/thumbnails/{$item['SKU']}.webp");
+            $item['src']        = parseAsset("/images/{$path}/{$item['SKU']}.webp");
+            $item['thumbnail']  = parseAsset("/images/{$path}/thumbnails/{$item['SKU']}.webp");
             return $item;
         });
     }
 
     public static function parsePHP(array $productos) {
         return Arr::map($productos, function(array $item) {
+            $item['image']  = parseAsset($item['image']);
             $item['images'] = static::galleryPHP($item['asset'], $item['images']);
             return $item;
         });
@@ -63,10 +65,18 @@ trait ProductosTraits {
         return Arr::map($images, function(string $image) use ($path) {
             $image = [
                 'caption'       => "- {$image} -",
-                'src'           => asset("{$path}/{$image}.webp"),
-                'thumbnail'     => asset("{$path}/thumbnails/{$image}.webp")
+                'src'           => parseAsset("{$path}/{$image}.webp"),
+                'thumbnail'     => parseAsset("{$path}/thumbnails/{$image}.webp")
             ];
             return $image;
+        });
+    }
+
+    public static function home(Array $items) {
+        return Arr::map($items, function(array $item) {
+            $item['href']   = url($item['href']);
+            $item['image']  = parseAsset($item['image']);
+            return $item;
         });
     }
 

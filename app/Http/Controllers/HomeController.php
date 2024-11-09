@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Traits\ProductosTraits;
 
 class HomeController extends Controller {
 
@@ -16,6 +17,10 @@ class HomeController extends Controller {
         ] = home();
 
         static::seo($seo);
+
+        $slider = ProductosTraits::home($slider);
+
+        $productos = ProductosTraits::home($productos);
 
         return view('home.index')
             ->with('slider', $slider)

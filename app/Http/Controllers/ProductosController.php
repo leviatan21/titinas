@@ -20,6 +20,8 @@ class ProductosController extends Controller {
 
         static::seo($seo);
 
+        $productos = ProductosTraits::home($productos);
+
         return view('productos.index')
             ->with('paragraph', $paragraph)
             ->with('products', $productos);
@@ -37,6 +39,7 @@ class ProductosController extends Controller {
         static::seo($seo);
 
         $items = Arr::map($items, function(array $item) {
+            $item['image']  = parseAsset($item['image']);
             $item['schemamarkup'] = SchemaMarkupTraits::Product(static::$seo, $item);
             return $item;
         });

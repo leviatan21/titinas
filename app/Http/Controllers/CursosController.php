@@ -21,11 +21,13 @@ class CursosController extends Controller {
         static::seo($seo);
 
         $horizontal = Arr::map($horizontal, function(array $item) {
+            $item['image-cover']  = parseAsset($item['image-cover']);
             $item['schemamarkup'] = SchemaMarkupTraits::Course(static::$seo, static::$config, $item);
             return $item;
         });
 
         $vertical = Arr::map($vertical, function(array $item) {
+            $item['image-cover']  = parseAsset($item['image-cover']);
             $item['schemamarkup'] = SchemaMarkupTraits::Course(static::$seo, static::$config, $item);
             return $item;
         });

@@ -41,6 +41,9 @@ class ProductosController extends Controller {
         $items = Arr::map($items, function(array $item) {
             $item['image']  = parseAsset($item['image']);
             $item['schemamarkup'] = SchemaMarkupTraits::Product(static::$seo, $item);
+            if (!empty($item['related'])) {
+                $item['related']['href'] = url($item['related']['href']);
+            }
             return $item;
         });
 

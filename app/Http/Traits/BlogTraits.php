@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Traits;
+use Illuminate\Support\Arr;
 
 trait BlogTraits {
     use AuthorsTraits;
@@ -11,10 +12,9 @@ trait BlogTraits {
 
         include_once(storage_path('app/data/blog.php'));
 
-        $posts = posts();
-        foreach($posts as $index => $item) {
-            $posts[$index] = static::parsePost($item);
-        }
+        $posts = Arr::map(posts(), function(array $item) {
+            return static::parsePost($item);
+        });
 
         return collect($posts)->sortByDesc('datePublished');
     }
@@ -38,20 +38,15 @@ trait BlogTraits {
 
     public static function GetByAuthor($slug='') {
         $posts      = static::GetPosts();
-        $filtered   = [];
-        $author     = [];
+        $author     = static::GetAuthor($slug);
 
-        foreach($posts as $post) {
-            if (!isset($post['author'])) { continue; }
-            if ($post['author']['slug'] === $slug) {
-                $author     = $post['author'];
-                $filtered[] = $post;
-            }
-        }
+        $filtered = $posts->filter(function($post) use ($slug) {
+            return $post['author']['slug'] ?? '' === $slug;
+        });
 
         return [
             'author' => $author,
-            'posts' => collect($filtered)
+            'posts' => $filtered ?? []
         ];
     }
 
@@ -156,15 +151,41 @@ trait BlogTraits {
         $post['link']       = parseLink($post['title'] ?? '', static::$route);
         $post['author']     = static::parseAuthor($post['author'] ?? '');
 
-        foreach($post['category'] as $index => $item) {
-            $post['category'][$index] = static::parseCategory($item);
+        if (!empty($post['related-blog' ])) {
+            $post['related-blog' ] = url($post['related-blog' ]);
         }
 
-        foreach($post['tag'] as $index => $item) {
-            $post['tag'][$index] = static::parseTag($item);
+        if (!empty($post['related-links'])) {
+            $post['related-links'] = static::parseLinks($post['related-links']);
+        }
+
+        if (!empty($post['related-manual'])) {
+            $post['related-manual'] = static::parseLinks($post['related-manual']);
+        }
+
+        if (!empty($post['category'])) {
+            $post['category'] = Arr::map($post['category'] ,function($item) {
+                return static::parseCategory($item);
+            });
+        }
+
+        if (!empty($post['tag'])) {
+            $post['tag'] = Arr::map($post['tag'] ,function($item) {
+                return static::parseTag($item);
+            });
         }
 
         return $post;
+    }
+
+    private static function parseLinks(array $links=[]) {
+        if (empty($links)) {
+            return $links;
+        }
+        return Arr::map($links, function(array $item) {
+            $item['href'] = url($item['href']);
+            return $item;
+        });
     }
 
     private static function parseCategory($string='') {

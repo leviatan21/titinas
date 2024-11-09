@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Traits;
+use Illuminate\Support\Arr;
 
 trait ManualesTraits {
     use AuthorsTraits;
@@ -10,10 +11,9 @@ trait ManualesTraits {
     public static function GetPosts() {
         include_once(storage_path('app/data/manuales.php'));
 
-        $posts = posts();
-        foreach($posts as $index => $item) {
-            $posts[$index] = static::parsePost($item);
-        }
+        $posts = Arr::map(posts(), function(array $item) {
+            return static::parsePost($item);
+        });
 
         return collect($posts)->sortByDesc('datePublished');
     }
@@ -37,20 +37,15 @@ trait ManualesTraits {
 
     public static function GetByAuthor($slug='') {
         $posts      = static::GetPosts();
-        $filtered   = [];
-        $author     = [];
+        $author     = static::GetAuthor($slug);
 
-        foreach($posts as $post) {
-            if (!isset($post['author'])) { continue; }
-            if ($post['author']['slug'] === $slug) {
-                $author     = $post['author'];
-                $filtered[] = $post;
-            }
-        }
+        $filtered = $posts->filter(function($post) use ($slug) {
+            return $post['author']['slug'] ?? '' === $slug;
+        });
 
         return [
             'author' => $author,
-            'posts' => collect($filtered)
+            'posts' => $filtered ?? []
         ];
     }
 
@@ -59,6 +54,29 @@ trait ManualesTraits {
         $post['image']      = parseAsset($post['image'] ?? '');
         $post['link']       = parseLink($post['title'] ?? '', static::$route);
         $post['author']     = static::parseAuthor($post['author'] ?? '');
+
+        if (!empty($post['related-blog' ])) {
+            $post['related-blog' ] = url($post['related-blog' ]);
+        }
+
+        if (!empty($post['related-links'])) {
+            $post['related-links'] = static::parseLinks($post['related-links']);
+        }
+
+        if (!empty($post['related-videos'])) {
+            $post['related-videos'] = static::parseLinks($post['related-videos']);
+        }
+
         return $post;
+    }
+
+    private static function parseLinks(array $links=[]) {
+        if (empty($links)) {
+            return $links;
+        }
+        return Arr::map($links, function(array $item) {
+            $item['href'] = url($item['href']);
+            return $item;
+        });
     }
 }

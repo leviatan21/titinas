@@ -8,7 +8,7 @@ class ContactoController extends Controller {
 
     public function index() {
 
-        static::seo([
+        static::Seo([
             'title' => "Contacto - Titinas",
             'description' => "Gestión de pedidos y entregas - Gestión artística",
             'keywords' => "Gestión, clientes, pedidos, entregas, artística, envíos, tiempos, pagos"

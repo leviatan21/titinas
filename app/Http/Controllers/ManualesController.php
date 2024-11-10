@@ -19,7 +19,7 @@ class ManualesController extends Controller {
             'paginator' => $paginator
         ] = PaginateTraits::Paginate($posts);
 
-        static::seo([
+        static::Seo([
             'title' => "Los manuales de Titina's"
         ]);
 
@@ -46,7 +46,7 @@ class ManualesController extends Controller {
 
         $post['schemamarkup'] = SchemaMarkupTraits::ManualPosting(static::$seo, $post);
 
-        static::seo([
+        static::Seo([
             'title' => "Manual {$post['title']}",
             'description' => $post['description'],
             'keywords' => ""
@@ -81,7 +81,7 @@ class ManualesController extends Controller {
 
         $author = array_merge($author, $content);
 
-        static::seo([
+        static::Seo([
             'title' => "\"{$author['title']}\" escribe manuales para Titina's",
             'description' => "{$author['title']} - {$author['content'][0]}"
         ]);

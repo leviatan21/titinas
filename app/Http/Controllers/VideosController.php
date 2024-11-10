@@ -18,7 +18,7 @@ class VideosController extends Controller {
             'items'     => $items
         ] = videos();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = VideosTraits::GetVideos(static::$seo, $items);
 

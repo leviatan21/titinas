@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Log;
 class RenewalController extends Controller {
 
     public function index() {
-        static::seo([
+        static::Seo([
             'title' => "Nos renovamos - Titina's"
         ]);
 

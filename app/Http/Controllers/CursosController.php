@@ -18,7 +18,7 @@ class CursosController extends Controller {
             'vertical'  => $vertical
         ] = cursos();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $horizontal = Arr::map($horizontal, function(array $item) {
             $item['image-cover']  = parseAsset($item['image-cover']);

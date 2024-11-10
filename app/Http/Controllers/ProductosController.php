@@ -18,7 +18,7 @@ class ProductosController extends Controller {
             'productos' => $productos
         ] = home();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $productos = ProductosTraits::home($productos);
 
@@ -36,7 +36,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = exclusivos();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = Arr::map($items, function(array $item) {
             $item['image']  = parseAsset($item['image']);
@@ -61,7 +61,7 @@ class ProductosController extends Controller {
             'items'     => $items 
         ] = pasta();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parsePHP($items);
 
@@ -79,7 +79,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = tintas();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parsePHP($items);
 
@@ -90,7 +90,7 @@ class ProductosController extends Controller {
     //
     public function navidad() {
 
-        static::seo([
+        static::Seo([
             'title' => "Materiales para navidad Titina's",
             'description' => "Sellos de Goma - Stenciles - Vinilos - Sublimación - Transferencia - Multitransfer - Autoadhesivo - Etiquetas - Decoupage - Láminas de seda",
             'keywords' => "Sello, Stencil, Vinilos, Sublimación, Transferencia, Multitransfer, Autoadhesivo, Etiquetas, Decoupage, Láminas "
@@ -111,7 +111,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = transferencias();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -129,7 +129,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = decoupage();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -147,7 +147,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = cartulinas();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -165,7 +165,7 @@ class ProductosController extends Controller {
             'items'     => $items 
         ] = autoadhesivos();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -183,7 +183,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = vinilos();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -201,7 +201,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = sublimacion();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -219,7 +219,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = artefrances();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -237,7 +237,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = sellos();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 
@@ -255,7 +255,7 @@ class ProductosController extends Controller {
             'items'     => $items
         ] = stenciles();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $items = ProductosTraits::parseJSON($items);
 

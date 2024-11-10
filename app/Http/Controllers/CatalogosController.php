@@ -17,7 +17,7 @@ class CatalogosController extends Controller {
             'generales' => $generales
         ] = catalogos();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         return view('catalogos.index')
             ->with('paragraph', $paragraph)

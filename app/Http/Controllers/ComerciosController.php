@@ -16,7 +16,7 @@ class ComerciosController extends Controller {
             'items'     => $items
         ] = comercios();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $comercios = Arr::map($items, function(array $item) {
             return collect($item)->sortBy('name');

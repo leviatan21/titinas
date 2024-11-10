@@ -25,7 +25,7 @@ class BlogController extends Controller {
         $tags               = BlogTraits::GetTag();
         $tagsDescriptions   = BlogTraits::GetTagDescription();
 
-        static::seo([
+        static::Seo([
             'title' => "El blog de Titina's",
             'description' => "$catsDescriptions",
             'keywords' => "$tagsDescriptions"
@@ -57,7 +57,7 @@ class BlogController extends Controller {
 
         $post['schemamarkup'] = SchemaMarkupTraits::BlogPosting(static::$seo, $post);
 
-        static::seo([
+        static::Seo([
             'title' => "Posteo {$post['title']}",
             'description' => $post['content'][0],
             'keywords' => ""
@@ -92,7 +92,7 @@ class BlogController extends Controller {
 
         $author = array_merge($author, $content);
 
-        static::seo([
+        static::Seo([
             'title' => "\"{$author['title']}\" escribe en el blog de Titina's",
             'description' => "{$author['title']} - {$author['content'][0]}"
         ]);
@@ -125,7 +125,7 @@ class BlogController extends Controller {
             'paginator' => $paginator
         ] = PaginateTraits::Paginate($posts);
 
-        static::seo([
+        static::Seo([
             'title' => "Posteos para la categoría \"{$category['title']}\"",
             'description' => "Categorías - $cats"
         ]);
@@ -157,7 +157,7 @@ class BlogController extends Controller {
             'paginator' => $paginator
         ] = PaginateTraits::Paginate($posts);
 
-        static::seo([
+        static::Seo([
             'title' => "Posteos para el tag \"{$tag['title']}\"",
             'description' => "Tags: $tags"
         ]);

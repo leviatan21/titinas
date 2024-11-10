@@ -16,7 +16,7 @@ class HomeController extends Controller {
             'productos' => $productos
         ] = home();
 
-        static::seo($seo);
+        static::Seo($seo);
 
         $slider = ProductosTraits::home($slider);
 
@@ -28,7 +28,7 @@ class HomeController extends Controller {
     }
 
     public function historia() {
-        static::seo([
+        static::Seo([
             'title' => "La historia de Titina's"
         ]);
         return view('historia.index');

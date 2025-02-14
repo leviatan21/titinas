@@ -21,19 +21,23 @@ Route::get( '{any}.{extension}', function($route, $extension) {
 
 Route::get( '/',                    [HomeController::class, 'index']                )->name('web.home');
 Route::get( '/catalogos',           [CatalogosController::class, 'index']           )->name('web.catalogos');
-Route::get( '/cursos',              [CursosController::class, 'index']              )->name('web.cursos');
 Route::get( '/contacto',            [ContactoController::class, 'index']            )->name('web.contacto');
 Route::get( '/comercios',           [ComerciosController::class, 'index']           )->name('web.comercios');
 Route::get( '/historia',            [HomeController::class, 'historia']             )->name('web.historia');
 Route::get( '/videos',              [VideosController::class, 'index']              )->name('web.videos');
 Route::get( '/sitio-renovado',      [RenewalController::class, 'index']             )->name('renovado');
 Route::get( '/redirect',            [RedirectController::class, 'index']            )->name('redireccion');
+
+Route::prefix('/cursos')->group(function() {
+    Route::get( '/',              [CursosController::class, 'index']                )->name('web.cursos');
+    Route::get( '/capacitacion-efecto-gaudi-2025',  [CursosController::class, 'capacitacionEfectoGaudi2025']       )->name('web.capacitacion-efecto-gaudi-2025');
+});
 Route::prefix('/productos')->group(function() {
     Route::get( '/',               [ProductosController::class, 'index']            )->name('web.productos');
     Route::prefix('/exclusivos')->group(function () {
-        Route::get( '/',                        [ProductosController::class, 'exclusivos']  )->name('web.exclusivos');
-        Route::get( '/pasta-ceramica-sin-horno',[ProductosController::class, 'pasta']       )->name('web.pasta-ceramica-sin-horno');
-        Route::get( '/tintas-al-alcohol',       [ProductosController::class, 'tintas']      )->name('web.tintas-al-alcohol');
+        Route::get( '/',                            [ProductosController::class, 'exclusivos']  )->name('web.exclusivos');
+        Route::get( '/pasta-ceramica-sin-horno',    [ProductosController::class, 'pasta']       )->name('web.pasta-ceramica-sin-horno');
+        Route::get( '/tintas-al-alcohol',           [ProductosController::class, 'tintas']      )->name('web.tintas-al-alcohol');
     });
     Route::get( '/navidad',         [ProductosController::class, 'navidad']         )->name('navidad');
     Route::get( '/transferencias',  [ProductosController::class, 'transferencias']  )->name('web.transferencias');

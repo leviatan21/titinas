@@ -37,4 +37,11 @@ class CursosController extends Controller {
             ->with('horizontal', $horizontal)
             ->with('vertical', $vertical);
     }
+
+    public function capacitacionEfectoGaudi2025() {
+        static::Seo([
+            'title' => "Capacitación Efecto Gaudí 2025"
+        ]);
+        return view('cursos.capacitacion-efecto-gaudi-2025');
+    }
 }

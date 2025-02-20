@@ -14,15 +14,15 @@
             <h2 class="page-title color-brand">Efecto Gaudí Black Edition</h2>
         </header>
 
-        <img src="{{asset('/images/releases/efecto-gaudi-black-edition-page1.webp')}}" alt="Efecto Gaudi Black Edition hoja 1" 
+        <img src="{{asset('/images/releases/efecto-gaudi-black-edition-page-1.webp')}}" alt="Efecto Gaudi Black Edition hoja 1" 
             class="my-4" width="1200"
             decoding="async" loading="lazy" fetchpriority="auto" 
         />
-        <img src="{{asset('/images/releases/efecto-gaudi-black-edition-page2.webp')}}" alt="Efecto Gaudi Black Edition hoja 2" 
+        <img src="{{asset('/images/releases/efecto-gaudi-black-edition-page-2.webp')}}" alt="Efecto Gaudi Black Edition hoja 2" 
             class="my-4" width="1200"
             decoding="async" loading="lazy" fetchpriority="auto" 
         />
-        <img src="{{asset('/images/releases/efecto-gaudi-black-edition-page3.webp')}}" alt="Efecto Gaudi Black Edition hoja 3" 
+        <img src="{{asset('/images/releases/efecto-gaudi-black-edition-page-3.webp')}}" alt="Efecto Gaudi Black Edition hoja 3" 
             class="my-4" width="1200"
             decoding="async" loading="lazy" fetchpriority="auto" 
         />

@@ -13,20 +13,22 @@ use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ManualesController;
+use App\Http\Controllers\ReleasesController;
 
 // Global .html redirection
 Route::get( '{any}.{extension}', function($route, $extension) { 
     return RedirectController::renovado($route, $extension);
 })->where(['any'=>'([^\s"]+)', 'extension'=>'(php7|php|html|htm)'])->name('old');
 
-Route::get( '/',                    [HomeController::class, 'index']                )->name('web.home');
-Route::get( '/catalogos',           [CatalogosController::class, 'index']           )->name('web.catalogos');
-Route::get( '/contacto',            [ContactoController::class, 'index']            )->name('web.contacto');
-Route::get( '/comercios',           [ComerciosController::class, 'index']           )->name('web.comercios');
-Route::get( '/historia',            [HomeController::class, 'historia']             )->name('web.historia');
-Route::get( '/videos',              [VideosController::class, 'index']              )->name('web.videos');
-Route::get( '/sitio-renovado',      [RenewalController::class, 'index']             )->name('renovado');
-Route::get( '/redirect',            [RedirectController::class, 'index']            )->name('redireccion');
+Route::get( '/',                        [HomeController::class, 'index']                )->name('web.home');
+Route::get( '/catalogos',               [CatalogosController::class, 'index']           )->name('web.catalogos');
+Route::get( '/contacto',                [ContactoController::class, 'index']            )->name('web.contacto');
+Route::get( '/comercios',               [ComerciosController::class, 'index']           )->name('web.comercios');
+Route::get( '/historia',                [HomeController::class, 'historia']             )->name('web.historia');
+Route::get( '/videos',                  [VideosController::class, 'index']              )->name('web.videos');
+Route::get( '/sitio-renovado',          [RenewalController::class, 'index']             )->name('renovado');
+Route::get( '/redirect',                [RedirectController::class, 'index']            )->name('redireccion');
+Route::get( '/lanzamientos-marzo-2025', [ReleasesController::class, 'march2025']        )->name('lanzamientos.marzo.2025');
 
 Route::prefix('/cursos')->group(function() {
     Route::get( '/',              [CursosController::class, 'index']                )->name('web.cursos');

@@ -44,7 +44,7 @@
         @endforeach
         </div>
     </div>
-    
+
     @include('components.products-drawers', ['products'=>$products])
 
 </div>

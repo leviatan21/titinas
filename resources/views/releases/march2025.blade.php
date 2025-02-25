@@ -27,15 +27,16 @@
             decoding="async" loading="lazy" fetchpriority="auto" 
         />
     </article>
-    
+
     <article id="gallery-wrap-0" class="gallery-wrap mt-4">
         <header class="page-header">
             <h2 class="page-title color-brand">Herramientas para puntillismo y cerámica</h2>
         </header>
-        <img src="{{asset('/images/releases/herramientas.webp')}}" alt="herramientas" 
+        <img src="{{asset('/images/releases/herramientas-puntillismo.webp')}}" alt="Herramientas para puntillismo y cerámica" 
             class="my-4" width="1200"
             decoding="async" loading="lazy" fetchpriority="auto" 
         />
     </article>
+
 </div>
 @endsection

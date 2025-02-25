@@ -52,5 +52,7 @@
 
     </div>
 
+    @include('components.footer-manuales')
+
 </div>
 @endsection

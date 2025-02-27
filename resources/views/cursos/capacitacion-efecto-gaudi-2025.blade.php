@@ -23,7 +23,10 @@
                             <strong>¡Completamente online y super completa!</strong>
                         </p>
                         <p>
-                            Inscripción Febrero 2025<br />
+                            <a href="https://forms.gle/ARbrcpLo67nfRcSJ8"  rel="nofollow noopener" target="_blank">
+                                Inscripción Febrero 2025
+                            </a>
+                            <br />
                             Iniciamos en marzo 2025
                         </p>
                     </div>
@@ -41,6 +44,10 @@
             <ul class="blog-grid">
                 <li class="blog-list-style text-center">
                     Descargar información en PDF <a href="{{asset('/pdf/CAPACITACION-ONLINE-EFECTO-GAUDI-2025.pdf')}}" rel="nofollow noopener" target="_blank">aquí</a>
+                </li>
+                <li class="blog-list-style text-center">
+                    
+                    Inscripción <a href="https://forms.gle/ARbrcpLo67nfRcSJ8"  rel="nofollow noopener" target="_blank">aquí</a>
                 </li>
             </ul>
         </div>
